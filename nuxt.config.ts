@@ -20,4 +20,18 @@ export default defineNuxtConfig({
       branch: "main",
     },
   },
+
+  nitro: {
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+      wrangler: {
+        vars: {
+          STUDIO_GOOGLE_MODERATORS:
+            "matt@pupsinthepark.uk,rea@pupsinthepark.uk,beck@pupsinthepark.uk",
+        },
+      },
+    },
+  },
 });
