@@ -1,11 +1,11 @@
 <template>
   <div>
-    <!-- <AppHeader /> -->
+    <AppHeader />
 
     <UMain>
       <slot />
     </UMain>
 
-    <!-- <AppFooter /> -->
+    <AppFooter />
   </div>
 </template>
