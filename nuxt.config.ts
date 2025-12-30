@@ -35,7 +35,7 @@ export default defineNuxtConfig({
           {
             binding: "DB",
             database_name: "website",
-            database_id: "4edea48e-70c0-4c40-83b5-bacfedeb85b8",
+            database_id: "ab3472a7-a1c9-40a6-a240-feb4f241c9e3",
           },
         ],
       },
