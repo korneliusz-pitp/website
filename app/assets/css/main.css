@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  /* --- PITP Base Colours (Single Values) --- */
+  --color-border-collie-white: #fbfaf5;
+  --color-border-collie-black: #191b1a;
+  --color-edgbarston-taupe: #b6afa9;
+  --color-earth: #5d4d3b;
+  --color-cannon-forest: #3a471c;
+  --color-cannon-hill: #506123;
+  --color-beck: #690f10;
+
+  /* NEUTRAL (Border Collie Scale) */
+  /* Combines White, Taupe, Earth, and Black */
+  --color-neutral-50: #fbfaf5; /* Official: Border Collie White */
+  --color-neutral-100: #efede6;
+  --color-neutral-200: #ded9d0;
+  --color-neutral-300: #cdc4bc;
+  --color-neutral-400: #b6afa9; /* Official: Edgbarston Taupe */
+  --color-neutral-500: #96897d;
+  --color-neutral-600: #7a6b5c;
+  --color-neutral-700: #5d4d3b; /* Official: Border Earth */
+  --color-neutral-800: #3d342c;
+  --color-neutral-900: #2a2420;
+  --color-neutral-950: #191b1a; /* Official: Border Collie Black */
+
+  /* -- Cannon Scale -- */
+  /* Greens */
+  --color-cannon-50: #f6f8ef;
+  --color-cannon-100: #ebefdb;
+  --color-cannon-200: #d5dfb8;
+  --color-cannon-300: #bacc90;
+  --color-cannon-400: #9db669;
+  --color-cannon-500: #7e9c46;
+  --color-cannon-600: #506123; /* Official: Cannon Hill */
+  --color-cannon-700: #43521e;
+  --color-cannon-800: #3a471c; /* Official: Cannon Forest */
+  --color-cannon-900: #2f3a19;
+  --color-cannon-950: #19210c;
+
+  /* -- Beck Scale -- */
+  /* Reds */
+  --color-beck-50: #fcf4f4;
+  --color-beck-100: #f7e5e5;
+  --color-beck-200: #eccbcb;
+  --color-beck-300: #ddacad;
+  --color-beck-400: #ca8183;
+  --color-beck-500: #b35a5c;
+  --color-beck-600: #953d40;
+  --color-beck-700: #7e2528;
+  --color-beck-800: #690f10; /* Official: Beck */
+  --color-beck-900: #5a1213;
+  --color-beck-950: #3b0607;
+}
+
+@theme {
+  --font-display: "Etna Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root {
+  /* No border radius for brutalist design */
+  --ui-radius: 0rem;
+}
+
+/* Fonts */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  font-family: var(--font-sans);
+}
+
+/* Selection color - using a neutral color with strong contrast in both modes */
+::selection {
+  background-color: var(--ui-primary);
+  color: var(--ui-text-inverted);
+}
+
+::-moz-selection {
+  background-color: var(--ui-primary);
+  color: var(--ui-text-inverted);
+}

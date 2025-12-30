@@ -12,6 +12,31 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2025-07-15",
 
+  css: ["~/assets/css/main.css"],
+
+  ui: {
+    theme: {
+      colors: [
+        // Semantic Roles (Required)
+        "primary",
+        "secondary",
+        "neutral",
+        "error",
+        "warning",
+        "success",
+        "info",
+
+        // Brand Role Scales (TODO: Add these)
+        // "helper-red",
+        // "content-purple",
+        // "creator-gold",
+        // "medical-green",
+        // "management-midnight",
+        // "creative-red",
+      ],
+    },
+  },
+
   studio: {
     repository: {
       provider: "github",
