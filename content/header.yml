@@ -1,7 +1,8 @@
 title: Pups in the Park
 buttons:
-  - label: Volunteer
-    to: /volunteer
+  - label: Contact
+    to: /contact
+    icon: i-lucide-mail
     color: primary
     variant: outline
   - label: Donate
@@ -22,9 +23,8 @@ links:
         to: /events/gallery
       - label: Rules & Safety
         to: /events/conduct
-  - label: Contact
-    to: /contact
-    icon: i-lucide-mail
+  - label: Volunteer
+    to: /volunteer
 to: /
 toggle:
   color: primary
