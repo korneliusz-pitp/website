@@ -1,0 +1,34 @@
+brand:
+  title: Pups in the Park
+  description:
+    - The UK's Largest non-profit kemonomimi/alternative meet!
+socials:
+  - label: Instagram
+    to: https://www.instagram.com/pupsintheparkuk/
+    icon: i-simple-icons-instagram
+  - label: TikTok
+    to: https://www.tiktok.com/@pupsintheparkuk
+    icon: i-simple-icons-tiktok
+  - label: Discord
+    to: https://discord.gg/9Sz2msbSDq
+    icon: i-simple-icons-discord
+quickLinks:
+  - label: Code of Conduct
+    to: /code-of-conduct
+  - label: Report a Concern
+    to: /report
+  - label: Volunteer
+    to: /get-involved
+  - label: Privacy Policy
+    to: /privacy
+contacts:
+  - label: Info
+    email: info@pupsinthepark.uk
+    icon: i-heroicons-envelope
+  - label: Safeguarding
+    email: safeguarding@pupsinthepark.uk
+    icon: i-heroicons-shield-check
+  # - label: Press & Media
+  #   email: management@pupsinthepark.uk
+  #   icon: i-heroicons-camera
+footnote: Designed in the UK.

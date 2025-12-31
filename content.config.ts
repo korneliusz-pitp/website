@@ -25,10 +25,22 @@ const buttonSchema = z.object({
   to: z.string().optional(),
   href: z.string().optional(),
   target: z.string().optional(),
-  color: z.string().optional(),
-  variant: z.string().optional(),
+  color: z
+    .enum([
+      "primary",
+      "secondary",
+      "neutral",
+      "error",
+      "warning",
+      "success",
+      "info",
+    ])
+    .optional(),
+  variant: z
+    .enum(["link", "solid", "outline", "soft", "subtle", "ghost"])
+    .optional(),
   icon: property(z.string().optional()).editor({ input: "icon" }),
-  size: z.string().optional(),
+  size: z.enum(["xs", "sm", "md", "lg", "xl"]).optional(),
 });
 
 export default defineContentConfig({
@@ -51,6 +63,30 @@ export default defineContentConfig({
           .optional(),
         links: z.array(navigationMenuItemSchema).optional(),
         buttons: z.array(buttonSchema).optional(),
+      }),
+    }),
+    footer: defineCollection({
+      type: "data",
+      source: "footer.yml",
+      schema: z.object({
+        brand: z
+          .object({
+            title: z.string(),
+            description: z.array(z.string()),
+          })
+          .optional(),
+        socials: z.array(buttonSchema).optional(),
+        quickLinks: z.array(navigationMenuItemSchema).optional(),
+        contacts: z
+          .array(
+            z.object({
+              label: z.string(),
+              email: z.string().email(),
+              icon: property(z.string().optional()).editor({ input: "icon" }),
+            })
+          )
+          .optional(),
+        footnote: z.string().optional(),
       }),
     }),
   },
