@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <UApp>
-    <UHeader />
+    <AppHeader />
 
     <UError :error="error" />
 
