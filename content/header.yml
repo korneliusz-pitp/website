@@ -23,8 +23,8 @@ links:
         to: /events/gallery
       - label: Rules & Safety
         to: /events/conduct
-  - label: Volunteer
-    to: /volunteer
+  - label: Get Involved
+    to: /get-involved
 to: /
 toggle:
   color: primary
