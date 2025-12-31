@@ -1,0 +1,29 @@
+title: Pups in the Park
+to: /
+toggle:
+  color: primary
+  variant: subtle
+links:
+  - label: About
+    to: /about
+  - label: Events
+    to: /events
+    children:
+      - label: Upcoming
+        to: /events/upcoming
+      - label: Gallery
+        to: /events/gallery
+      - label: Rules & Safety
+        to: /events/conduct
+  - label: Contact
+    to: /contact
+buttons:
+  - label: Volunteer
+    to: /volunteer
+    color: primary
+  - label: Donate
+    to: https://www.gofundme.com/f/pupsinthepark
+    target: _blank
+    color: secondary
+    variant: outline
+    size: md
