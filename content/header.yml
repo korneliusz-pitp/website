@@ -1,8 +1,15 @@
 title: Pups in the Park
-to: /
-toggle:
-  color: primary
-  variant: subtle
+buttons:
+  - label: Volunteer
+    to: /volunteer
+    color: primary
+    variant: outline
+  - label: Donate
+    to: https://www.gofundme.com/f/pupsinthepark
+    target: _blank
+    color: primary
+    variant: solid
+    size: md
 links:
   - label: About
     to: /about
@@ -17,13 +24,8 @@ links:
         to: /events/conduct
   - label: Contact
     to: /contact
-buttons:
-  - label: Volunteer
-    to: /volunteer
-    color: primary
-  - label: Donate
-    to: https://www.gofundme.com/f/pupsinthepark
-    target: _blank
-    color: secondary
-    variant: outline
-    size: md
+    icon: i-lucide-mail
+to: /
+toggle:
+  color: primary
+  variant: subtle
