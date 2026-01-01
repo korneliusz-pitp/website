@@ -1,9 +1,9 @@
 import { defineContentConfig, defineCollection, property } from "@nuxt/content";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 const navigationMenuItemSchema = z.object({
   label: z.string(),
-  to: z.string().optional(),
+  to: z.url().optional(),
   icon: property(z.string().optional()).editor({ input: "icon" }),
   description: z.string().optional(),
   disabled: z.boolean().default(false).optional(),
@@ -11,7 +11,7 @@ const navigationMenuItemSchema = z.object({
   children: z
     .object({
       label: z.string(),
-      to: z.string().optional(),
+      to: z.url().optional(),
       icon: property(z.string().optional()).editor({ input: "icon" }),
       description: z.string().optional(),
       disabled: z.boolean().default(false).optional(),
@@ -22,8 +22,7 @@ const navigationMenuItemSchema = z.object({
 
 const buttonSchema = z.object({
   label: z.string().optional(),
-  to: z.string().optional(),
-  href: z.string().optional(),
+  to: z.url().optional(),
   target: z.string().optional(),
   color: z
     .enum([
@@ -47,7 +46,10 @@ export default defineContentConfig({
   collections: {
     content: defineCollection({
       type: "page",
-      source: "**/*.md",
+      source: {
+        include: "**/*.md",
+        exclude: ["events/*.md"],
+      },
     }),
     header: defineCollection({
       type: "data",
@@ -81,12 +83,40 @@ export default defineContentConfig({
           .array(
             z.object({
               label: z.string(),
-              email: z.string().email(),
+              email: z.email(),
               icon: property(z.string().optional()).editor({ input: "icon" }),
             })
           )
           .optional(),
         footnote: z.string().optional(),
+      }),
+    }),
+    events: defineCollection({
+      type: "page",
+      source: "events/*.md",
+      schema: z.object({
+        date: z.iso.date().optional(),
+        time: z
+          .object({
+            start: z.iso.time().optional(),
+            end: z.iso.time().optional(),
+          })
+          .optional(),
+        location: z
+          .object({
+            name: z.string().optional(),
+            address: z.string().optional(),
+            map: z.url().optional(),
+            what3words: z.string().optional(),
+          })
+          .optional(),
+        status: z.enum(["draft", "published", "cancelled"]).default("draft"),
+        coverImage: property(z.string().optional()).editor({ input: "media" }),
+        gallery: z.array(
+          property(z.string().optional()).editor({ input: "media" })
+        ),
+        registrationLink: z.url().optional(),
+        feedbackLink: z.url().optional(),
       }),
     }),
   },
