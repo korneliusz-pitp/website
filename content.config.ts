@@ -133,7 +133,7 @@ export default defineContentConfig({
     }),
     rules: defineCollection({
       type: "data",
-      source: "rules.yml",
+      source: "events/rules.yml",
       schema: z.object({
         title: z.string().optional(),
         description: z.string().optional(),
