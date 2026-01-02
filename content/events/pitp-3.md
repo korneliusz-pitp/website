@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2025
-coverImage: /images/PITPPlaceholder.svg
+coverImage: /images/Copy-of-Copy-of-Sustainability-PITP.svg
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 gallery: []
 location:
@@ -8,6 +8,10 @@ location:
 registrationLink: ""
 status: draft
 ---
+
+::note{color="primary"}
+We are currently in the event procurement stage - 19/10/25
+::
 
 ## Coming Soon!
 
@@ -17,8 +21,10 @@ We're excited to announce our upcoming spring meet!
 
 Our spring event will feature:
 
-- thing one
-- things two
+- A Brand new Venue!
+- Event perk 1
+- Event perk 2
+- Event perk 3
 
 ### Event Details Coming Soon
 
