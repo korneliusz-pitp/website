@@ -131,5 +131,47 @@ export default defineContentConfig({
         feedbackLink: z.url().optional(),
       }),
     }),
+    rules: defineCollection({
+      type: "data",
+      source: "rules.yml",
+      schema: z.object({
+        title: z.string().optional(),
+        description: z.string().optional(),
+        intro: z.string().optional(),
+        permittedGear: z
+          .object({
+            title: z.string(),
+            icon: property(z.string().optional()).editor({ input: "icon" }),
+            itemIcon: property(z.string().optional()).editor({ input: "icon" }),
+            items: z.array(z.string()),
+          })
+          .optional(),
+        prohibitedItems: z
+          .object({
+            title: z.string(),
+            icon: property(z.string().optional()).editor({ input: "icon" }),
+            itemIcon: property(z.string().optional()).editor({ input: "icon" }),
+            items: z.array(z.string()),
+          })
+          .optional(),
+        keyRules: z
+          .array(
+            z.object({
+              label: z.string(),
+              icon: property(z.string().optional()).editor({ input: "icon" }),
+              content: z.array(z.string()),
+            })
+          )
+          .optional(),
+        callToAction: z
+          .object({
+            title: z.string().optional(),
+            description: z.string().optional(),
+            button: buttonSchema.optional(),
+          })
+          .optional(),
+        contactEmail: z.email().optional(),
+      }),
+    }),
   },
 });

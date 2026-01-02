@@ -1,0 +1,79 @@
+title: Rules & Safety
+callToAction:
+  title: Read the Full Code of Conduct
+  description: This page is a summary. For complete details on all policies, visit our Policies Hub.
+  button:
+    label: View Full Policy
+    to: /policies/code-of-conduct
+    color: primary
+    variant: solid
+    icon: i-lucide-external-link
+contactEmail: events@pupsinthepark.uk
+description: A summary of our attendee code of conduct.
+intro: |
+  Pups in the Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
+keyRules:
+  - label: Consent & Respect
+    icon: i-lucide-heart-handshake
+    content:
+      - '"Cosplay is not Consent." Always ask for explicit verbal permission before touching anyone or their gear'
+      - Respect \"No Touch\" tags absolutely. If someone says \"no\", respect that immediately.
+      - Please use people's preferred pronouns."
+  - label: Age Restrictions
+    icon: i-lucide-users
+    content:
+      - "Under 13: Must be accompanied by a parent/guardian (18+) at all times."
+      - "13-17: Permitted unaccompanied. Strictly prohibited from alcohol, tobacco, or vapes."
+      - "18-29: Standard access. Model appropriate behaviour for younger attendees."
+      - "30+: Restricted access - only as guardians, registered carers, or approved volunteers."
+  - label: Public Decency
+    icon: i-lucide-eye
+    content:
+      - Our events are held in public parks. All behaviour, attire, and conversation must be PG-rated.
+      - Gear must not be explicitly sexual or fetishistic. Sexual behaviour of any kind is strictly prohibited.
+  - label: Photography & Media
+    icon: i-lucide-camera
+    content:
+      - Always ask for permission before taking photos or videos of specific individuals.
+      - If you do not wish to be photographed, inform the photographer.
+      - Official Content Team members wear a Black Lanyard with a Purple ID Tag.
+  - label: Medical Safety
+    icon: i-lucide-heart-pulse
+    content:
+      - Many attendees have severe allergies. Ask about allergies before sharing food.
+      - If you have a serious medical condition, inform a Medic (Green Lanyard) upon arrival.
+      - Carry your own necessary medication at all times.
+  - label: Safeguarding
+    icon: i-lucide-shield-check
+    content:
+      - If you feel unsafe or notice concerning behaviour, alert an Organiser or Volunteer immediately.
+      - For medical assistance, look for a volunteer with a Green Lanyard.
+      - We have zero tolerance for violence, abuse, harassment, or discrimination.
+  - label: Environment
+    icon: i-lucide-leaf
+    content:
+      - We are guests in the park. Please use bins or take your litter home.
+      - Keep noise to a respectful level to avoid disturbing local residents and wildlife.
+  - label: Smoking & Vaping
+    icon: i-lucide-cigarette-off
+    content:
+      - No smoking or vaping in the main event area. Please move away from the group if you wish to smoke.
+permittedGear:
+  title: Permitted Gear
+  icon: i-lucide-check-circle
+  items:
+    - Kemomimi ears and tails
+    - Paws and fursuit partials
+    - Street-legal collars and harnesses
+    - Alternative fashion and accessories
+    - Fursuits
+prohibitedItems:
+  title: Prohibited Items
+  icon: i-lucide-x-circle
+  items:
+    - Weapons (including knives and multi-tools)
+    - Alcohol at the event
+    - Illegal drugs or narcotics
+    - Exposed fetish gear (gags, restraints, etc.)
+    - Pup hoods and muzzles
+    - Leashes for "walking" humans

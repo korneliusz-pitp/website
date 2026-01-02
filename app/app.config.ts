@@ -6,5 +6,9 @@ export default defineAppConfig({
       secondary: "beck",
       neutral: "neutral",
     },
+    // Custom component theming
+    pageGrid: {
+      base: "lg:grid-cols-2",
+    },
   },
 });
