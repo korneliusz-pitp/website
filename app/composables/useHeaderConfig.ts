@@ -4,8 +4,15 @@ export type HeaderConfig = {
   title?: string;
   to?: string;
   toggle?: {
-    color?: string;
-    variant?: string;
+    color?:
+      | "primary"
+      | "secondary"
+      | "neutral"
+      | "error"
+      | "warning"
+      | "success"
+      | "info";
+    variant?: "link" | "solid" | "outline" | "soft" | "subtle" | "ghost";
   };
   links?: NavigationMenuItem[];
   buttons?: ButtonProps[];
@@ -47,7 +54,7 @@ export const useHeaderConfig = async (): Promise<HeaderConfig> => {
         title: headerData.title || defaultConfig.title,
         to: headerData.to || defaultConfig.to,
         toggle: headerData.toggle || defaultConfig.toggle,
-        links: headerData.links || defaultConfig.links,
+        links: (headerData.links as NavigationMenuItem[]) || defaultConfig.links,
         buttons: headerData.buttons || defaultConfig.buttons,
       };
     }

@@ -17,9 +17,9 @@
       <UNavigationMenu :items="navigationItems" content-orientation="vertical" />
     </div>
 
-    <!-- Right Slot - Buttons & Color Mode Toggle -->
+    <!-- Right Slot - Buttons (Desktop) & Color Mode Toggle -->
     <template #right>
-      <div v-if="buttons.length > 0" class="flex items-center gap-2">
+      <div v-if="buttons.length > 0" class="hidden lg:flex items-center gap-2">
         <UButton
           v-for="button in buttons"
           :key="button.label"
@@ -36,9 +36,26 @@
       <UColorModeButton />
     </template>
 
-    <!-- Navigation - Mobile Vertical -->
-    <template v-if="navigationItems.length > 0" #body>
-      <UNavigationMenu :items="navigationItems" orientation="vertical" class="-mx-2.5" />
+    <!-- Navigation - Mobile Vertical with Buttons -->
+    <template #body>
+      <div v-if="navigationItems.length > 0">
+        <UNavigationMenu :items="navigationItems" orientation="vertical" class="-mx-2.5" />
+      </div>
+      <div v-if="buttons.length > 0" class="flex flex-col gap-2 mt-4">
+        <UButton
+          v-for="button in buttons"
+          :key="button.label"
+          :label="button.label"
+          :to="button.to"
+          :href="button.href"
+          :target="button.target"
+          :color="button.color || 'primary'"
+          :variant="button.variant || 'solid'"
+          :size="button.size || 'md'"
+          :icon="button.icon"
+          block
+        />
+      </div>
     </template>
   </UHeader>
 </template>

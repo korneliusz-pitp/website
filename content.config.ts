@@ -59,8 +59,20 @@ export default defineContentConfig({
         to: z.string().optional(),
         toggle: z
           .object({
-            color: z.string().optional(),
-            variant: z.string().optional(),
+            color: z
+              .enum([
+                "primary",
+                "secondary",
+                "neutral",
+                "error",
+                "warning",
+                "success",
+                "info",
+              ])
+              .optional(),
+            variant: z
+              .enum(["link", "solid", "outline", "soft", "subtle", "ghost"])
+              .optional(),
           })
           .optional(),
         links: z.array(navigationMenuItemSchema).optional(),
