@@ -14,67 +14,9 @@ if (!event.value) {
   })
 }
 
-const startDateTime = computed(() => {
-  if (!event.value?.date) return null
-  const datePart = event.value.date
-  const start = event.value?.time?.start ?? "00:00:00"
-  const isoString = `${datePart}T${start}${start.includes('Z') ? '' : 'Z'}`
-  const dt = new Date(isoString)
-  return Number.isNaN(dt.getTime()) ? null : dt
-})
-
-const endDateTime = computed(() => {
-  if (!event.value?.date || !event.value?.time?.end) return null
-  const datePart = event.value.date
-  const end = event.value.time.end
-  const isoString = `${datePart}T${end}${end.includes('Z') ? '' : 'Z'}`
-  const dt = new Date(isoString)
-  return Number.isNaN(dt.getTime()) ? null : dt
-})
-
-const formattedDate = computed(() => {
-  const dt = startDateTime.value || (event.value?.date ? new Date(`${event.value.date}T00:00:00Z`) : null)
-  if (!dt) return null
-  return dt.toLocaleDateString('en-GB', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
-})
-
-const formattedTimeRange = computed(() => {
-  const formatTime = (dt: Date) =>
-    dt.toLocaleTimeString('en-GB', {
-      hour: '2-digit',
-      minute: '2-digit',
-    })
-
-  if (startDateTime.value && endDateTime.value) {
-    return `${formatTime(startDateTime.value)} – ${formatTime(endDateTime.value)}`
-  }
-  if (startDateTime.value) {
-    return formatTime(startDateTime.value)
-  }
-  if (endDateTime.value) {
-    return formatTime(endDateTime.value)
-  }
-  return null
-})
-
-const isUpcoming = computed(() => {
-  const dt = startDateTime.value
-  if (!dt) return true
-  const now = new Date()
-  return dt >= now
-})
-
-const isPast = computed(() => {
-  const dt = startDateTime.value
-  if (!dt) return false
-  const now = new Date()
-  return dt < now
-})
+const { formattedDate, formattedTimeRange, isUpcoming, isPast } = computed(() =>
+  getEventDateTime(event.value!.date, event.value!.time),
+).value
 </script>
 
 <template>
