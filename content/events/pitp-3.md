@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2025
-coverImage: /images/Copy-of-Copy-of-Sustainability-PITP.svg
+coverImage: /images/PLACEHOLD.svg
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 gallery: []
 location:
