@@ -21,39 +21,26 @@ useSeoMeta({
   description: 'View all upcoming Pups in the Park events and meetups.',
 })
 
-const router = useRouter()
-
 const { data: events } = await useAsyncData('upcoming-events', () =>
   queryCollection('events')
     .where('status', '=', 'published')
     .all(),
 )
 
-const upcomingEvents = computed(() => {
-  if (!events.value) return []
-  return (events.value as Event[])
-    .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
-    .sort((a, b) => {
-      const dateA = new Date(a.date || '')
-      const dateB = new Date(b.date || '')
-      return dateA.getTime() - dateB.getTime()
-    })
-})
+const upcomingEvents = (events.value as Event[])
+  .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
+  .sort((a, b) => {
+    const dateA = new Date(a.date || '')
+    const dateB = new Date(b.date || '')
+    return dateA.getTime() - dateB.getTime()
+  })
 
-// Handle redirects based on event count
-watch(
-  () => upcomingEvents.value.length,
-  (count) => {
-    if (count === 0) {
-      // No events: redirect to main events page
-      navigateTo('/events')
-    } else if (count === 1 && upcomingEvents.value[0]?._path) {
-      // Single event: redirect to that event's page
-      navigateTo(upcomingEvents.value[0]._path)
-    }
-  },
-  { immediate: true },
-)
+// Server-side redirects
+if (upcomingEvents.length === 0) {
+  throw navigateTo('/events', { replace: true, redirectCode: 307 })
+} else if (upcomingEvents.length === 1 && upcomingEvents[0]?._path) {
+  throw navigateTo(upcomingEvents[0]._path, { replace: true, redirectCode: 307 })
+}
 </script>
 
 <template>
@@ -66,7 +53,7 @@ watch(
       />
 
       <UPageBody>
-        <div v-if="upcomingEvents.length > 1" class="space-y-6">
+        <div class="space-y-6">
           <!-- Multiple Events: Display as Grid -->
           <div class="grid gap-6 lg:grid-cols-2">
             <EventCard
@@ -84,7 +71,6 @@ watch(
             />
           </div>
         </div>
-        <!-- Single event or no events: handled by redirects -->
       </UPageBody>
     </UContainer>
   </UPage>
