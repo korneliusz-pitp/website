@@ -48,7 +48,7 @@ export default defineContentConfig({
       type: "page",
       source: {
         include: "**/*.md",
-        exclude: ["events/*.md"],
+        exclude: ["events/*.md", "policies/*.md"],
       },
     }),
     header: defineCollection({
@@ -172,6 +172,14 @@ export default defineContentConfig({
           .optional(),
         contactEmail: z.email().optional(),
       }),
+    }),
+    policy: defineCollection({
+      type: "page",
+      source: "policies/index.yml",
+    }),
+    policies: defineCollection({
+      type: "page",
+      source: "policies/*.md",
     }),
   },
 });
