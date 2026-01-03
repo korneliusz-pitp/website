@@ -1,10 +1,14 @@
+---
+title: Attendee Code of Conduct
+---
+
 # Attendee Code of Conduct
 
 > December 2025
 
 ## 1. Introduction
 
-Pups in the Park is the UK's largest non-profit Kemomimi and alternative meet. We are dedicated to providing a safe, inclusive, and fun environment for everyone to socialise and express themselves.
+Pups in the Park is the UK's largest non-profit Kemonomimi and alternative meet. We are dedicated to providing a safe, inclusive, and fun environment for everyone to socialise and express themselves.
 
 This Code of Conduct applies to **all attendees** at our events. By attending, you agree to abide by these rules. Failure to do so may result in being asked to leave the event and potential bans from future meets and online spaces.
 
@@ -40,7 +44,7 @@ To ensure the safety and comfort of our primary demographic, we strictly enforce
 
 **Restricted Access.**
 
-- Attendance is **not permitted** for those aged 30 and over, with the following strict exceptions:
+- Attendance is **not permitted**for those aged 30 and over, with the following strict exceptions:
   1. You are the parent/guardian actively supervising a child (Under 13) or a teen requiring support.
   2. You are a registered carer for an attendee with a disability.
   3. You are an official Volunteer or Organiser approved by the event management.
@@ -51,12 +55,10 @@ To ensure the safety and comfort of our primary demographic, we strictly enforce
 Our events are held in public parks shared with families, dog walkers, and the general public.
 
 - **PG Rating:** All behaviour, attire, and conversation must remain suitable for a general audience (PG-rated).
-
 - **Gear & Dress:** We welcome kemomimi gear (ears, tails), fursuits, and alternative fashion. However, gear must not be explicitly sexual or fetishistic.
-  - _Permitted:_ Ears, tails, paws, street-legal collars/harnesses.
-  - _Not Permitted:_ Exposed fetish gear (e.g., gags, bondage restraints), pup hoods, leashes attached to collars for "walking" humans, or indecent exposure.
+  - *Permitted:* Ears, tails, paws, street-legal collars/harnesses.
+  - *Not Permitted:* Exposed fetish gear (e.g., gags, bondage restraints), pup hoods, leashes attached to collars for "walking" humans, or indecent exposure.
   - **Muzzles:** All types of muzzles are strictly banned. They are considered NSFW and count as prohibited gear.
-
 - **Behaviour:** Sexual behaviour of any kind is strictly prohibited.
 
 ## 4. Consent & Respect
@@ -64,57 +66,43 @@ Our events are held in public parks shared with families, dog walkers, and the g
 **"Cosplay is not Consent."**
 
 - **Ask First:** Just because someone is wearing ears, a tail, or a hood does not mean you can touch them. Always ask for explicit verbal permission before hugging, petting, scritching, or touching anyone’s gear.
-
 - **"No Touch" Tags:** Attendees wearing a "No Touch" tag will be respected absolutely. If you break this policy, you may be asked to leave.
-
 - **Respect Boundaries:** If someone says "no" or indicates they want space, respect that immediately.
-
 - **Pronouns:** Please respect people’s gender identities and use their preferred pronouns.
 
 ## 5. Prohibited Items
 
 - **Weapons:** No knives or weapons are permitted at the event. This includes Swiss Army knives and multi-tools.
-  - _Exception:_ **Medics** (identifiable by **Green Lanyards**) are permitted to carry tools necessary for their role.
-
+  - *Exception:* **Medics** (identifiable by **Green Lanyards**) are permitted to carry tools necessary for their role.
 - **Alcohol:** No alcohol is to be consumed at the event.
-
 - **Illegal Drugs:** The possession or use of illegal drugs (narcotics) is strictly prohibited. Depending on severity, the **Police will be contacted**.
-
 - **Smoking & Vaping:** No smoking or vaping is permitted in the main event area. Please move away from the group if you wish to smoke.
 
 ### 5.1. Confiscation & Disposal
 
-Organisers reserve the right to search bags and coats if there is reasonable suspicion of prohibited items. Prohibited items (including alcohol, tobacco, vapes, and weapons) found in the possession of minors (under 18\) or used in strictly prohibited areas will be confiscated.
+Organisers reserve the right to search bags and coats if there is reasonable suspicion of prohibited items. Prohibited items (including alcohol, tobacco, vapes, and weapons) found in the possession of minors (under 18) or used in strictly prohibited areas will be confiscated.
 
 - **Illegal items (drugs/weapons)**: Will be handed to the Police.
-
 - **High-value items (e.g., vapes/phones)**: Will be held securely and returned only to a parent/guardian.
-
 - **Consumables (e.g., open alcohol/cigarettes)**: May be disposed of immediately at the discretion of the Lead Organiser.
 
 ## 6. Medical Safety & Allergies
 
 - Please be aware that many attendees have severe allergies. Do not share food without explicitly asking about allergies first. You are responsible for the food you bring.
-
 - If you have a serious medical condition (e.g., Epilepsy, Diabetes, history of Anaphylaxis), we strongly encourage you to inform a **Medic (Green Lanyard)** upon arrival.
-
 - Please carry your own necessary medication (e.g., EpiPens, Inhalers) at all times. Our Medics carry standard First Aid supplies but do not stock prescription medication.
 
 ## 7. Photography & Media
 
 - **"Think Consent":** Always ask for permission before taking photos or videos of specific individuals.
-
 - **Opt-Out:** If you do not wish to be photographed, please let the photographer know.
-
 - **Content Team:** The official Pups in the Park Content Team are exempt from the individual permission rule, as all official photos are screened before posting.
-  - _Identification:_ Content Team members wear a **Black Lanyard with a Purple ID Tag** bearing "Content".
+  - *Identification:* Content Team members wear a **Black Lanyard with a Purple ID Tag** bearing "Content".
 
 ## 8. Safeguarding and Reporting
 
 - If you feel unsafe, see someone else who looks uncomfortable, or notice a prohibited item, please alert an Organiser or Volunteer immediately.
-
 - If you require medical assistance, look for a volunteer wearing a **Green Lanyard**.
-
 - We have **zero tolerance** for violence, abuse, harassment, discrimination, or predatory behaviour.
 
 ## 9. Environment
@@ -130,4 +118,4 @@ If you breach this Code of Conduct, Organisers reserve the right to:
 2. Ask you to leave the event immediately.
 3. Ban you from future Pups in the Park events and online communities.
 
-For any questions regarding this policy, please contact the Events team via [events@pupsinthepark.uk](mailto:events@pupsinthepark.uk).
+For any questions regarding this policy, please contact the Events team via <events@pupsinthepark.uk>.
