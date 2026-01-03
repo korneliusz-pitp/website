@@ -22,7 +22,7 @@ links:
       - label: Gallery
         to: /events/gallery
       - label: Rules & Safety
-        to: /events/conduct
+        to: /events/rules
   - label: Get Involved
     to: /get-involved
 to: /
