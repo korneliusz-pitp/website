@@ -50,6 +50,7 @@
           variant="link"
           square
           aria-label="Edit content in Studio"
+          external
         />
         <ProseP>{{ footnote }}</ProseP>
       </div>
