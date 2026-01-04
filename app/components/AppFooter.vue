@@ -42,7 +42,17 @@
     </template>
 
     <template #right>
-      <ProseP>{{ footnote }}</ProseP>
+      <div class="flex items-center gap-2">
+        <UButton
+          to="/_studio"
+          icon="i-heroicons-pencil"
+          color="neutral"
+          variant="link"
+          square
+          aria-label="Edit content in Studio"
+        />
+        <ProseP>{{ footnote }}</ProseP>
+      </div>
     </template>
   </UFooter>
 </template>
