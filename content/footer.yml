@@ -14,13 +14,13 @@ socials:
     icon: i-simple-icons-discord
 quickLinks:
   - label: Code of Conduct
-    to: /code-of-conduct
+    to: /policies/code-of-conduct
   - label: Report a Concern
     to: /report
   - label: Volunteer
     to: /get-involved
   - label: Privacy Policy
-    to: /privacy
+    to: /policies/privacy
 contacts:
   - label: Info
     email: info@pupsinthepark.uk
