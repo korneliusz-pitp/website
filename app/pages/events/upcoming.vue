@@ -1,21 +1,4 @@
 <script setup lang="ts">
-interface Event {
-  date?: string
-  time?: {
-    start?: string
-    end?: string
-  }
-  title?: string
-  description?: string
-  location?: {
-    name?: string
-    address?: string
-  }
-  status?: 'draft' | 'published' | 'cancelled'
-  coverImage?: string
-  _path?: string
-}
-
 useSeoMeta({
   title: 'Upcoming Events',
   description: 'View all upcoming Pups in the Park events and meetups.',
@@ -24,27 +7,28 @@ useSeoMeta({
 const { data: events } = await useAsyncData('upcoming-events', () =>
   queryCollection('events')
     .where('status', '=', 'published')
+    .orWhere(query => 
+      query
+        .where('date', '>', new Date().toISOString())
+        .where('date', 'IS NULL')
+    )
+    .order('date', 'ASC')
     .all(),
 )
 
-const upcomingEvents = (events.value as Event[])
-  .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
-  .sort((a, b) => {
-    const dateA = new Date(a.date || '')
-    const dateB = new Date(b.date || '')
-    return dateA.getTime() - dateB.getTime()
-  })
+console.log('Upcoming events:', events.value);
 
-// Server-side redirects
-if (upcomingEvents.length === 0) {
+if (!events.value || events.value.length === 0) {
   throw navigateTo('/events', { replace: true, redirectCode: 307 })
-} else if (upcomingEvents.length === 1 && upcomingEvents[0]?._path) {
-  throw navigateTo(upcomingEvents[0]._path, { replace: true, redirectCode: 307 })
+} else if (events.value.length == 1 && events.value[0]?.path) {
+  throw navigateTo(events.value[0].path, { replace: true, redirectCode: 307 })
 }
+
 </script>
 
 <template>
   <UPage>
+    {{ events?.length }}
     <UContainer>
       <!-- Page Header -->
       <UPageHero
@@ -57,8 +41,8 @@ if (upcomingEvents.length === 0) {
           <!-- Multiple Events: Display as Grid -->
           <div class="grid gap-6 lg:grid-cols-2">
             <EventCard
-              v-for="event in upcomingEvents"
-              :key="event._path"
+              v-for="event in events"
+              :key="event.path"
               :title="event.title"
               :description="event.description"
               :date="event.date"
@@ -66,7 +50,7 @@ if (upcomingEvents.length === 0) {
               :location="event.location"
               :cover-image="event.coverImage"
               :status="event.status"
-              :to="event._path"
+              :to="event.path"
               orientation="vertical"
             />
           </div>
