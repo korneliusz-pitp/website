@@ -55,7 +55,7 @@ To ensure the safety and comfort of our primary demographic, we strictly enforce
 Our events are held in public parks shared with families, dog walkers, and the general public.
 
 - **PG Rating:** All behaviour, attire, and conversation must remain suitable for a general audience (PG-rated).
-- **Gear & Dress:** We welcome kemomimi gear (ears, tails), fursuits, and alternative fashion. However, gear must not be explicitly sexual or fetishistic.
+- **Gear & Dress:**&#x57;e welcome kemomimi gear (ears, tails), fursuits, and alternative fashion. However, gear must not be explicitly sexual or fetishistic.
   - *Permitted:* Ears, tails, paws, street-legal collars/harnesses.
   - *Not Permitted:* Exposed fetish gear (e.g., gags, bondage restraints), pup hoods, leashes attached to collars for "walking" humans, or indecent exposure.
   - **Muzzles:** All types of muzzles are strictly banned. They are considered NSFW and count as prohibited gear.
@@ -72,7 +72,7 @@ Our events are held in public parks shared with families, dog walkers, and the g
 
 ## 5. Prohibited Items
 
-- **Weapons:** No knives or weapons are permitted at the event. This includes Swiss Army knives and multi-tools.
+- **Weapons:**&#x4E;o knives or weapons are permitted at the event. This includes Swiss Army knives and multi-tools.
   - *Exception:* **Medics** (identifiable by **Green Lanyards**) are permitted to carry tools necessary for their role.
 - **Alcohol:** No alcohol is to be consumed at the event.
 - **Illegal Drugs:** The possession or use of illegal drugs (narcotics) is strictly prohibited. Depending on severity, the **Police will be contacted**.
@@ -96,7 +96,7 @@ Organisers reserve the right to search bags and coats if there is reasonable sus
 
 - **"Think Consent":** Always ask for permission before taking photos or videos of specific individuals.
 - **Opt-Out:** If you do not wish to be photographed, please let the photographer know.
-- **Content Team:** The official Pups in the Park Content Team are exempt from the individual permission rule, as all official photos are screened before posting.
+- **Content Team:**&#x54;he official Pups in the Park Content Team are exempt from the individual permission rule, as all official photos are screened before posting.
   - *Identification:* Content Team members wear a **Black Lanyard with a Purple ID Tag** bearing "Content".
 
 ## 8. Safeguarding and Reporting
