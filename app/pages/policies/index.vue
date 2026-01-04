@@ -9,7 +9,7 @@
             v-for="policy in policies"
             :key="policy.path"
             :to="policy.path"
-            class="block p-6 border border-gray-200 rounded-lg hover:bg-gray-50"
+            class="block p-6 border border-neutral-200 rounded-lg hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800"
           >
             <ProseH2 class="my-0">{{ policy.title }}</ProseH2>
           </NuxtLink> 
