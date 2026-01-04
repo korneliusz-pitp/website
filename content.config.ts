@@ -103,6 +103,19 @@ export default defineContentConfig({
         footnote: z.string().optional(),
       }),
     }),
+    event: defineCollection({
+      type: "page",
+      source: "events/index.yml",
+      schema: z.object({
+        cta: z
+          .object({
+            title: z.string().optional(),
+            description: z.string().optional(),
+            button: buttonSchema.optional(),
+          })
+          .optional(),
+      }),
+    }),
     events: defineCollection({
       type: "page",
       source: "events/*.md",

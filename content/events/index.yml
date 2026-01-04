@@ -1,0 +1,8 @@
+title: "Events"
+description: "Join the Pups in the Park community at our upcoming gatherings and meetups"
+cta:
+  title: Event Guidelines
+  description: Before attending, please review our community guidelines and what to bring.
+  button:
+    label: View Guidelines
+    to: /events/rules

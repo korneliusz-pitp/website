@@ -1,25 +1,10 @@
 <script setup lang="ts">
-interface Event {
-  date?: string
-  time?: {
-    start?: string
-    end?: string
-  }
-  title?: string
-  description?: string
-  location?: {
-    name?: string
-    address?: string
-  }
-  status?: 'draft' | 'published' | 'cancelled'
-  coverImage?: string
-  _path?: string
-}
-
 useSeoMeta({
   title: 'Events',
   description: 'Discover Pups in the Park events, meetups and gatherings for the UK kemonomimi community.',
 })
+
+const { data: page } = await useAsyncData('events-page', () => queryCollection('event').first())
 
 const { data: events } = await useAsyncData('events', () =>
   queryCollection('events')
@@ -29,7 +14,7 @@ const { data: events } = await useAsyncData('events', () =>
 
 const upcomingEvents = computed(() => {
   if (!events.value) return []
-  return (events.value as Event[])
+  return (events.value)
     .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
     .sort((a, b) => {
       const dateA = new Date(a.date || '')
@@ -40,7 +25,7 @@ const upcomingEvents = computed(() => {
 
 const pastEvents = computed(() => {
   if (!events.value) return []
-  return (events.value as Event[])
+  return (events.value)
     .filter((event) => getEventDateTime(event.date, event.time).isPast)
     .sort((a, b) => {
       const dateA = new Date(a.date || '')
@@ -52,11 +37,11 @@ const pastEvents = computed(() => {
 
 <template>
   <UPage>
-    <UContainer>
+    <UContainer v-if="page">
       <!-- Page Header -->
       <UPageHero
-        title="Events"
-        description="Join the Pups in the Park community at our upcoming gatherings and meetups"
+        :title=page.title 
+        :description=page.description
       />
 
       <UPageBody>
@@ -73,7 +58,7 @@ const pastEvents = computed(() => {
               >
                 <EventCard
                   v-for="event in upcomingEvents"
-                  :key="event._path"
+                  :key="event.path"
                   :title="event.title"
                   :description="event.description"
                   :date="event.date"
@@ -98,7 +83,7 @@ const pastEvents = computed(() => {
             <div class="grid gap-6 lg:grid-cols-2">
               <EventCard
                 v-for="event in pastEvents"
-                :key="event._path"
+                :key="event.path"
                 :title="event.title"
                 :description="event.description"
                 :date="event.date"
@@ -115,17 +100,15 @@ const pastEvents = computed(() => {
             <template #header>
               <div class="flex items-center gap-2">
                 <UIcon name="i-lucide-shield-check" class="w-5 h-5" />
-                <h3 class="font-semibold">Event Guidelines</h3>
+                <h3 class="font-semibold">{{ page.cta?.title }}</h3>
               </div>
             </template>
             <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4">
-              Before attending, please review our community guidelines and what to bring.
+              {{ page.cta?.description }}
             </p>
-            <NuxtLink to="/events/conduct">
-              <UButton color="primary" variant="soft" icon="i-lucide-arrow-right" trailing>
-                View Guidelines
+              <UButton :to="page.cta?.button?.to" color="primary" variant="soft" icon="i-lucide-arrow-right" trailing>
+                {{ page.cta?.button?.label }}
               </UButton>
-            </NuxtLink>
           </UCard>
         </div>
       </UPageBody>
