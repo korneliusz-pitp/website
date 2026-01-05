@@ -10,8 +10,7 @@ callToAction:
     icon: i-lucide-external-link
 contactEmail: events@pupsinthepark.uk
 description: A summary of our attendee code of conduct.
-intro: |
-  Pups in the Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
+intro: Pups In The Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
 keyRules:
   - label: Consent & Respect
     icon: i-lucide-heart-handshake

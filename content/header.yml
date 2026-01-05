@@ -1,4 +1,4 @@
-title: Pups in the Park
+title: Pups In The Park
 buttons:
   - label: Contact
     to: /contact
@@ -28,4 +28,4 @@ links:
 to: /
 toggle:
   color: primary
-  variant: subtle
+  variant: ghost

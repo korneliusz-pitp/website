@@ -2,10 +2,10 @@
 title: Pups In The Park 2
 coverImage: /images/Untitled-design.webp
 date: 2025-10-18
-description: Our second PITP on October 18th, 2025
+description: Our Second meet on the 18th October 2025
 gallery: []
 location:
-  name: Cannon Hill
+  name: Cannon Hill Park
   address: Birmingham, B12 9QH
   map: ""
   what3words: held.insect.strut
@@ -15,6 +15,7 @@ seo:
 status: published
 time:
   start: 12:00
+  end: 18:00
 ---
 
 # Activities
