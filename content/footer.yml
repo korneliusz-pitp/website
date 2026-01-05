@@ -1,7 +1,34 @@
 brand:
-  title: Pups in the Park
+  title: Pups In The Park
   description:
-    - The UK's Largest non-profit kemonomimi/alternative meet!
+    - The UK's Largest non-profit Kemonomimi/Alternative meet!
+contacts:
+  - label: Info
+    email: info@pupsinthepark.uk
+    icon: i-heroicons-envelope
+  - label: Safeguarding
+    email: safeguarding@pupsinthepark.uk
+    icon: i-heroicons-shield-check
+  - label: Speak to our event team!
+    icon: i-heroicons-chat-bubble-left-right
+    email: events@pupsinthepark.uk
+footnote: Designed in the UK
+quickLinks:
+  - label: Code of Conduct
+    to: /policies/code-of-conduct
+    icon: i-heroicons-document-check
+  - label: Report a Concern
+    to: /report
+    icon: i-heroicons-exclamation-triangle
+  - label: Get Involved
+    to: /get-involved
+    icon: i-heroicons-user-group
+  - label: Privacy Policy
+    to: /policies/privacy
+    icon: i-heroicons-hand-raised
+  - label: Already A Volunteer?
+    icon: i-heroicons-chevron-right
+    disabled: "True"
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
@@ -12,23 +39,3 @@ socials:
   - label: Discord
     to: https://discord.gg/9Sz2msbSDq
     icon: i-simple-icons-discord
-quickLinks:
-  - label: Code of Conduct
-    to: /policies/code-of-conduct
-  - label: Report a Concern
-    to: /report
-  - label: Volunteer
-    to: /get-involved
-  - label: Privacy Policy
-    to: /policies/privacy
-contacts:
-  - label: Info
-    email: info@pupsinthepark.uk
-    icon: i-heroicons-envelope
-  - label: Safeguarding
-    email: safeguarding@pupsinthepark.uk
-    icon: i-heroicons-shield-check
-  # - label: Press & Media
-  #   email: management@pupsinthepark.uk
-  #   icon: i-heroicons-camera
-footnote: Designed in the UK.
