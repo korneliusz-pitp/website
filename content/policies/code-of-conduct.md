@@ -44,10 +44,7 @@ To ensure the safety and comfort of our primary demographic, we strictly enforce
 
 **Restricted Access.**
 
-- Attendance is **not permitted**for those aged 30 and over, with the following strict exceptions:
-  1. You are the parent/guardian actively supervising a child (Under 13) or a teen requiring support.
-  2. You are a registered carer for an attendee with a disability.
-  3. You are an official Volunteer or Organiser approved by the event management.
+- Attendance is **not permitted** for those aged 30 and over, with the following strict exceptions:--- Unknown node: hardBreak ---You are the parent/guardian actively supervising a child (Under 13) or a teen requiring support.You are a registered carer for an attendee with a disability.You are an official Volunteer or Organiser approved by the event management.
 - Adults attending as guardians must focus on supervision and must not use the event to socialise independently of their ward.
 
 ## 3. Public Decency
