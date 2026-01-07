@@ -28,7 +28,7 @@ quickLinks:
     icon: i-heroicons-hand-raised
   - label: Already A Volunteer?
     icon: i-heroicons-chevron-right
-    disabled: "True"
+    disabled: true
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
