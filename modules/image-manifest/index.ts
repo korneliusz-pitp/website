@@ -1,5 +1,5 @@
 import { defineNuxtModule } from "@nuxt/kit";
-import { readdir, stat, writeFile } from "fs/promises";
+import { readdir, stat, writeFile, readFile } from "fs/promises";
 import { join, relative } from "path";
 
 export interface ImageFile {
@@ -143,7 +143,9 @@ export default defineNuxtModule({
       const imagesDir = join(publicDir, options.scanPath);
 
       try {
-        const images = await scanDirectory(imagesDir, publicDir);
+        const images = (await scanDirectory(imagesDir, publicDir)).sort(
+          (a, b) => a.path.localeCompare(b.path)
+        );
 
         const categories = [
           ...new Set(images.map((img) => img.category)),
@@ -154,6 +156,17 @@ export default defineNuxtModule({
           .sort()
           .reverse();
 
+        const manifestPath = join(publicDir, options.outputPath);
+
+        let existingManifest: ManifestData | null = null;
+
+        try {
+          const current = await readFile(manifestPath, "utf8");
+          existingManifest = JSON.parse(current) as ManifestData;
+        } catch {
+          existingManifest = null;
+        }
+
         const manifest: ManifestData = {
           images,
           categories,
@@ -161,12 +174,24 @@ export default defineNuxtModule({
           generated: new Date().toISOString(),
         };
 
-        const manifestPath = join(publicDir, options.outputPath);
-        await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+        const stripGenerated = (m: ManifestData | null) => {
+          if (!m) return null;
+          const { generated: _generated, ...rest } = m;
+          return rest;
+        };
 
-        console.log(`✓ Generated manifest with ${images.length} images`);
-        console.log(`✓ Categories: ${categories.join(", ") || "none"}`);
-        console.log(`✓ Date folders: ${dates.length}`);
+        if (
+          existingManifest &&
+          JSON.stringify(stripGenerated(existingManifest)) ===
+            JSON.stringify(stripGenerated(manifest))
+        ) {
+          console.log("✓ Manifest unchanged; skipping write");
+        } else {
+          await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+          console.log(`✓ Generated manifest with ${images.length} images`);
+          console.log(`✓ Categories: ${categories.join(", ") || "none"}`);
+          console.log(`✓ Date folders: ${dates.length}`);
+        }
       } catch (error) {
         console.error("Error generating manifest:", error);
       }
