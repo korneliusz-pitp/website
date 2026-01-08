@@ -321,21 +321,22 @@
       "modified": "2026-01-07T16:49:33.275Z"
     },
     {
+      "path": "/images/events/banners/pitp2.webp",
+      "name": "pitp2.webp",
+      "category": "banners",
+      "size": 1177974,
+      "modified": "2026-01-02T01:32:05.417Z"
+    },
+    {
       "path": "/images/PLACEHOLD.svg",
       "name": "PLACEHOLD.svg",
       "category": "uncategorized",
       "size": 10354,
       "modified": "2026-01-02T20:25:35.601Z"
-    },
-    {
-      "path": "/images/Untitled-design.webp",
-      "name": "Untitled-design.webp",
-      "category": "uncategorized",
-      "size": 1177974,
-      "modified": "2026-01-02T01:32:05.417Z"
     }
   ],
   "categories": [
+    "banners",
     "events",
     "uncategorized"
   ],
@@ -343,5 +344,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-08T01:01:03.084Z"
+  "generated": "2026-01-08T02:34:38.843Z"
 }

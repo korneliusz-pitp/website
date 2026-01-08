@@ -1,9 +1,8 @@
 ---
 title: Pups In The Park 2
-coverImage: /images/Untitled-design.webp
+coverImage: /images/events/banners/pitp2.webp
 date: 2025-10-18
 description: Our Second meet on the 18th October 2025
-gallery: []
 location:
   name: Cannon Hill Park
   address: Birmingham, B12 9QH

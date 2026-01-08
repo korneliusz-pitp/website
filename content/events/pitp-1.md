@@ -4,11 +4,6 @@ coverImage: /images/events/2025-07-05/IMG_4715.webp
 date: 2025-07-05
 description: Our Founding meet on the 5th July 2025
 feedbackLink: https://docs.google.com/forms/d/e/1FAIpQLSfaPeMZ-vbQjooBAQ1Ag6jtaq2ORtQOUH1sNbVPh-h_DTELXg/viewform?usp=sharing&ouid=108820849382766974072
-gallery:
-  - ""
-  - ""
-  - ""
-  - ""
 location:
   map: ""
   address: ""
