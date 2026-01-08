@@ -73,4 +73,11 @@ export default defineNuxtConfig({
       bindingName: "DB",
     },
   },
+
+  image: {
+    provider: "cloudflare",
+    cloudflare: {
+      baseURL: "https://pupsinthepark.uk/",
+    }
+  },
 });
