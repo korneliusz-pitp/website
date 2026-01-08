@@ -116,6 +116,10 @@ export default defineContentConfig({
           .optional(),
       }),
     }),
+    event_gallery: defineCollection({
+      type: "page",
+      source: "events/gallery.yml",
+    }),
     events: defineCollection({
       type: "page",
       source: "events/*.md",

@@ -1,5 +1,7 @@
 <template>
   <UContainer class="py-8 space-y-6">
+    <UPageHeader :title="gallery?.title" :description="gallery?.description" />
+
     <UAlert
       color="warning"
       title="Under Construction"
@@ -7,34 +9,26 @@
       icon="i-lucide-alert-triangle"
     />
 
-    <UScrollArea
-      ref="scrollArea"
-      v-slot="{ item, index }"
-      :items="images"
-      :virtualize="{
-        gap: 16,
-        lanes: 3,
-        estimateSize: 480,
-      }"
-      class="w-full h-128 p-4"
-    >
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
       <NuxtImg
+        v-for="(item, index) in images"
+        :key="item.path"
         :src="item.path"
         :alt="item.name"
         sizes="100vw sm:50vw md:400px"
         format="webp"
         :quality="70"
         :loading="index > 8 ? 'lazy' : 'eager'"
-        class="rounded-md size-full object-cover"
+        class="w-full h-auto object-cover mb-4 break-inside-avoid"
         placeholder
       />
-    </UScrollArea>
+    </div>
 
     <UProgress
       v-if="status === 'pending'"
       indeterminate
       size="xs"
-      class="absolute top-0 inset-x-0 z-1"
+      class="fixed top-0 inset-x-0 z-50"
       :ui="{ base: 'bg-default' }"
     />
   </UContainer>
@@ -72,22 +66,29 @@ watch(data, () => {
 
 execute();
 
-const scrollArea = useTemplateRef("scrollArea");
-
 onMounted(() =>
   useInfiniteScroll(
-    scrollArea.value?.$el,
+    document,
     () => {
       offset.value += 10;
     },
     {
-      distance: 200,
+      distance: 500,
       canLoadMore: () => {
         return data.value?.hasMore || false;
       },
     }
   )
 );
+
+const { data: gallery } = await useAsyncData(`event-gallery`, () => {
+  return queryCollection("event_gallery").first();
+});
+
+useSeoMeta({
+  title: gallery.value?.title,
+  description: gallery.value?.description,
+});
 </script>
 
 <style></style>
