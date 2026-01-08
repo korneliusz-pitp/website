@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   image: {
     provider: "cloudflare",
     cloudflare: {
-      baseURL: "https://pupsinthepark.uk/",
+      baseURL: "https://preview.pupsinthepark.uk/", // TODO: Update this when needed lol
     }
   },
 });
