@@ -137,9 +137,6 @@ export default defineContentConfig({
           .optional(),
         status: z.enum(["draft", "published", "cancelled"]).default("draft"),
         coverImage: property(z.string().optional()).editor({ input: "media" }),
-        gallery: z.array(
-          property(z.string().optional()).editor({ input: "media" })
-        ),
         registrationLink: z.url().optional(),
         feedbackLink: z.url().optional(),
       }),
