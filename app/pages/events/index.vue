@@ -1,48 +1,45 @@
 <script setup lang="ts">
+const { data: page } = await useAsyncData("events-page", () =>
+  queryCollection("event").first()
+);
+
 useSeoMeta({
-  title: 'Events',
-  description: 'Discover Pups in the Park events, meetups and gatherings for the UK kemonomimi community.',
-})
+  title: page.value?.title,
+  description: page.value?.description,
+});
 
-const { data: page } = await useAsyncData('events-page', () => queryCollection('event').first())
-
-const { data: events } = await useAsyncData('events', () =>
-  queryCollection('events')
-    .where('status', '=', 'published')
-    .all(),
-)
+const { data: events } = await useAsyncData("events", () =>
+  queryCollection("events").where("status", "=", "published").all()
+);
 
 const upcomingEvents = computed(() => {
-  if (!events.value) return []
-  return (events.value)
+  if (!events.value) return [];
+  return events.value
     .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
     .sort((a, b) => {
-      const dateA = new Date(a.date || '')
-      const dateB = new Date(b.date || '')
-      return dateA.getTime() - dateB.getTime()
-    })
-})
+      const dateA = new Date(a.date || "");
+      const dateB = new Date(b.date || "");
+      return dateA.getTime() - dateB.getTime();
+    });
+});
 
 const pastEvents = computed(() => {
-  if (!events.value) return []
-  return (events.value)
+  if (!events.value) return [];
+  return events.value
     .filter((event) => getEventDateTime(event.date, event.time).isPast)
     .sort((a, b) => {
-      const dateA = new Date(a.date || '')
-      const dateB = new Date(b.date || '')
-      return dateB.getTime() - dateA.getTime()
-    })
-})
+      const dateA = new Date(a.date || "");
+      const dateB = new Date(b.date || "");
+      return dateB.getTime() - dateA.getTime();
+    });
+});
 </script>
 
 <template>
   <UPage>
     <UContainer v-if="page">
       <!-- Page Header -->
-      <UPageHero
-        :title=page.title 
-        :description=page.description
-      />
+      <UPageHero :title="page.title" :description="page.description" />
 
       <UPageBody>
         <!-- Upcoming Events Section -->
@@ -67,13 +64,23 @@ const pastEvents = computed(() => {
                   :cover-image="event.coverImage"
                   :status="event.status"
                   :to="event.path"
-                  :orientation="upcomingEvents.length === 1 ? 'horizontal' : 'vertical'"
+                  :orientation="
+                    upcomingEvents.length === 1 ? 'horizontal' : 'vertical'
+                  "
                 />
               </div>
             </div>
-            <div v-else class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-8 text-center">
-              <UIcon name="i-lucide-calendar-off" class="w-12 h-12 mx-auto text-neutral-400 mb-3" />
-              <p class="text-neutral-600 dark:text-neutral-400">No upcoming events scheduled yet.</p>
+            <div
+              v-else
+              class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-8 text-center"
+            >
+              <UIcon
+                name="i-lucide-calendar-off"
+                class="w-12 h-12 mx-auto text-neutral-400 mb-3"
+              />
+              <p class="text-neutral-600 dark:text-neutral-400">
+                No upcoming events scheduled yet.
+              </p>
             </div>
           </div>
 
@@ -106,9 +113,15 @@ const pastEvents = computed(() => {
             <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4">
               {{ page.cta?.description }}
             </p>
-              <UButton :to="page.cta?.button?.to" color="primary" variant="soft" icon="i-lucide-arrow-right" trailing>
-                {{ page.cta?.button?.label }}
-              </UButton>
+            <UButton
+              :to="page.cta?.button?.to"
+              color="primary"
+              variant="soft"
+              icon="i-lucide-arrow-right"
+              trailing
+            >
+              {{ page.cta?.button?.label }}
+            </UButton>
           </UCard>
         </div>
       </UPageBody>
