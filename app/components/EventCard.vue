@@ -1,20 +1,20 @@
 <script setup lang="ts">
 interface EventCardProps {
-  title?: string
-  description?: string
-  date?: string
+  title?: string;
+  description?: string;
+  date?: string;
   time?: {
-    start?: string
-    end?: string
-  }
+    start?: string;
+    end?: string;
+  };
   location?: {
-    name?: string
-    address?: string
-  }
-  status?: 'draft' | 'published' | 'cancelled'
-  coverImage?: string
-  to?: string
-  orientation?: 'vertical' | 'horizontal'
+    name?: string;
+    address?: string;
+  };
+  status?: "draft" | "published" | "cancelled";
+  coverImage?: string;
+  to?: string;
+  orientation?: "vertical" | "horizontal";
 }
 
 const props = withDefaults(defineProps<EventCardProps>(), {
@@ -23,18 +23,23 @@ const props = withDefaults(defineProps<EventCardProps>(), {
   date: undefined,
   time: undefined,
   location: undefined,
-  status: 'draft',
+  status: "draft",
   coverImage: undefined,
   to: undefined,
-  orientation: 'vertical',
-})
+  orientation: "vertical",
+});
 
 const computedDateTime = computed(() => {
   if (!props.date) {
-    return { formattedDate: null, formattedTimeRange: null, isUpcoming: false, isPast: false }
+    return {
+      formattedDate: null,
+      formattedTimeRange: null,
+      isUpcoming: false,
+      isPast: false,
+    };
   }
-  return getEventDateTime(props.date, props.time)
-})
+  return getEventDateTime(props.date, props.time);
+});
 </script>
 
 <template>
@@ -42,8 +47,12 @@ const computedDateTime = computed(() => {
     :to="to"
     class="group block transition-all duration-300"
     :class="[
-      orientation === 'horizontal' ? 'opacity-100' : 'opacity-75 hover:opacity-100',
-      status === 'published' && !computedDateTime.isPast ? '' : 'opacity-75 hover:opacity-100',
+      orientation === 'horizontal'
+        ? 'opacity-100'
+        : 'opacity-75 hover:opacity-100',
+      status === 'published' && !computedDateTime.isPast
+        ? ''
+        : 'opacity-75 hover:opacity-100',
     ]"
   >
     <div
@@ -61,14 +70,16 @@ const computedDateTime = computed(() => {
           orientation === 'horizontal' ? 'w-48 h-48' : 'w-full h-48',
         ]"
       >
-        <img
+        <NuxtImg
           :src="coverImage"
           :alt="title"
           :class="[
             'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300',
-            status !== 'published' || computedDateTime.isPast ? 'grayscale group-hover:grayscale-0' : '',
+            status !== 'published' || computedDateTime.isPast
+              ? 'grayscale group-hover:grayscale-0'
+              : '',
           ]"
-        >
+        />
       </div>
 
       <!-- Event Details -->
@@ -82,7 +93,9 @@ const computedDateTime = computed(() => {
         <div>
           <div class="flex items-start justify-between gap-3 mb-3">
             <div class="flex-1">
-              <h3 class="text-lg md:text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-primary transition-colors">
+              <h3
+                class="text-lg md:text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-primary transition-colors"
+              >
                 {{ title }}
               </h3>
             </div>
@@ -108,7 +121,10 @@ const computedDateTime = computed(() => {
             </div>
           </div>
 
-          <p v-if="description" class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
+          <p
+            v-if="description"
+            class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2"
+          >
             {{ description }}
           </p>
         </div>
@@ -117,7 +133,10 @@ const computedDateTime = computed(() => {
         <div class="space-y-2 text-sm mt-4">
           <!-- Date & Time -->
           <div class="space-y-1">
-            <div v-if="date" class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+            <div
+              v-if="date"
+              class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300"
+            >
               <UIcon name="i-lucide-calendar" class="w-4 h-4 shrink-0" />
               <span>{{ computedDateTime.formattedDate }}</span>
             </div>
