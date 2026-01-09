@@ -6,13 +6,25 @@
   >
     <template #top>
       <UContainer>
-        <UFooterColumns 
+        <UFooterColumns
+          v-if="footerConfig"
           :columns="footerColumns"
-          :ui="{ center: 'xl:justify-items-end' }"
+          :ui="{
+            center: 'xl:justify-items-end',
+            label: 'text-lg font-semibold text-highlighted mt-0',
+          }"
         >
           <template #left>
-            <ProseH1>{{ brandTitle }}</ProseH1>
-            <ProseP v-for="line in brandDescription" :key="line" size="sm">{{ line }}</ProseP>
+            <h1 class="text-2xl font-bold text-highlighted mb-2">
+              {{ brandTitle }}
+            </h1>
+            <p
+              v-for="line in brandDescription"
+              :key="line"
+              class="text-sm text-muted mb-2"
+            >
+              {{ line }}
+            </p>
 
             <div class="flex gap-1">
               <UButton
@@ -29,16 +41,14 @@
               />
             </div>
           </template>
-
-          <template #column-label="{ column }">
-            <ProseH2 class="mt-0">{{ column.label }}</ProseH2>
-          </template>
         </UFooterColumns>
       </UContainer>
     </template>
 
     <template #left>
-      <ProseP>© {{ year }} {{ brandTitle }} | All Rights Reserved.</ProseP>
+      <p class="text-sm text-muted">
+        © {{ year }} {{ brandTitle }} | All Rights Reserved.
+      </p>
     </template>
 
     <template #right>
@@ -52,41 +62,51 @@
           aria-label="Edit content in Studio"
           external
         />
-        <ProseP>{{ footnote }}</ProseP>
+        <p class="text-sm text-muted">{{ footnote }}</p>
       </div>
     </template>
   </UFooter>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import type { FooterConfig } from '~/composables/useFooterConfig'
-import { useFooterConfig } from '~/composables/useFooterConfig'
-import type { FooterColumn } from '@nuxt/ui'
+import type { FooterConfig } from "~/composables/useFooterConfig";
+import { useFooterConfig } from "~/composables/useFooterConfig";
+import type { FooterColumn } from "@nuxt/ui";
 
-const { data: footerConfig } = await useAsyncData<FooterConfig>('footer-config', () => useFooterConfig())
+const { data: footerConfig } = await useAsyncData<FooterConfig>(
+  "footer-config",
+  () => useFooterConfig()
+);
 
-const brandTitle = computed(() => footerConfig.value?.brand?.title || 'Pups in the Park')
-const brandDescription = computed(() => footerConfig.value?.brand?.description || [])
-const socials = computed(() => footerConfig.value?.socials || [])
-const quickLinks = computed(() => footerConfig.value?.quickLinks || [])
-const contacts = computed(() => footerConfig.value?.contacts || [])
-const footnote = computed(() => footerConfig.value?.footnote || 'All rights reserved. | Designed in the UK.')
+const brandTitle = computed(
+  () => footerConfig.value?.brand?.title || "Pups in the Park"
+);
+const brandDescription = computed(
+  () => footerConfig.value?.brand?.description || []
+);
+const socials = computed(() => footerConfig.value?.socials || []);
+const quickLinks = computed(() => footerConfig.value?.quickLinks || []);
+const contacts = computed(() => footerConfig.value?.contacts || []);
+const footnote = computed(
+  () =>
+    footerConfig.value?.footnote || "All rights reserved. | Designed in the UK."
+);
 
 const footerColumns = computed<FooterColumn[]>(() => [
   {
-    label: 'Quick Links',
-    children: quickLinks.value
+    label: "Quick Links",
+    children: quickLinks.value,
   },
   {
-    label: 'Contact',
-    children: contacts.value.map(contact => ({
+    label: "Contact",
+    children: contacts.value.map((contact) => ({
       label: contact.email,
       href: `mailto:${contact.email}`,
-      icon: contact.icon
-    }))
-  }
-])
+      icon: contact.icon,
+    })),
+  },
+]);
 
-const year = new Date().getFullYear()
+// Use useState to ensure consistent value between server and client hydration
+const year = useState("footer-year", () => new Date().getFullYear());
 </script>
