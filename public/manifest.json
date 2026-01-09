@@ -257,14 +257,6 @@
       "modified": "2026-01-07T16:47:06.763Z"
     },
     {
-      "path": "/images/events/2025-10-18/38.png",
-      "name": "38.png",
-      "category": "events",
-      "date": "2025-10-18",
-      "size": 14477017,
-      "modified": "2026-01-07T16:45:02.968Z"
-    },
-    {
       "path": "/images/events/2025-10-18/39.png",
       "name": "39.png",
       "category": "events",
@@ -344,5 +336,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-08T02:34:38.843Z"
+  "generated": "2026-01-09T13:56:21.281Z"
 }
