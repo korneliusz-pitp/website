@@ -51,14 +51,13 @@ const offset = ref(0);
 const { data, status, execute } = await useFetch("/api/gallery", {
   query: {
     category: "events",
+    offset,
   },
-  key: "scroll-area-images-infinite-scroll",
-  params: { offset },
   lazy: true,
   immediate: false,
 });
 
-const images = ref<Image[]>([]);
+const images = useState<Image[]>("event-gallery-images", () => []);
 
 watch(data, () => {
   images.value = [...images.value, ...(data.value?.images || [])];
@@ -66,20 +65,20 @@ watch(data, () => {
 
 execute();
 
-onMounted(() =>
+onMounted(() => {
   useInfiniteScroll(
     document,
     () => {
-      offset.value += 10;
+      offset.value += 20;
     },
     {
       distance: 500,
       canLoadMore: () => {
-        return data.value?.hasMore || false;
+        return (data.value?.hasMore && status.value === "success") || false;
       },
     }
-  )
-);
+  );
+});
 
 const { data: gallery } = await useAsyncData(`event-gallery`, () => {
   return queryCollection("event_gallery").first();

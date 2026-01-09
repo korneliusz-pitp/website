@@ -4,9 +4,9 @@ import { useInfiniteScroll } from "@vueuse/core";
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const { data: event } = await useAsyncData(`event-${slug}`, () => {
-  return queryCollection("events").path(`/events/${slug}`).first();
-});
+const { data: event } = await useAsyncData(`event-${slug}`, () =>
+  queryCollection("events").path(`/events/${slug}`).first()
+);
 
 if (!event.value) {
   throw createError({
@@ -16,9 +16,9 @@ if (!event.value) {
   });
 }
 
-const { formattedDate, formattedTimeRange, isUpcoming, isPast } = computed(() =>
+const eventDateTime = computed(() =>
   getEventDateTime(event.value!.date, event.value!.time)
-).value;
+);
 
 interface Image {
   path: string;
@@ -34,43 +34,45 @@ const offset = ref(0);
 const {
   data: galleryData,
   status: galleryStatus,
-  execute: fetchGallery,
+  execute,
 } = await useFetch("/api/gallery", {
   query: {
     category: "events",
     date: event.value?.date || "",
-    limit: 100, //TODO: fix infinite scroll so this can be removed
+    offset,
   },
-  key: `event-gallery-${slug}`,
-  params: { offset },
   lazy: true,
   immediate: false,
 });
 
-const images = ref<Image[]>([]);
+const images = useState<Image[]>("images", () => []);
 
 watch(galleryData, () => {
   images.value = [...images.value, ...(galleryData.value?.images || [])];
 });
 
-fetchGallery();
-
 const scrollArea = useTemplateRef("scrollArea");
 
-onMounted(() =>
+onMounted(() => {
+  execute();
+
   useInfiniteScroll(
     scrollArea.value?.$el,
     () => {
-      offset.value += 10;
+      offset.value += 20;
     },
     {
-      distance: 10,
+      distance: 200,
       canLoadMore: () => {
-        return galleryData.value?.hasMore || false;
+        return (
+          (galleryData.value?.hasMore && galleryStatus.value === "success") ||
+          false
+        );
       },
+      direction: "right",
     }
-  )
-);
+  );
+});
 </script>
 
 <template>
@@ -106,7 +108,7 @@ onMounted(() =>
               </div>
               <div v-if="event.status !== 'cancelled'" class="text-right">
                 <UBadge
-                  v-if="isUpcoming"
+                  v-if="eventDateTime.isUpcoming"
                   color="primary"
                   size="lg"
                   class="mb-2"
@@ -114,7 +116,7 @@ onMounted(() =>
                   Upcoming
                 </UBadge>
                 <UBadge
-                  v-else-if="isPast"
+                  v-else-if="eventDateTime.isPast"
                   color="neutral"
                   size="lg"
                   class="mb-2"
@@ -139,15 +141,15 @@ onMounted(() =>
                 </div>
               </template>
               <div class="space-y-2">
-                <div v-if="formattedDate" class="font-medium">
-                  {{ formattedDate }}
+                <div v-if="eventDateTime.formattedDate" class="font-medium">
+                  {{ eventDateTime.formattedDate }}
                 </div>
                 <div v-else class="text-amber-600 dark:text-amber-500">TBC</div>
                 <div
-                  v-if="formattedTimeRange"
+                  v-if="eventDateTime.formattedTimeRange"
                   class="text-sm text-gray-600 dark:text-gray-400"
                 >
-                  {{ formattedTimeRange }}
+                  {{ eventDateTime.formattedTimeRange }}
                 </div>
               </div>
             </UCard>
@@ -208,32 +210,30 @@ onMounted(() =>
           </div>
 
           <!-- Gallery -->
-          <div v-if="images.length > 0" class="mb-8">
-            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
-            <UScrollArea
-              ref="scrollArea"
-              v-slot="{ item, index }"
-              :items="images"
-              orientation="horizontal"
-              :virtualize="{
-                gap: 10,
-                lanes: 2,
-                estimateSize: 480,
-              }"
-              class="w-full h-128 p-4"
-            >
-              <NuxtImg
-                :src="item.path"
-                :alt="`${event.title} - Gallery image`"
-                sizes="100vh sm:50vh md:400px"
-                format="webp"
-                :quality="70"
-                :loading="index > 8 ? 'lazy' : 'eager'"
-                class="size-full object-cover"
-                placeholder
-              />
-            </UScrollArea>
-          </div>
+          <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+          <UScrollArea
+            ref="scrollArea"
+            v-slot="{ item, index }"
+            :items="images"
+            orientation="horizontal"
+            :virtualize="{
+              gap: 10,
+              lanes: 2,
+              estimateSize: 340,
+            }"
+            class="w-full h-128 p-4"
+          >
+            <NuxtImg
+              :src="item.path"
+              :alt="`${event.title} - Gallery image`"
+              sizes="100vh sm:50vh md:400px"
+              format="webp"
+              :quality="70"
+              :loading="index > 8 ? 'lazy' : 'eager'"
+              class="size-full object-cover"
+              placeholder
+            />
+          </UScrollArea>
 
           <UProgress
             v-if="galleryStatus === 'pending'"
@@ -258,7 +258,7 @@ onMounted(() =>
               <div
                 v-if="
                   event.registrationLink &&
-                  isUpcoming &&
+                  eventDateTime.isUpcoming &&
                   event.date &&
                   event.location?.name
                 "
@@ -287,7 +287,7 @@ onMounted(() =>
                   </p>
                 </div>
                 <div
-                  v-else-if="isPast"
+                  v-else-if="eventDateTime.isPast"
                   class="rounded-lg bg-info-50 dark:bg-info-950 p-3 text-sm"
                 >
                   <p class="text-info-900 dark:text-info-100">

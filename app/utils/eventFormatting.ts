@@ -38,6 +38,7 @@ export const getEventDateTime = (
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "Europe/London",
     });
   })();
 
@@ -46,6 +47,8 @@ export const getEventDateTime = (
       dt.toLocaleTimeString("en-GB", {
         hour: "2-digit",
         minute: "2-digit",
+        timeZone: "Europe/London",
+        hour12: false,
       });
 
     if (startDateTime && endDateTime) {
