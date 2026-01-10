@@ -1,0 +1,66 @@
+title: About Pups in the Park
+callToAction:
+  title: Get Involved
+  description: Join us at one of our regular meetups or events, or get in touch to learn how you can contribute to our community.
+  buttons:
+    - label: View Upcoming Events
+      to: /events/upcoming
+      color: primary
+      variant: solid
+      icon: i-lucide-calendar
+    - label: Join the Discord
+      to: https://discord.gg/9Sz2msbSDq
+      target: _blank
+      color: neutral
+      variant: outline
+      icon: i-simple-icons-discord
+description: Learn about our community, values, and the team behind Pups in the Park.
+intro: Pups in the Park is a UK-based community organisation dedicated to bringing together people who share an interest in kemonomimi culture and alternative lifestyles. We create safe, welcoming spaces where members of our community can meet, socialise, and celebrate their identities.
+mission:
+  title: Our Mission
+  content: To foster an inclusive, safe, and vibrant community where people interested in kemonomimi culture and alternative lifestyles can express themselves authentically and build meaningful connections with others who share their passions.
+team:
+  - name: Beck
+    role: Founder & Lead Organiser
+    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    image: /images/brand/placeholder.png
+    socials:
+      - icon: i-lucide-mail
+        url: mailto:example@pupsinthepark.uk
+        label: Email
+  - name: Rea
+    role: Event Coordinator
+    bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    image: /images/brand/placeholder.png
+    socials:
+      - icon: i-lucide-mail
+        url: mailto:member@pupsinthepark.uk
+        label: Email
+  - name: Matt
+    role: Systems Administrator
+    bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    image: /images/brand/placeholder.png
+    socials:
+      - icon: i-lucide-mail
+        url: mailto:member@pupsinthepark.uk
+        label: Email
+  - name: Mads
+    role: Community Manager
+  - name: Princefizz
+    role: Creative Manager
+values:
+  - label: Inclusivity
+    description: We welcome everyone who shares our values, regardless of background, identity, or experience.
+    icon: i-lucide-users
+  - label: Safety
+    description: We prioritise the safety and wellbeing of all community members through clear policies and attentive organisation.
+    icon: i-lucide-shield-check
+  - label: Respect
+    description: We treat each other with kindness, respect, and consideration for different perspectives.
+    icon: i-lucide-heart-handshake
+  - label: Authenticity
+    description: We celebrate and encourage genuine self-expression and the freedom to be yourself.
+    icon: i-lucide-sparkles
+  - label: Community
+    description: We believe in the power of coming together and supporting one another.
+    icon: i-lucide-hand-helping

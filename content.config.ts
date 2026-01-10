@@ -195,5 +195,57 @@ export default defineContentConfig({
       type: "page",
       source: "policies/*.md",
     }),
+    about: defineCollection({
+      type: "page",
+      source: "about.yml",
+      schema: z.object({
+        title: z.string().optional(),
+        description: z.string().optional(),
+        intro: z.string().optional(),
+        mission: z
+          .object({
+            title: z.string(),
+            content: z.string(),
+          })
+          .optional(),
+        values: z
+          .array(
+            z.object({
+              label: z.string(),
+              description: z.string(),
+              icon: property(z.string().optional()).editor({ input: "icon" }),
+            })
+          )
+          .optional(),
+        team: z
+          .array(
+            z.object({
+              name: z.string(),
+              role: z.string(),
+              bio: z.string().optional(),
+              image: property(z.string().optional()).editor({ input: "media" }),
+              socials: z
+                .array(
+                  z.object({
+                    icon: property(z.string().optional()).editor({
+                      input: "icon",
+                    }),
+                    url: z.url().optional(),
+                    label: z.string().optional(),
+                  })
+                )
+                .optional(),
+            })
+          )
+          .optional(),
+        callToAction: z
+          .object({
+            title: z.string().optional(),
+            description: z.string().optional(),
+            buttons: z.array(buttonSchema.optional()).optional(),
+          })
+          .optional(),
+      }),
+    }),
   },
 });
