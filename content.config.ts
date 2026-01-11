@@ -227,7 +227,6 @@ export const collections = {
       title: z.string().optional(),
       description: z.string().optional(),
       intro: z.string().optional(),
-      application: button().optional(),
       timeline: z
         .array(
           z.object({

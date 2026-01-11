@@ -1,12 +1,13 @@
 ---
 title: Spring Meet 2025
+date: 2026-03-20
 coverImage: /images/PLACEHOLD.svg
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 gallery: []
 location:
   name: ""
 registrationLink: ""
-status: draft
+status: published
 ---
 
 ::note{color="primary"}
