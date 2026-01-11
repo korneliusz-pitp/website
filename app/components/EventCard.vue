@@ -79,6 +79,8 @@ const computedDateTime = computed(() => {
               ? 'grayscale group-hover:grayscale-0'
               : '',
           ]"
+          format="webp"
+          placeholder
         />
       </div>
 

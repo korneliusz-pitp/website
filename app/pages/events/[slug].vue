@@ -45,7 +45,7 @@ const {
   immediate: false,
 });
 
-const images = useState<Image[]>("images", () => []);
+const images = useState<Image[]>(`event-gallery-${slug}`, () => []);
 
 watch(galleryData, () => {
   images.value = [...images.value, ...(galleryData.value?.images || [])];
