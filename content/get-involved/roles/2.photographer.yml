@@ -1,0 +1,16 @@
+name: Photographer
+description: >-
+  Capture the vibe while strictly following our media & privacy
+  policies. Experience preferred; portfolio links welcome.
+icon: i-lucide-camera
+available: false
+colorHex: "#db2777"
+apply:
+  label: Apply
+  to: https://forms.gle/photography-form
+  target: _blank
+details:
+  requirements:
+    - Portfolio demonstrating event or portrait work
+    - Respect for privacy and consent policies
+    - Own camera and equipment

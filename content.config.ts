@@ -176,7 +176,7 @@ export const collections = {
 
   team: defineCollection({
     type: "data",
-    source: "team/*.yml",
+    source: "about/team/*.yml",
     schema: z.object({
       name: z.string(),
       role: z.string(),
@@ -196,7 +196,7 @@ export const collections = {
 
   about: defineCollection({
     type: "page",
-    source: "about.yml",
+    source: "about/index.yml",
     schema: z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -217,6 +217,50 @@ export const collections = {
         )
         .optional(),
       callToAction: cta().optional(),
+    }),
+  }),
+
+  get_involved: defineCollection({
+    type: "page",
+    source: "get-involved/index.yml",
+    schema: z.object({
+      title: z.string().optional(),
+      description: z.string().optional(),
+      intro: z.string().optional(),
+      application: button().optional(),
+      timeline: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string().optional(),
+            icon: z.string().optional().editor({ input: "icon" }),
+          })
+        )
+        .optional(),
+      callToAction: cta().optional(),
+    }),
+  }),
+
+  volunteer_roles: defineCollection({
+    type: "data",
+    source: "get-involved/roles/*.yml",
+    schema: z.object({
+      name: z.string(),
+      description: z.string().optional(),
+      icon: z.string().optional().editor({ input: "icon" }),
+      available: z.boolean(),
+      colorHex: z
+        .string()
+        .regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/)
+        .optional(),
+      apply: link().optional(),
+      details: z
+        .object({
+          requirements: z.array(z.string()).optional(),
+          duties: z.array(z.string()).optional(),
+          contactEmail: z.string().email().optional(),
+        })
+        .optional(),
     }),
   }),
 };

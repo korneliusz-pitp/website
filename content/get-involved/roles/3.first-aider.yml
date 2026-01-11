@@ -1,0 +1,21 @@
+name: Medic
+description: >-
+  Provide basic first aid support. Certification required; we'll
+  verify credentials during review.
+icon: i-lucide-heart-pulse
+available: true
+colorHex: "#16a34a"
+apply:
+  label: Apply
+  to: https://forms.gle/first-aid-form
+  target: _blank
+details:
+  requirements:
+    - Valid first aid certification
+    - Recent practical experience preferred
+    - Good communication skills
+  duties:
+    - Provide basic first aid support
+    - Maintain incident notes and handovers
+    - Liaise with organisers regarding incidents
+  contactEmail: volunteer@pupsinthepark.org
