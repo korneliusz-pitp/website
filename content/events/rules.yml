@@ -2,12 +2,13 @@ title: Rules & Safety
 callToAction:
   title: Read the Full Code of Conduct
   description: This page is a summary. For complete details on all policies, visit our Policies Hub.
-  button:
-    label: View Full Policy
-    to: /policies/code-of-conduct
-    color: primary
-    variant: solid
-    icon: i-lucide-external-link
+  buttons:
+    -
+      label: View Full Policy
+      to: /policies/code-of-conduct
+      color: primary
+      variant: solid
+      icon: i-lucide-external-link
 contactEmail: events@pupsinthepark.uk
 description: A summary of our attendee code of conduct.
 intro: Pups In The Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
