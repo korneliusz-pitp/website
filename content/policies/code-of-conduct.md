@@ -44,7 +44,7 @@ To ensure the safety and comfort of our primary demographic, we strictly enforce
 
 **Restricted Access.**
 
-- Attendance is **not permitted** for those aged 30 and over, with the following strict exceptions:
+- Attendance is **not permitted**for those aged 30 and over, with the following strict exceptions:
   - You are the parent/guardian actively supervising a child (Under 13) or a teen requiring support.
   - You are a registered carer for an attendee with a disability.
   - You are an official Volunteer or Organiser approved by the event management.
@@ -92,25 +92,34 @@ Organisers reserve the right to search bags and coats if there is reasonable sus
 - If you have a serious medical condition (e.g., Epilepsy, Diabetes, history of Anaphylaxis), we strongly encourage you to inform a **Medic (Green Lanyard)** upon arrival.
 - Please carry your own necessary medication (e.g., EpiPens, Inhalers) at all times. Our Medics carry standard First Aid supplies but do not stock prescription medication.
 
-## 7. Photography & Media
+## 7. Trading & Commerce
+
+To comply with local council bylaws and ensure safeguarding, we strictly regulate trading at our events.
+
+- You are **prohibited** from setting up a "stall," "blanket shop," or displaying goods for sale. Exchanging cash or card payments for goods on-site is not permitted.
+- Personal trading (swapping) of low-value items (e.g., stickers, badges, trading cards) is permitted, provided **no money changes hands**.
+- Artists may hand over pre-paid commissions to clients. However, new orders should not be taken, and cash payments must not be handled at the event.
+- Adults are strictly prohibited from entering into financial transactions with unaccompanied minors (Under 18).
+
+## 8. Photography & Media
 
 - **"Think Consent":** Always ask for permission before taking photos or videos of specific individuals.
 - **Opt-Out:** If you do not wish to be photographed, please let the photographer know.
 - **Content Team:**&#x54;he official Pups in the Park Content Team are exempt from the individual permission rule, as all official photos are screened before posting.
   - *Identification:* Content Team members wear a **Black Lanyard with a Purple ID Tag** bearing "Content".
 
-## 8. Safeguarding and Reporting
+## 9. Safeguarding and Reporting
 
 - If you feel unsafe, see someone else who looks uncomfortable, or notice a prohibited item, please alert an Organiser or Volunteer immediately.
 - If you require medical assistance, look for a volunteer wearing a **Green Lanyard**.
 - We have **zero tolerance** for violence, abuse, harassment, discrimination, or predatory behaviour.
 
-## 9. Environment
+## 10. Environment
 
 - We are guests in the park. Please use bins provided or take your litter home.
 - Keep noise to a respectful level to avoid disturbing local residents and wildlife.
 
-## 10. Breaches of Code
+## 11. Breaches of Code
 
 If you breach this Code of Conduct, Organisers reserve the right to:
 
