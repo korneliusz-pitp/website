@@ -174,6 +174,26 @@ export const collections = {
     source: "policies/*.md",
   }),
 
+  team: defineCollection({
+    type: "data",
+    source: "team/*.yml",
+    schema: z.object({
+      name: z.string(),
+      role: z.string(),
+      bio: z.string().optional(),
+      image: z.string().optional().editor({ input: "media" }),
+      socials: z
+        .array(
+          z.object({
+            icon: z.string().optional().editor({ input: "icon" }),
+            url: z.string().url().optional(),
+            label: z.string().optional(),
+          })
+        )
+        .optional(),
+    }),
+  }),
+
   about: defineCollection({
     type: "page",
     source: "about.yml",
@@ -193,25 +213,6 @@ export const collections = {
             label: z.string(),
             description: z.string(),
             icon: z.string().optional().editor({ input: "icon" }),
-          })
-        )
-        .optional(),
-      team: z
-        .array(
-          z.object({
-            name: z.string(),
-            role: z.string(),
-            bio: z.string().optional(),
-            image: z.string().optional().editor({ input: "media" }),
-            socials: z
-              .array(
-                z.object({
-                  icon: z.string().optional().editor({ input: "icon" }),
-                  url: z.string().url().optional(),
-                  label: z.string().optional(),
-                })
-              )
-              .optional(),
           })
         )
         .optional(),

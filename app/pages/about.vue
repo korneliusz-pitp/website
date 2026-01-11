@@ -3,6 +3,10 @@ const { data: about } = await useAsyncData("about-page", () =>
   queryCollection("about").first()
 );
 
+const { data: team } = await useAsyncData("team-members", () =>
+  queryCollection("team").all()
+);
+
 useSeoMeta({
   title: about.value?.title,
   description: about.value?.description,
@@ -76,11 +80,11 @@ const carouselItems = computed(() => {
         </div>
 
         <!-- Meet the Team Section -->
-        <div v-if="about.team && about.team.length > 0" class="my-8">
+        <div v-if="team && team.length > 0" class="my-8">
           <ProseH2>Meet the Team</ProseH2>
           <div class="grid gap-4 mt-6 md:grid-cols-2 lg:grid-cols-3">
             <UCard
-              v-for="member in about.team"
+              v-for="member in team"
               :key="member.name"
               class="flex flex-col text-center"
             >

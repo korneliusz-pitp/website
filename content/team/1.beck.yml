@@ -1,0 +1,8 @@
+name: Beck
+role: Founder & Lead Organiser
+bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+image: /images/brand/placeholder.png
+socials:
+  - icon: i-lucide-mail
+    url: mailto:example@pupsinthepark.uk
+    label: Email

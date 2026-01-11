@@ -19,35 +19,6 @@ intro: Pups in the Park is a UK-based community organisation dedicated to bringi
 mission:
   title: Our Mission
   content: To foster an inclusive, safe, and vibrant community where people interested in kemonomimi culture and alternative lifestyles can express themselves authentically and build meaningful connections with others who share their passions.
-team:
-  - name: Beck
-    role: Founder & Lead Organiser
-    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    image: /images/brand/placeholder.png
-    socials:
-      - icon: i-lucide-mail
-        url: mailto:example@pupsinthepark.uk
-        label: Email
-  - name: Rea
-    role: Event Coordinator
-    bio: Hey! I’m Rea! The Events Organiser & Coordinator here at PITP and I love putting a smile on somones face! I’m a video editor on my 9-5 and a Fox at all Other Times! Feel free to reach out if you have any questions, inquiries or suggestions! I’d love to hear from you!
-    image: /images/brand/placeholder.png
-    socials:
-      - icon: i-lucide-mail
-        url: mailto:member@pupsinthepark.uk
-        label: Email
-  - name: Matt
-    role: Systems Administrator
-    bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    image: /images/brand/placeholder.png
-    socials:
-      - icon: i-lucide-mail
-        url: mailto:member@pupsinthepark.uk
-        label: Email
-  - name: Mads
-    role: Community Manager
-  - name: Princefizz
-    role: Creative Manager
 values:
   - label: Inclusivity
     description: We welcome everyone who shares our values, regardless of background, identity, or experience.
