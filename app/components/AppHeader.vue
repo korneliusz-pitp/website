@@ -29,7 +29,7 @@
           :icon="button.icon"
         />
       </div>
-      <UColorModeButton />
+      <ColorModeButton />
     </template>
 
     <!-- Navigation - Mobile Vertical with Buttons -->
