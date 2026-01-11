@@ -59,7 +59,11 @@ const carouselItems = computed(() => {
             dots
             :autoplay="{ delay: 2000 }"
             :items="carouselItems"
-            :ui="{ item: 'basis-1/3' }"
+            :ui="{
+              item: 'sm:basis-1/2 lg:basis-1/3',
+              prev: 'sm:start-4 lg:-start-12',
+              next: 'sm:end-4 lg:-end-12',
+            }"
           >
             <div
               v-if="about.values?.[item.id]"
