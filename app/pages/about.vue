@@ -103,7 +103,7 @@ const carouselItems = computed(() => {
                 <ProseP class="text-xs font-semibold text-primary mb-2">
                   {{ member.role }}
                 </ProseP>
-                <ProseP v-if="member.bio" class="text-xs mb-3 line-clamp-3">
+                <ProseP v-if="member.bio" class="text-xs mb-3 line-clamp-5">
                   {{ member.bio }}
                 </ProseP>
 
