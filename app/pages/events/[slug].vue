@@ -52,12 +52,13 @@ watch(galleryData, () => {
 });
 
 const scrollArea = useTemplateRef("scrollArea");
+const scrollElement = computed(() => scrollArea.value?.$el);
 
 onMounted(() => {
   execute();
 
   useInfiniteScroll(
-    scrollArea.value?.$el,
+    scrollElement,
     () => {
       offset.value += 20;
     },
@@ -210,38 +211,97 @@ onMounted(() => {
           </div>
 
           <!-- Gallery -->
-          <h2 class="text-2xl font-bold mb-4">Gallery</h2>
-          <UScrollArea
-            ref="scrollArea"
-            v-slot="{ item, index }"
-            :items="images"
-            orientation="horizontal"
-            :virtualize="{
-              gap: 10,
-              lanes: 2,
-              estimateSize: 340,
-            }"
-            class="w-full h-128 p-4"
-          >
-            <NuxtImg
-              :src="item.path"
-              :alt="`${event.title} - Gallery image`"
-              sizes="100vh sm:50vh md:400px"
-              format="webp"
-              :quality="70"
-              :loading="index > 8 ? 'lazy' : 'eager'"
-              class="size-full object-cover"
-              placeholder
-            />
-          </UScrollArea>
+          <template v-if="galleryStatus === 'pending' && images.length === 0">
+            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <div
+              class="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg"
+            >
+              <div class="text-center">
+                <UIcon
+                  name="i-heroicons-photo"
+                  class="size-12 text-gray-400 mb-2"
+                />
+                <p class="text-gray-500 dark:text-gray-400">
+                  Loading gallery...
+                </p>
+              </div>
+            </div>
+          </template>
 
-          <UProgress
-            v-if="galleryStatus === 'pending'"
-            indeterminate
-            size="xs"
-            class="absolute top-0 inset-x-0 z-1"
-            :ui="{ base: 'bg-default' }"
-          />
+          <template
+            v-else-if="images.length === 0 && galleryStatus === 'success'"
+          >
+            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <div
+              class="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg"
+            >
+              <div class="text-center">
+                <UIcon
+                  name="i-heroicons-camera"
+                  class="size-12 text-gray-400 mb-2"
+                />
+                <p class="text-gray-500 dark:text-gray-400">
+                  {{
+                    eventDateTime.isUpcoming
+                      ? "Photos will be added after the event!"
+                      : "No photos available yet."
+                  }}
+                </p>
+              </div>
+            </div>
+          </template>
+
+          <template v-else-if="images.length === 1">
+            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <div class="relative rounded-lg overflow-hidden">
+              <NuxtImg
+                :src="images[0]!.path"
+                :alt="`${event.title} - Gallery image`"
+                sizes="100vw md:800px"
+                format="webp"
+                :quality="80"
+                class="w-full max-h-128 object-cover"
+                placeholder
+              />
+            </div>
+          </template>
+
+          <template v-else-if="images.length > 1">
+            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <div class="relative">
+              <UScrollArea
+                ref="scrollArea"
+                v-slot="{ item, index }"
+                :items="images"
+                orientation="horizontal"
+                :virtualize="{
+                  gap: 10,
+                  lanes: 2,
+                  estimateSize: 340,
+                }"
+                class="w-full h-128 p-4"
+              >
+                <NuxtImg
+                  :src="item.path"
+                  :alt="`${event.title} - Gallery image`"
+                  sizes="100vh sm:50vh md:400px"
+                  format="webp"
+                  :quality="70"
+                  :loading="index > 8 ? 'lazy' : 'eager'"
+                  class="size-full object-cover"
+                  placeholder
+                />
+              </UScrollArea>
+
+              <UProgress
+                v-if="galleryStatus === 'pending'"
+                indeterminate
+                size="xs"
+                class="absolute top-0 inset-x-0 z-1"
+                :ui="{ base: 'bg-default' }"
+              />
+            </div>
+          </template>
         </div>
 
         <!-- Right Column: Sidebar -->
