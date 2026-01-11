@@ -1,0 +1,80 @@
+title: Report a Concern
+description: Report safeguarding concerns or code of conduct violations
+formInfo:
+  title: Reporting Form
+  intro: This form is monitored by our Designated Safeguarding Lead (DSL) and  safeguarding team. All reports are treated confidentially and in accordance  with our safeguarding policies.
+  googleFormUrl: https://docs.google.com/forms/d/e/1FAIpQLSf_6jC6Us54TdIAzlJAKaQsj0C5DPksZDOV8OWwm8ZdYLDPuA/viewform?embedded=true
+  googleFormHeight: 1200
+  submissionNote: After submitting, you should receive an acknowledgement within 24-48 hours.  For urgent concerns, please also email safeguarding@pupsinthepark.uk directly.
+relatedPolicies:
+  title: Related Policies
+  links:
+    - label: Safeguarding Adults Policy
+      to: /policies/safeguarding-adults
+      icon: i-heroicons-document-check
+    - label: Safeguarding Children Policy
+      to: /policies/safeguarding-children
+      icon: i-heroicons-document-check
+    - label: Code of Conduct
+      to: /policies/code-of-conduct
+      icon: i-heroicons-document-check
+    - label: Complaints & Grievances
+      to: /policies/complaints-grievances
+      icon: i-heroicons-document-check
+supportResources:
+  title: Need Support?
+  description: If you need someone to talk to or require additional support
+  resources:
+    - label: Samaritans
+      contact: 116 123 (24/7)
+      description: Confidential emotional support
+      icon: i-heroicons-phone
+    - label: Ann Craft Trust
+      contact: 0115 951 5400
+      description: Safeguarding adults advice
+      icon: i-heroicons-information-circle
+    - label: NSPCC
+      contact: 0808 800 5000
+      description: Help for anyone concerned about a child
+      icon: i-heroicons-shield-check
+urgency:
+  title: Is this an emergency?
+  emergency:
+    description: If someone is in immediate danger, please contact emergency services first.
+    actions:
+      - label: Call 999 (Emergency)
+        icon: i-heroicons-phone
+        color: error
+        variant: solid
+        to: tel:999
+      - label: Call 101 (Non-Emergency Police)
+        icon: i-heroicons-phone
+        color: warning
+        variant: outline
+        to: "tel:"
+  nonEmergency:
+    description: For non-urgent safeguarding concerns, code of conduct violations, or  to report inappropriate behaviour, please use the form below.
+whatToReport:
+  title: What Should I Report?
+  categories:
+    - label: Safeguarding Concerns
+      icon: i-heroicons-shield-exclamation
+      description: Concerns about the safety or welfare of an adult or child
+      examples:
+        - Suspected abuse or neglect
+        - Someone appearing vulnerable or at risk
+        - Disclosure of harm or distress
+    - label: Code of Conduct Violations
+      icon: i-heroicons-document-text
+      description: Behaviour that breaks our community guidelines
+      examples:
+        - Harassment or discriminatory behaviour
+        - Inappropriate conduct towards others
+        - Breach of event rules
+    - label: Concerns About Staff/Volunteers
+      icon: i-heroicons-user-circle
+      description: Issues with organisation team members or volunteers
+      examples:
+        - Unprofessional behaviour
+        - Boundary violations
+        - Abuse of position

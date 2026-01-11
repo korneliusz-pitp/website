@@ -262,4 +262,99 @@ export const collections = {
         .optional(),
     }),
   }),
+
+  contact: defineCollection({
+    type: "page",
+    source: "contact.yml",
+    schema: z.object({
+      title: z.string(),
+      description: z.string(),
+      intro: z.string().optional(),
+      contactMethods: z.array(
+        z.object({
+          department: z.string(),
+          email: z.string().email(),
+          icon: z.string().optional().editor({ input: "icon" }),
+          description: z.string().optional(),
+          priority: z.enum(["normal", "high"]).default("normal").optional(),
+        })
+      ),
+      socialConnections: z
+        .object({
+          title: z.string(),
+          description: z.string().optional(),
+          links: z.array(button()),
+        })
+        .optional(),
+      faq: z
+        .object({
+          title: z.string(),
+          items: z.array(
+            z.object({
+              question: z.string(),
+              answer: z.string(),
+              link: z.string().optional(),
+            })
+          ),
+        })
+        .optional(),
+    }),
+  }),
+
+  report: defineCollection({
+    type: "page",
+    source: "report.yml",
+    schema: z.object({
+      title: z.string(),
+      description: z.string(),
+      urgency: z.object({
+        title: z.string(),
+        emergency: z.object({
+          description: z.string(),
+          actions: z.array(button()),
+        }),
+        nonEmergency: z.object({
+          description: z.string(),
+        }),
+      }),
+      formInfo: z.object({
+        title: z.string(),
+        intro: z.string(),
+        googleFormUrl: z.string().url(),
+        googleFormHeight: z.number().default(1200),
+        submissionNote: z.string().optional(),
+      }),
+      whatToReport: z.object({
+        title: z.string(),
+        categories: z.array(
+          z.object({
+            label: z.string(),
+            icon: z.string().optional().editor({ input: "icon" }),
+            description: z.string(),
+            examples: z.array(z.string()),
+          })
+        ),
+      }),
+      supportResources: z
+        .object({
+          title: z.string(),
+          description: z.string().optional(),
+          resources: z.array(
+            z.object({
+              label: z.string(),
+              contact: z.string(),
+              description: z.string().optional(),
+              icon: z.string().optional().editor({ input: "icon" }),
+            })
+          ),
+        })
+        .optional(),
+      relatedPolicies: z
+        .object({
+          title: z.string(),
+          links: z.array(link()),
+        })
+        .optional(),
+    }),
+  }),
 };
