@@ -1,3 +1,7 @@
+apply:
+  label: Apply
+  to: https://forms.gle/steward-form
+  target: _blank
 available: true
 colorHex: "#ef4444"
 description: Help with attendee guidance, queue management, and general event flow. Ideal for friendly folks who enjoy supporting others.
@@ -9,12 +13,3 @@ details:
   contactEmail: volunteer@pupsinthepark.org
 icon: i-lucide-users
 name: Helper
-links: []
-apply:
-  label: Apply
-  to: https://forms.gle/steward-form
-  target: _blank
-link:
-  label: Steward details
-  to: https://example.com/steward
-  target: _blank
