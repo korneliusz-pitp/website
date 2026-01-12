@@ -2,12 +2,11 @@ title: Events
 cta:
   title: Event Guidelines
   description: Before attending, please review our community guidelines and what to bring.
-  button:
-    label: View Guidelines
-    to: /events/rules
-    icon: ""
-    variant: ghost
-  buttons: []
+  buttons:
+    - label: View Guidelines
+      to: /events/rules
+      icon: ""
+      variant: ghost
 description: Join the Pups In The Park community at our upcoming gatherings and meetups!
 navigation:
   icon: ""
