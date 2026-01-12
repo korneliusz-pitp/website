@@ -113,15 +113,19 @@ const pastEvents = computed(() => {
             <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4">
               {{ page.cta?.description }}
             </p>
-            <UButton
-              :to="page.cta?.button?.to"
-              color="primary"
-              variant="soft"
-              icon="i-lucide-arrow-right"
-              trailing
-            >
-              {{ page.cta?.button?.label }}
-            </UButton>
+            <div class="flex flex-wrap">
+              <span v-for="button in page.cta?.buttons" :key="button.label">
+                <UButton
+                  :to="button.to"
+                  color="primary"
+                  variant="soft"
+                  icon="i-lucide-arrow-right"
+                  trailing
+                >
+                  {{ button.label }}
+                </UButton>
+              </span>
+            </div>
           </UCard>
         </div>
       </UPageBody>
