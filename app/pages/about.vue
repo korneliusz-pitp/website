@@ -97,7 +97,8 @@ const carouselItems = computed(() => {
                 <NuxtImg
                   :src="member.image"
                   :alt="member.name"
-                  class="w-24 h-24 rounded-lg object-cover mx-auto"
+                  class="w-24 h-24 rounded-full object-cover mx-auto"
+                  format="webp"
                 />
               </div>
 
