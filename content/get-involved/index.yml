@@ -1,16 +1,27 @@
 title: Get Involved
+callToAction:
+  title: Questions?
+  description: If you have any questions about volunteering or the application process, we're here to help.
+  buttons:
+    - label: Contact us
+      to: /contact
+      icon: i-lucide-mail
+      color: primary
+      variant: outline
+    - label: Join the Discord
+      to: https://discord.gg/9Sz2msbSDq
+      target: _blank
+      color: info
+      variant: outline
+      icon: i-simple-icons-discord
 description: Volunteer roles and our application process
-intro: >-
-  Pups in the Park is a something something something... If you'd like to support us, we
-  welcome volunteers across a range of roles. Below you'll find
-  current opportunities and an outline of our application process.
-
+intro: Here at Pups In The Park, community is everything; thats why  in order to run our amazing events; we need vital Volunteers and Helpers to help us! Here you can see the relative roles you can apply for!
 timeline:
   - title: Submit Application
     description: Share your details and role preferences via the form.
     icon: i-lucide-file-input
   - title: Acknowledgement
-    description: We'll confirm receipt and outline next steps.
+    description: The form will acknowledge and log your application.
     icon: i-lucide-mail
   - title: Review
     description: We assess fit, availability, and any required credentials.
@@ -21,22 +32,6 @@ timeline:
   - title: Decision
     description: We'll let you know the outcome and any alternatives.
     icon: i-lucide-badge-check
-  - title: Onboarding
+  - title: Onboarding + Training
     description: Briefing, policies, and role-specific guidance before the event.
     icon: i-lucide-clipboard-check
-
-callToAction:
-  title: Questions?
-  description: If you have any questions about volunteering or the application process, we're here to help.
-  buttons:
-    - label: Contact us
-      to: /contact
-      icon: i-lucide-mail
-      color: primary
-      variant: solid
-    - label: Join the Discord
-      to: https://discord.gg/9Sz2msbSDq
-      target: _blank
-      color: neutral
-      variant: outline
-      icon: i-simple-icons-discord

@@ -1,32 +1,46 @@
 title: Contact Us
-description: Get in touch with the Pups in the Park team
-
-intro: >-
-  We'd love to hear from you! Whether you have questions about upcoming events, 
-  volunteering opportunities, or general enquiries, our team is here to help.
-
 contactMethods:
   - department: General Enquiries
     email: info@pupsinthepark.uk
     icon: i-heroicons-envelope
     description: Questions about events, tickets, or general information
-    
   - department: Events Team
     email: events@pupsinthepark.uk
     icon: i-heroicons-chat-bubble-left-right
     description: Event-specific queries, accessibility needs, or on-the-day support
-    
   - department: Volunteer Enquiries
-    email: volunteers@pupsinthepark.uk
+    email: volunteer@pupsinthepark.uk
     icon: i-heroicons-user-group
     description: Questions about volunteer roles and applications
-    
   - department: Safeguarding
     email: safeguarding@pupsinthepark.uk
     icon: i-heroicons-shield-check
     description: Non-urgent safeguarding concerns (for urgent concerns, use our report form)
     priority: high
-
+  - department: Environment & Sustainability
+    email: sustainability@pupsinthepark.uk
+    description: Our paws are green! If you have any questions about our sustainable practises, please send us a message!
+    icon: i-heroicons-bolt
+description: Get in touch with the Pups in the Park team
+faq:
+  title: Quick Answers
+  items:
+    - question: When is your next event?
+      answer: Check our upcoming events page for the latest dates and registration information.
+      link: /events/upcoming
+    - question: How do I volunteer?
+      answer: Visit our Get Involved page to learn about roles and the application process.
+      link: /get-involved
+    - question: Do you have a Code of Conduct?
+      answer: Yes! All attendees must read and agree to our Code of Conduct.
+      link: /policies/code-of-conduct
+    - question: How do you use my data?
+      answer: We may collect data in line with our Privacy Policy
+      link: https://preview.pupsinthepark.uk/policies/privacy
+    - question: I dont want my photo taken!
+      answer: Our Content team will try their best not to capture you if you have a "No Photo" badge/tag, If you wish for a photo to be taken down, please see our Media & Photography Policy
+      link: https://preview.pupsinthepark.uk/policies/privacy
+intro: We'd love to hear from you! Whether you have questions about upcoming events,  volunteering opportunities, or general enquiries, our team is here to help.
 socialConnections:
   title: Join Our Community
   description: Connect with us on social media or join our Discord server
@@ -46,16 +60,3 @@ socialConnections:
       icon: i-simple-icons-tiktok
       color: secondary
       variant: outline
-
-faq:
-  title: Quick Answers
-  items:
-    - question: When is your next event?
-      answer: Check our upcoming events page for the latest dates and registration information.
-      link: /events/upcoming
-    - question: How do I volunteer?
-      answer: Visit our Get Involved page to learn about roles and the application process.
-      link: /get-involved
-    - question: Do you have a Code of Conduct?
-      answer: Yes! All attendees must read and agree to our Code of Conduct.
-      link: /policies/code-of-conduct

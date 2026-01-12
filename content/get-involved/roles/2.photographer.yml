@@ -1,16 +1,15 @@
-name: Photographer
-description: >-
-  Capture the vibe while strictly following our media & privacy
-  policies. Experience preferred; portfolio links welcome.
-icon: i-lucide-camera
-available: false
-colorHex: "#db2777"
 apply:
   label: Apply
   to: https://forms.gle/photography-form
   target: _blank
+available: false
+colorHex: "#e201a0"
+description: Join The PITP Content Team as a Photographer or Videographer and be our social frontline of our events! Portfolio/Experiance Required.
 details:
   requirements:
     - Portfolio demonstrating event or portrait work
     - Respect for privacy and consent policies
     - Own camera and equipment
+  contactEmail: rea@pupsinthepark.org
+icon: i-lucide-camera
+name: Photographer
