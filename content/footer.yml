@@ -27,11 +27,12 @@ quickLinks:
     to: /policies/privacy
     icon: i-heroicons-hand-raised
   - label: "Sustainability "
-    icon: ""
-    disabled: true
+    icon: i-lucide-leaf
+    to: "/sustainability "
   - icon: "i-heroicons-chevron-right "
     to: ""
     label: Already A Volunteer?
+    disabled: "true"
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
