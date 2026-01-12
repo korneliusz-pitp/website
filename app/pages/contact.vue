@@ -140,7 +140,7 @@ const getFaqAnswer = (index: number) => {
           <ProseH2>{{ contact.faq.title }}</ProseH2>
           <UAccordion :items="faqItems" type="multiple">
             <template #body="{ item }">
-              <div class="flex items-center gap-1">
+              <div class="flex items-center gap-1 flex-wrap">
                 <p>{{ getFaqAnswer(Number(item.value))?.answer }}</p>
                 <UButton
                   v-if="getFaqAnswer(Number(item.value))?.link"
