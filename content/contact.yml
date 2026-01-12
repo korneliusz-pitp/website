@@ -20,7 +20,7 @@ contactMethods:
   - department: Environment & Sustainability
     email: sustainability@pupsinthepark.uk
     description: Our paws are green! If you have any questions about our sustainable practises, please send us a message!
-    icon: i-heroicons-bolt
+    icon: i-heroicons-globe-europe-africa
 description: Get in touch with the Pups in the Park team
 faq:
   title: Quick Answers
@@ -48,15 +48,15 @@ socialConnections:
     - label: Discord Server
       to: https://discord.gg/9Sz2msbSDq
       icon: i-simple-icons-discord
-      color: primary
-      variant: solid
+      color: info
+      variant: ghost
     - label: Instagram
       to: https://www.instagram.com/pupsintheparkuk/
       icon: i-simple-icons-instagram
-      color: secondary
-      variant: outline
+      color: error
+      variant: ghost
     - label: TikTok
       to: https://www.tiktok.com/@pupsintheparkuk
       icon: i-simple-icons-tiktok
-      color: secondary
-      variant: outline
+      color: ""
+      variant: ghost
