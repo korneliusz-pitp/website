@@ -325,16 +325,24 @@
       "category": "uncategorized",
       "size": 10354,
       "modified": "2026-01-02T20:25:35.601Z"
+    },
+    {
+      "path": "/images/team/rea-rea.png",
+      "name": "rea-rea.png",
+      "category": "team",
+      "size": 1584105,
+      "modified": "2026-01-12T13:22:41.986Z"
     }
   ],
   "categories": [
     "banners",
     "events",
+    "team",
     "uncategorized"
   ],
   "dates": [
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-09T13:56:21.281Z"
+  "generated": "2026-01-12T13:38:24.307Z"
 }
