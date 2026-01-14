@@ -57,7 +57,9 @@ const carouselItems = computed(() => {
             loop
             arrows
             dots
-            :autoplay="{ delay: 2000 }"
+            :autoplay="{ 7000 }" 
+            :mouse-drag="{ false }" 
+            :touch-drag="{ false }"
             :items="carouselItems"
             :ui="{
               item: 'sm:basis-1/2 lg:basis-1/3',
