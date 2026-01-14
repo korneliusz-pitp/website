@@ -57,7 +57,7 @@ const carouselItems = computed(() => {
             loop
             arrows
             dots
-            :autoplay="{ 7000 }" 
+            :autoplay="{ delay: 7000 }" 
             :wheel-gestures="false"
             :items="carouselItems"
             :ui="{
