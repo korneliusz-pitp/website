@@ -58,8 +58,7 @@ const carouselItems = computed(() => {
             arrows
             dots
             :autoplay="{ 7000 }" 
-            :mouse-drag="{ false }" 
-            :touch-drag="{ false }"
+            :wheel-gestures="false"
             :items="carouselItems"
             :ui="{
               item: 'sm:basis-1/2 lg:basis-1/3',
