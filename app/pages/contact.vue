@@ -60,7 +60,7 @@ const getFaqAnswer = (index: number) => {
           <UAlert
             v-for="method in priorityContacts"
             :key="method.email"
-            color="warning"
+            color="neutral"
             variant="subtle"
             :icon="method.icon"
             :title="method.department"
@@ -71,7 +71,7 @@ const getFaqAnswer = (index: number) => {
                 :to="`mailto:${method.email}`"
                 external
                 icon="i-heroicons-envelope"
-                color="warning"
+                color="info"
                 variant="outline"
                 size="xs"
               >
