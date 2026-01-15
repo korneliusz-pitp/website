@@ -2,13 +2,6 @@
   <UContainer class="py-8 space-y-6">
     <UPageHeader :title="gallery?.title" :description="gallery?.description" />
 
-    <UAlert
-      color="warning"
-      title="Under Construction"
-      description="The events gallery is currently under construction. We are working hard to bring you this feature soon."
-      icon="i-lucide-alert-triangle"
-    />
-
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
       <NuxtImg
         v-for="(item, index) in images"
