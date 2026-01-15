@@ -56,6 +56,30 @@ const itemList = () =>
     items: z.array(z.string()),
   });
 
+const pageFeature = () =>
+  z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    icon: z.string().optional().editor({ input: "icon" }),
+    orientation: z.enum(["horizontal", "vertical"]).default("horizontal").optional(),
+    to: z.string().optional(),
+    target: z.enum(["_blank", "_self"]).optional(),
+  });
+
+const pageSection = () =>
+  z.object({
+    headline: z.string().optional(),
+    icon: z.string().optional().editor({ input: "icon" }),
+    title: z.string(),
+    description: z.string().optional(),
+    content: z.string().optional(),
+    reverse: z.boolean().optional(),
+    image: z.string().optional().editor({ input: "media" }),
+    imageAlt: z.string().optional(),
+    features: z.array(pageFeature()).optional(),
+    links: z.array(button()).optional(),
+  });
+
 export const collections = {
   content: defineCollection({
     type: "page",
@@ -355,6 +379,39 @@ export const collections = {
           links: z.array(link()),
         })
         .optional(),
+    }),
+  }),
+
+  sustainability: defineCollection({
+    type: "page",
+    source: "sustainability.yml",
+    schema: z.object({
+      title: z.string(),
+      description: z.string(),
+      leafImage: z.string().optional().editor({ input: "media" }),
+      hero: z
+        .object({
+          image: z.string().optional().editor({ input: "media" }),
+          alt: z.string().optional(),
+        })
+        .optional(),
+      sections: z.array(pageSection()),
+      initiatives: z
+        .array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+            icon: z.string().optional().editor({ input: "icon" }),
+            stats: z
+              .object({
+                value: z.string(),
+                label: z.string(),
+              })
+              .optional(),
+          })
+        )
+        .optional(),
+      callToAction: cta().optional(),
     }),
   }),
 };

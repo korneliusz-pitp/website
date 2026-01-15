@@ -26,9 +26,9 @@ quickLinks:
   - label: Privacy Policy
     to: /policies/privacy
     icon: i-heroicons-hand-raised
-  - label: "Sustainability "
+  - label: "Sustainability"
     icon: i-lucide-leaf
-    to: "/sustainability "
+    to: "/sustainability"
   - icon: i-heroicons-chevron-right
     to: "https://kennel.pupsinthepark.uk/login"
     label: Already A Volunteer?
