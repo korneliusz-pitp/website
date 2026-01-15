@@ -29,10 +29,9 @@ quickLinks:
   - label: "Sustainability "
     icon: i-lucide-leaf
     to: "/sustainability "
-  - icon: "i-heroicons-chevron-right "
-    to: ""
+  - icon: i-heroicons-chevron-right
+    to: "https://kennel.pupsinthepark.uk/login"
     label: Already A Volunteer?
-    disabled: "true"
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
