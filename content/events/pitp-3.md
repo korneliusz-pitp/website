@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2025
-coverImage: /images/PLACEHOLD.svg
+coverImage: https://placehold.co/600x400/EEE/31343C?font=poppins&text=PITP+3
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 location:
   name: ""
