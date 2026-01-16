@@ -68,10 +68,12 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    provider: "cloudflare",
-    cloudflare: {
-      baseURL: "https://preview.pupsinthepark.uk/", // TODO: Update this when needed lol
-    }
-  },
+  $production: {
+    image: {
+      provider: "cloudflare",
+      cloudflare: {
+        baseURL: "https://preview.pupsinthepark.uk/", // TODO: Update this when needed lol
+      }
+    },
+  }
 });

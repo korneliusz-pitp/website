@@ -5,6 +5,17 @@
     :to="headerConfig.to"
     :toggle="headerConfig.toggle"
   >
+    <template #title>
+      <span class="flex items-center gap-1">
+        <NuxtImg
+          src="/images/brand/pip.png"
+          alt="Our Mascot - Pip!"
+          height="50"
+        />
+        Pups in the Park
+      </span>
+    </template>
+
     <!-- Navigation - Desktop & Mobile -->
     <div v-if="navigationItems.length > 0" class="hidden lg:flex">
       <UNavigationMenu
