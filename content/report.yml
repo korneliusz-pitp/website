@@ -26,8 +26,8 @@ supportResources:
   description: If you need someone to talk to or require additional support
   resources:
     - label: Samaritans
-      contact: 116 123 (24/7)
-      description: Confidential emotional support
+      contact: 116 123
+      description: Confidential emotional support (24/7)
       icon: i-heroicons-phone
     - label: Ann Craft Trust
       contact: 0115 951 5400
