@@ -1,0 +1,164 @@
+title: Pups in the Park
+callToAction:
+  title: Ready to Join Us?
+  description: Whether you're new to the community or a long-time member, there's a place for you at Pups in the Park. Check out our upcoming events or join our Discord to stay connected.
+  buttons:
+    - label: View Upcoming Events
+      to: /events/upcoming
+      color: primary
+      variant: solid
+      icon: i-lucide-calendar
+      size: lg
+    - label: Learn About Volunteering
+      to: /get-involved
+      color: secondary
+      variant: solid
+      icon: i-lucide-hand-helping
+      size: lg
+    - label: Join the Discord
+      to: https://discord.gg/9Sz2msbSDq
+      target: _blank
+      color: info
+      variant: outline
+      icon: i-simple-icons-discord
+      size: lg
+description: The UK's largest alterhuman and kemonomimi community events, bringing together pups, handlers, and alternative lifestyle enthusiasts in safe, inclusive spaces.
+features:
+  title: Why Choose Pups in the Park?
+  description: We pride ourselves on creating exceptional experiences
+  items:
+    - icon: i-lucide-shield-check
+      title: Safety First
+      description: Comprehensive safeguarding policies, trained first aiders, and dedicated volunteers ensure everyone's wellbeing at our events.
+      spotlight: true
+      spotlightColor: primary
+    - icon: i-lucide-users-round
+      title: Community Focused
+      description: Built by the community, for the community. Your feedback shapes our events and policies.
+      spotlight: true
+    - icon: i-lucide-map-pin
+      title: Great Locations
+      description: Carefully selected outdoor spaces that provide privacy, accessibility, and natural beauty.
+      spotlight: true
+    - icon: i-lucide-calendar-check
+      title: Well Organised
+      description: Professional event management with clear communication, detailed planning, and smooth execution.
+      spotlight: true
+    - icon: i-lucide-heart-handshake
+      title: Respectful Environment
+      description: Our code of conduct ensures everyone is treated with dignity and respect.
+      spotlight: true
+    - icon: i-lucide-sparkles
+      title: Authentic Expression
+      description: Be yourself without judgement. Our events celebrate all forms of self-expression within our community.
+      spotlight: true
+hero:
+  headline: Welcome to
+  title: Pups in the Park
+  description: The UK's largest alterhuman and kemonomimi community events. Join us for inclusive, safe gatherings where you can express yourself authentically and connect with like-minded individuals.
+  orientation: horizontal
+  image: /images/brand/pip.png
+  imageAlt: Pups in the Park Logo
+  links:
+    - label: View Upcoming Events
+      to: /events/upcoming
+      color: primary
+      variant: solid
+      icon: i-lucide-calendar
+      size: xl
+    - label: Join Our Community
+      to: https://discord.gg/9Sz2msbSDq
+      target: _blank
+      color: secondary
+      variant: outline
+      icon: i-simple-icons-discord
+      size: xl
+sections:
+  - headline: Who We Are
+    icon: i-lucide-heart
+    title: A Community Built on Inclusivity
+    description: We're the largest alterhuman and kemonomimi community event organisers in the UK, hosting regular meetups where members can trade creations, meet content creators, and celebrate their authentic selves.
+    image: /images/events/2025-07-05/IMG_4715.webp
+    imageAlt: Community gathering at Pups in the Park
+    features:
+      - title: Inclusive
+        description: Everyone who shares our values is welcome, regardless of background or experience
+        icon: i-lucide-users
+      - title: Safe
+        description: Comprehensive policies and trained volunteers ensure everyone's wellbeing
+        icon: i-lucide-shield-check
+      - title: Authentic
+        description: Express yourself freely in a judgement-free environment
+        icon: i-lucide-sparkles
+    links:
+      - label: Read our Code of Conduct
+        to: /policies/code-of-conduct
+        color: primary
+        variant: outline
+        icon: i-lucide-book-open
+  - headline: What We Offer
+    icon: i-lucide-star
+    title: Events That Bring Us Together
+    description: From large meetups to smaller gatherings, we create spaces for connection, creativity, and community.
+    reverse: true
+    features:
+      - title: Regular Meetups
+        description: Two major events per year plus smaller community gatherings
+        icon: i-lucide-calendar-heart
+      - title: Trading Blanket
+        description: Trade your unique alterhuman and kemonomimi creations
+        icon: i-lucide-shopping-bag
+      - title: Meet & Greets
+        description: Connect with your favourite content creators
+        icon: i-lucide-handshake
+    links:
+      - label: Explore Events
+        to: /events
+        color: primary
+        variant: subtle
+        icon: i-lucide-arrow-right
+    image: https://placehold.co/600x400?text=Placeholder
+  - headline: Information for Parents
+    icon: i-lucide-users
+    title: A Safe Space for Young People
+    description: We are excited to welcome your child to our events! We understand that as a parent, its extremely important your child is safe and happy - it's important to us too.
+    features:
+      - title: Robust Safeguarding
+        description: We have dedicated safeguarding policies for both children and adults, with trained volunteers on-site
+        icon: i-lucide-shield-alert
+      - title: Trained First Aiders
+        description: Qualified first aiders are present at all events to handle any medical situations
+        icon: i-lucide-cross
+      - title: Clear Policies
+        description: Our code of conduct, safety guidelines, and complaints procedures are transparent and accessible
+        icon: i-lucide-file-text
+      - title: Supervised Environment
+        description: Dedicated volunteers and stewards monitor the event to ensure everyone's safety
+        icon: i-lucide-eye
+    links:
+      - label: Read Safeguarding Policies
+        to: /policies/safeguarding-children
+        color: primary
+        variant: solid
+        icon: i-lucide-shield-check
+      - label: View Safety Guidelines
+        to: /policies/safety
+        color: neutral
+        variant: outline
+        icon: i-lucide-heart
+    image: https://placehold.co/600x400?text=Placeholder
+stats:
+  title: Our Impact
+  items:
+    - value: 1000+
+      label: Community Members
+      icon: i-lucide-users
+    - value: "2"
+      label: Events Hosted
+      icon: i-lucide-calendar
+    - value: 25+
+      label: Volunteer Team
+      icon: i-lucide-heart
+    - value: 100%
+      label: Commitment to Safety
+      icon: i-lucide-shield-check

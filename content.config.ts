@@ -80,10 +80,58 @@ const pageSection = () =>
     links: z.array(button()).optional(),
   });
 
+const pageCard = () =>
+  z.object({
+    icon: z.string().optional().editor({ input: "icon" }),
+    title: z.string(),
+    description: z.string().optional(),
+    to: z.string().optional(),
+    target: z.enum(["_blank", "_self"]).optional(),
+    orientation: z.enum(["horizontal", "vertical"]).default("vertical").optional(),
+    highlight: z.boolean().optional(),
+    highlightColor: colorEnum.optional(),
+    spotlight: z.boolean().optional(),
+  });
+
 export const collections = {
   content: defineCollection({
     type: "page",
     source: { include: "**/*.md", exclude: ["events/*.md", "policies/*.md"] },
+  }),
+
+  homepage: defineCollection({
+    type: "page",
+    source: "index.yml",
+    schema: z.object({
+      title: z.string(),
+      description: z.string(),
+      hero: z.object({
+        headline: z.string().optional(),
+        title: z.string(),
+        description: z.string(),
+        image: z.string().optional().editor({ input: "media" }),
+        imageAlt: z.string().optional(),
+        links: z.array(button()).optional(),
+        orientation: z.enum(["horizontal", "vertical"]).default("vertical").optional(),
+      }).optional(),
+      sections: z.array(pageSection()).optional(),
+      features: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        items: z.array(pageCard()),
+      }).optional(),
+      stats: z.object({
+        title: z.string().optional(),
+        items: z.array(
+          z.object({
+            value: z.string(),
+            label: z.string(),
+            icon: z.string().optional().editor({ input: "icon" }),
+          })
+        ),
+      }).optional(),
+      callToAction: cta().optional(),
+    }),
   }),
 
   header: defineCollection({

@@ -1,6 +1,13 @@
 {
   "images": [
     {
+      "path": "/images/brand/pip.png",
+      "name": "pip.png",
+      "category": "brand",
+      "size": 113369,
+      "modified": "2026-01-15T23:48:54.473Z"
+    },
+    {
       "path": "/images/events/2025-07-05/IMG_4715.webp",
       "name": "IMG_4715.webp",
       "category": "events",
@@ -350,6 +357,7 @@
   ],
   "categories": [
     "banners",
+    "brand",
     "events",
     "team",
     "uncategorized"
@@ -358,5 +366,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-15T21:14:04.369Z"
+  "generated": "2026-01-15T23:55:54.093Z"
 }
