@@ -310,6 +310,13 @@ export const collections = {
       title: z.string().optional(),
       description: z.string().optional(),
       intro: z.string().optional(),
+      partnershipSection: z
+        .object({
+          title: z.string(),
+          description: z.string(),
+          link: button(),
+        })
+        .optional(),
       timeline: z
         .array(
           z.object({
@@ -320,6 +327,41 @@ export const collections = {
         )
         .optional(),
       callToAction: cta().optional(),
+    }),
+  }),
+
+  partnership: defineCollection({
+    type: "page",
+    source: "partnership.yml",
+    schema: z.object({
+      title: z.string(),
+      description: z.string(),
+      intro: z.string().optional(),
+      hero: z
+        .object({
+          title: z.string(),
+          description: z.string(),
+          image: z.string().optional().editor({ input: "media" }),
+          imageAlt: z.string().optional(),
+        })
+        .optional(),
+      sections: z.array(pageSection()).optional(),
+      benefits: z
+        .object({
+          title: z.string(),
+          description: z.string().optional(),
+          items: z.array(pageFeature()),
+        })
+        .optional(),
+      requirements: z
+        .object({
+          title: z.string(),
+          contentCreators: z.array(z.string()).optional(),
+          businesses: z.array(z.string()).optional(),
+        })
+        .optional(),
+      callToAction: cta().optional(),
+      contactEmail: z.string().email().optional(),
     }),
   }),
 

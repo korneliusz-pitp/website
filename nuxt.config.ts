@@ -75,5 +75,11 @@ export default defineNuxtConfig({
         baseURL: "https://preview.pupsinthepark.uk/", // TODO: Update this when needed lol
       }
     },
+  },
+
+  eslint: {
+    config: {
+      stylistic: true,
+    }
   }
 });

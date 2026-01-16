@@ -48,6 +48,26 @@ const timelineItems = computed<TimelineItem[]>(() => {
           {{ involved.intro }}
         </ProseP>
 
+        <!-- Partnership Section -->
+        <UAlert
+          v-if="involved.partnershipSection"
+          :title="involved.partnershipSection.title"
+          :description="involved.partnershipSection.description"
+          color="secondary"
+          variant="soft"
+          class="my-8"
+        >
+          <template #actions>
+            <UButton
+              :label="involved.partnershipSection.link.label"
+              :to="involved.partnershipSection.link.to"
+              :icon="involved.partnershipSection.link.icon"
+              :color="involved.partnershipSection.link.color"
+              :variant="involved.partnershipSection.link.variant"
+            />
+          </template>
+        </UAlert>
+
         <!-- Roles -->
         <VolunteerRoles :roles="roles ?? []" />
 

@@ -16,6 +16,15 @@ callToAction:
       icon: i-simple-icons-discord
 description: Volunteer roles and our application process
 intro: Here at Pups In The Park, community is everything; thats why  in order to run our amazing events; we need vital Volunteers and Helpers to help us! Here you can see the relative roles you can apply for!
+partnershipSection:
+  title: Content Creators & Businesses
+  description: Are you a content creator or business looking to collaborate with us? We have exciting partnership opportunities available!
+  link:
+    label: Explore Opportunities
+    to: /partnership
+    icon: i-lucide-handshake
+    color: secondary
+    variant: solid
 timeline:
   - title: Submit Application
     description: Share your details and role preferences via the form.

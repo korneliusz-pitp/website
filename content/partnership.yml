@@ -1,0 +1,90 @@
+title: Partner With Us
+benefits:
+  title: Partnership Benefits
+  description: What you can expect when partnering with Pups in the Park
+  items:
+    - title: Engaged Audience
+      description: Access to our community of 1000+ passionate members across the UK
+      icon: i-lucide-users-round
+    - title: Event Opportunities
+      description: Participation in our regular events and special gatherings
+      icon: i-lucide-calendar-heart
+    - title: Platform Promotion
+      description: Featured across our website, social media, and Discord community
+      icon: i-lucide-share-2
+    - title: Authentic Connection
+      description: Build genuine relationships with a community that values authenticity
+      icon: i-lucide-heart-handshake
+    - title: Custom Packages
+      description: Flexible partnership arrangements tailored to your needs and goals
+      icon: i-lucide-package
+    - title: Long-term Collaboration
+      description: Opportunities for ongoing partnerships and growing together
+      icon: i-lucide-trending-up
+callToAction:
+  title: Ready to Partner?
+  description: Get in touch with us to discuss partnership opportunities. We're excited to hear from you and explore how we can work together.
+  buttons:
+    - label: Apply Now
+      to: https://forms.gle/partnership-application
+      icon: i-lucide-arrow-right
+      color: primary
+      variant: solid
+      size: lg
+    - label: Join the Discord
+      to: https://discord.gg/9Sz2msbSDq
+      target: _blank
+      icon: i-simple-icons-discord
+      color: secondary
+      variant: outline
+      size: lg
+contactEmail: events@pupsinthepark.uk
+description: Collaboration opportunities for content creators and businesses to partner with Pups in the Park.
+hero:
+  title: Join Us as a Partner
+  description: Whether you're a content creator with a passionate following or a business that serves our community, we'd love to explore partnership opportunities with you.
+intro: We're always excited to collaborate with content creators and businesses who share our values and want to support the alterhuman and kemonomimi community.
+requirements:
+  title: Partnership Criteria
+  contentCreators:
+    - 50,000+ followers on any platform (Instagram, TikTok, YouTube, etc.)
+    - Actively create content for kemonomimi, furry, alterhuman, or therian audiences
+    - Align with our community values of inclusivity, safety, and respect
+    - Professional approach to content creation and community engagement
+  businesses:
+    - Products or services relevant to our community (gear makers, event suppliers, etc.)
+    - Commitment to our values of inclusivity, safety, and authenticity
+    - Professional business practices and reliable service
+    - Willingness to engage meaningfully with our community
+sections:
+  - headline: For Content Creators
+    icon: i-lucide-video
+    title: Amplify Your Impact
+    description: Partner with the UK's largest alterhuman and kemonomimi event organisers to reach an engaged, passionate audience and create meaningful content.
+    features:
+      - title: Event Access
+        description: VIP access to our events for content creation purposes
+        icon: i-lucide-ticket
+      - title: Cross-Promotion
+        description: Promotion across our platforms and community channels
+        icon: i-lucide-megaphone
+      - title: Collaboration Opportunities
+        description: Work with us on special projects and initiatives
+        icon: i-lucide-users
+    image: /images/events/2025-10-18/27.png
+    imageAlt: Ember at PITP 2
+  - headline: For Businesses
+    icon: i-lucide-briefcase
+    title: Support Our Community
+    description: Partner with us to reach a dedicated audience whilst supporting a community that values inclusivity, authenticity, and safety.
+    reverse: true
+    features:
+      - title: Brand Visibility
+        description: Exposure at our events and across our digital platforms
+        icon: i-lucide-eye
+      - title: Vendor Opportunities
+        description: Sell your products or services at our events
+        icon: i-lucide-shopping-bag
+      - title: Community Goodwill
+        description: Support a cause that matters to your customers
+        icon: i-lucide-sparkles
