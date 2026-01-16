@@ -1,7 +1,7 @@
 title: Sustainability & Environmental Commitment
 callToAction:
   title: Join Our Green Journey
-  description: Every attendee plays a vital role in our sustainability mission. Together, we can create amazing events whilst protecting our planet.
+  description: Every attendee plays a vital role in our sustainability mission. Together, we can create amazing events whilst protecting our planet & island.
   buttons:
     - label: Upcoming Events
       to: /events/upcoming
@@ -12,19 +12,19 @@ callToAction:
       to: /policies/environmental-impact
       variant: outline
       icon: i-lucide-file-text
-description: At Pups in the Park, we believe in protecting the natural spaces we love. Our sustainability initiatives ensure every event leaves a pawsitive impact on the environment.
+description: At Pups In The Park, we believe in protecting the natural spaces we visit and love. Our sustainability initiatives ensure every event leaves a pawsitive impact on the environment.
 hero:
-  image: idk an image can go here
-  alt: Community members enjoying the park during a Pups in the Park event
+  image: /images/Sustainability/header-sustain.svg
+  alt: We support keep Britain Tidy!
 initiatives:
   - title: Zero-Waste Target
-    description: Working towards eliminating all waste sent to landfill through comprehensive recycling, composting, and waste reduction programmes at every event.
+    description: Working towards eliminating all waste we produce by focusing on "Bottle-neck" points that are particularly hard to overcome.
     icon: i-lucide-target
   - title: Green Partnerships
-    description: Collaborating exclusively with eco-conscious vendors, suppliers, and venues who demonstrate genuine commitment to environmental sustainability.
+    description: Collaborating exclusively with vendors that share our same values, In Line with our Environmental Policy.
     icon: i-lucide-handshake
   - title: Community Education
-    description: Empowering attendees with practical knowledge about sustainable living and environmental stewardship they can implement beyond our events.
+    description: Providing attendees with practical knowledge about sustainable tips and tricks with environmental stewardship they can implement beyond our events.
     icon: i-lucide-graduation-cap
   - title: Continuous Improvement
     description: Regular sustainability audits, carbon footprint tracking, and community feedback collection to identify new environmental opportunities.
@@ -32,7 +32,7 @@ initiatives:
   - title: Local Ecosystem Support
     description: Active contribution to local conservation efforts and partnerships with environmental organisations in the areas where we host events.
     icon: i-lucide-trees
-  - title: Renewable Energy Advocacy
+  - title: Renewable Energy
     description: Prioritising venues with renewable energy sources and supporting the transition to clean power in event spaces.
     icon: i-lucide-zap
 sections:
@@ -40,32 +40,33 @@ sections:
     description: Comprehensive waste management strategies to ensure proper disposal and recycling at every event.
     icon: i-lucide-recycle
     reverse: false
-    image: https://placehold.co/800?text=Placeholder&font=poppins
+    image: /images/Sustainability/1.svg
     imageAlt: Park environment during our event
     features:
       - title: Recycling Stations
-        description: Clearly marked bins for recyclables, compostables, and general waste throughout the venue.
+        description: Clearly marked bins for recyclables, compostables, and general waste throughout the venue, In best practise with the Keep Britian Tidy scheme.
         icon: i-lucide-trash-2
       - title: Council Partnership
-        description: Working with local councils to ensure all waste is processed responsibly.
+        description: We work with local councils and park Authorities to ensure all waste is processed responsibly.
         icon: i-lucide-handshake
       - title: Post-Event Clean-up
-        description: Dedicated stewards conduct thorough operations to leave parks in pristine condition.
+        description: Event Operations conduct thorough checks to leave parks in pristine condition.
         icon: i-lucide-sparkles
+    headline: ""
   - title: Sustainable Event Materials
     description: Every decision considers environmental impact, from biodegradable name tags to reusable signage.
     icon: i-lucide-leaf
     reverse: true
-    image: https://placehold.co/800?text=Placeholder&font=poppins
+    image: /images/Sustainability/2.svg
     features:
       - title: Zero Single-Use Plastics
-        description: Eliminated wherever possible from all event operations.
+        description: We severely limit the usage of single use plastic where possible.
         icon: i-lucide-ban
       - title: Eco-Friendly Merchandise
-        description: Sourced from sustainable suppliers who share our environmental values.
+        description: Sourced from sustainable suppliers who share our environmental values. Our Paper is Fairtrade certified.
         icon: i-lucide-shopping-bag
       - title: Digital First
-        description: Tickets and communications reduce paper waste whilst improving accessibility.
+        description: E-Tickets and communications reduce paper waste whilst improving accessibility.
         icon: i-lucide-smartphone
       - title: Reusable Systems
         description: Signage and event materials designed for multiple uses.
@@ -74,31 +75,31 @@ sections:
     description: Reducing our collective carbon footprint through sustainable travel choices.
     icon: i-lucide-train-front
     reverse: false
-    image: https://placehold.co/800?text=Placeholder&font=poppins
+    image: /images/Sustainability/3.svg
     features:
       - title: Public Transport First
-        description: Events located for easy access via eco-friendly transport options.
+        description: Backing the Getting There Greener scheme by East Midlands Railway.
         icon: i-lucide-bus
-      - title: Carpooling Coordination
+      - title: Car Share
         description: Information and support for attendees sharing journeys.
         icon: i-lucide-users
       - title: Team Leadership
         description: Our team leads by example using public transport and electric vehicles.
         icon: i-lucide-leaf
       - title: Carbon Offsetting
-        description: Exploring programmes to neutralise environmental impact.
+        description: Exploring programmes to neutralise environmental impact,
         icon: i-lucide-cloud
   - title: Biodiversity & Wildlife Protection
     description: Respecting nature extends beyond litter collection to active ecosystem protection.
     icon: i-lucide-bird
     reverse: true
-    image: https://placehold.co/800?text=Placeholder&font=poppins
+    image: /images/Sustainability/4.svg
     features:
       - title: Wildlife-Friendly Scheduling
         description: Events timed to minimise disruption to local wildlife and nesting seasons.
         icon: i-lucide-calendar-clock
       - title: Trained Stewards
-        description: Staff identify and protect sensitive areas within event spaces.
+        description: Pre-Event checks allow us to identify sensitive or species-rich areas that we can limit our damage to.
         icon: i-lucide-shield-check
       - title: Authority Partnership
         description: Working with park authorities to enhance rather than damage ecosystems.
@@ -107,3 +108,6 @@ sections:
         description: Help attendees understand and appreciate the natural environment.
         icon: i-lucide-book-open
         to: /policies/environmental-impact
+leafImage: /images/Sustainability/The-holy-leaf.png
+navigation:
+  title: ""
