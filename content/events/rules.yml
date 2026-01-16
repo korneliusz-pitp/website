@@ -3,8 +3,7 @@ callToAction:
   title: Read the Full Code of Conduct
   description: This page is a summary. For complete details on all policies, visit our Policies Hub.
   buttons:
-    -
-      label: View Full Policy
+    - label: View Full Policy
       to: /policies/code-of-conduct
       color: primary
       variant: solid
@@ -12,6 +11,17 @@ callToAction:
 contactEmail: events@pupsinthepark.uk
 description: A summary of our attendee code of conduct.
 intro: Pups In The Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
+ageGroups:
+  title: Age Groups & Requirements
+  groups:
+    - ageRange: Under 13
+      summary: Must be accompanied by a parent or legal guardian (18+) at all times.
+    - ageRange: 13-17
+      summary: Permitted unaccompanied. Strictly prohibited from consuming alcohol, tobacco, or vapes.
+    - ageRange: 18-29
+      summary: Standard access. Expected to model appropriate behaviour for younger attendees.
+    - ageRange: 30+
+      summary: Restricted access - only as guardians, registered carers, or approved volunteers.
 keyRules:
   - label: Consent & Respect
     icon: i-lucide-heart-handshake
@@ -19,13 +29,6 @@ keyRules:
       - '"Cosplay is not Consent." Always ask for explicit verbal permission before touching anyone or their gear'
       - Respect \"No Touch\" tags absolutely. If someone says \"no\", respect that immediately.
       - Please use people's preferred pronouns."
-  - label: Age Restrictions
-    icon: i-lucide-users
-    content:
-      - "Under 13: Must be accompanied by a parent/guardian (18+) at all times."
-      - "13-17: Permitted unaccompanied. Strictly prohibited from alcohol, tobacco, or vapes."
-      - "18-29: Standard access. Model appropriate behaviour for younger attendees."
-      - "30+: Restricted access - only as guardians, registered carers, or approved volunteers."
   - label: Public Decency
     icon: i-lucide-eye
     content:

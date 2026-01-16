@@ -222,6 +222,17 @@ export const collections = {
       intro: z.string().optional(),
       permittedGear: itemList().optional(),
       prohibitedItems: itemList().optional(),
+      ageGroups: z
+        .object({
+          title: z.string(),
+          groups: z.array(
+            z.object({
+              ageRange: z.string(),
+              summary: z.string(),
+            })
+          ),
+        })
+        .optional(),
       keyRules: z
         .array(
           z.object({

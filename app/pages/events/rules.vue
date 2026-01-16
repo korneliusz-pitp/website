@@ -69,6 +69,23 @@ const getKeyRuleContent = (index: number): string[] => {
           </UPageGrid>
         </div>
 
+        <!-- Age Groups Section -->
+        <div v-if="rules.ageGroups" class="my-12">
+          <ProseH2>{{ rules.ageGroups.title }}</ProseH2>
+          <div class="space-y-3 mt-6">
+            <div
+              v-for="(group, index) in rules.ageGroups.groups"
+              :key="index"
+              class="flex gap-3"
+            >
+              <div class="font-semibold min-w-24 text-primary">
+                {{ group.ageRange }}:
+              </div>
+              <div>{{ group.summary }}</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Key Rules Accordion -->
         <div v-if="accordionItems.length > 0">
           <ProseH2>Key Rules</ProseH2>
