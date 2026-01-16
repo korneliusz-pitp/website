@@ -1,4 +1,15 @@
 title: Rules & Safety
+ageGroups:
+  title: Age Groups & Requirements
+  groups:
+    - ageRange: Under 13
+      summary: You Must be accompanied by a parent or legal guardian (18+) at all times.
+    - ageRange: 13-17
+      summary: Permitted unaccompanied, You are Strictly prohibited from consuming alcohol, tobacco, vapes and cigarettes.
+    - ageRange: 18-29
+      summary: Standard access! Expected to model appropriate behaviour for younger attendees.
+    - ageRange: 30+
+      summary: Sorry, Restricted access - only as guardians, registered carers, or approved volunteers.
 callToAction:
   title: Read the Full Code of Conduct
   description: This page is a summary. For complete details on all policies, visit our Policies Hub.
@@ -11,17 +22,6 @@ callToAction:
 contactEmail: events@pupsinthepark.uk
 description: A summary of our attendee code of conduct.
 intro: Pups In The Park is dedicated to providing a safe, inclusive, and fun environment for everyone. By attending our events, you agree to abide by these rules. Failure to do so may result in being asked to leave.
-ageGroups:
-  title: Age Groups & Requirements
-  groups:
-    - ageRange: Under 13
-      summary: Must be accompanied by a parent or legal guardian (18+) at all times.
-    - ageRange: 13-17
-      summary: Permitted unaccompanied. Strictly prohibited from consuming alcohol, tobacco, or vapes.
-    - ageRange: 18-29
-      summary: Standard access. Expected to model appropriate behaviour for younger attendees.
-    - ageRange: 30+
-      summary: Restricted access - only as guardians, registered carers, or approved volunteers.
 keyRules:
   - label: Consent & Respect
     icon: i-lucide-heart-handshake

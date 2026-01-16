@@ -2,7 +2,7 @@ apply:
   label: Apply
   to: https://forms.gle/first-aid-form
   target: _blank
-available: true
+available: false
 colorHex: "#66e301"
 description: Provide first aid support. Certification required; we'll verify credentials during review.
 details:

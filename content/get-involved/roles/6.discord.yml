@@ -1,15 +1,10 @@
-name: Discord Moderator
-description: >-
-  Support a safe and welcoming online space by moderating
-  our Discord server. Experience with community moderation
-  preferred.
-icon: i-lucide-shield
-available: true
-colorHex: "#3b82f6"
 apply:
   label: Apply
   to: https://forms.gle/discord-form
   target: _blank
+available: false
+colorHex: "#3b82f6"
+description: Support a safe and welcoming online space by moderating our Discord server. Experience with community moderation preferred.
 details:
   requirements:
     - Empathy and active listening
@@ -20,3 +15,5 @@ details:
     - Engage positively with community members
     - Escalate issues to lead moderators
   contactEmail: mads@pupsinthepark.org
+icon: i-lucide-shield
+name: Discord Moderator

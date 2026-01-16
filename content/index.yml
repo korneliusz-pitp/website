@@ -1,7 +1,7 @@
 title: Pups in the Park
 callToAction:
   title: Ready to Join Us?
-  description: Whether you're new to the community or a long-time member, there's a place for you at Pups in the Park. Check out our upcoming events or join our Discord to stay connected.
+  description: Whether you're new to the community or a long-time member, there's a place for you at Pups In The Park. Check out our upcoming events or join our Discord to stay connected.
   buttons:
     - label: View Upcoming Events
       to: /events/upcoming
@@ -11,7 +11,7 @@ callToAction:
       size: lg
     - label: Learn About Volunteering
       to: /get-involved
-      color: secondary
+      color: error
       variant: solid
       icon: i-lucide-hand-helping
       size: lg
@@ -19,30 +19,33 @@ callToAction:
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
       color: info
-      variant: outline
+      variant: solid
       icon: i-simple-icons-discord
       size: lg
-description: The UK's largest alterhuman and kemonomimi community event! Join us for inclusive, safe gatherings where you can express yourself authentically and connect with like-minded individuals.
+description: The UK's largest Alterhuman and Kemonomimi community event! Join us for inclusive gatherings where you can be yourself in a safe environment and connect with like-minded individuals!
 features:
   title: Why Choose Pups in the Park?
   description: We pride ourselves on creating exceptional experiences
   items:
     - icon: i-lucide-shield-check
       title: Safety First
-      description: Comprehensive safeguarding policies, trained first aiders, and dedicated volunteers ensure everyone's wellbeing at our events.
+      description: Comprehensive safeguarding policies, trained first aiders, and a dedicated volunteer team to ensure everyone's wellbeing at our events.
       spotlight: true
       spotlightColor: primary
     - icon: i-lucide-users-round
       title: Community Focused
-      description: Built by the community, for the community. Your feedback shapes our events and policies.
+      description: By the community, for the community. Your feedback shapes how we host our events and change our policies.
       spotlight: true
     - icon: i-lucide-map-pin
       title: Great Locations
-      description: Carefully selected outdoor spaces that provide privacy, accessibility, and natural beauty.
-      spotlight: true
+      description: Carefully selected outdoor spaces, flagshipped by British Heritage & Trust foundations that provide privacy, accessibility, and natural beauty.
+      spotlight: "true"
+      highlightColor: ""
+      highlight: ""
+      orientation: ""
     - icon: i-lucide-calendar-check
       title: Well Organised
-      description: Professional event management with clear communication, detailed planning, and smooth execution.
+      description: A Dedicated event management team with clear communication, detailed planning, and smooth execution.
       spotlight: true
     - icon: i-lucide-heart-handshake
       title: Respectful Environment
@@ -55,7 +58,7 @@ features:
 hero:
   headline: Welcome to
   title: Pups in the Park
-  description: The UK's largest alterhuman and kemonomimi community events. Join us for inclusive, safe gatherings where you can express yourself authentically and connect with like-minded individuals.
+  description: The UK's largest Alterhuman and Kemonomimi community event! Join us for inclusive gatherings where you can be yourself in a safe environment and connect with like-minded individuals!
   orientation: horizontal
   image: /images/brand/pip.png
   imageAlt: Pups in the Park Logo
@@ -69,7 +72,7 @@ hero:
     - label: Join Our Community
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
-      color: secondary
+      color: info
       variant: outline
       icon: i-simple-icons-discord
       size: xl
@@ -77,7 +80,7 @@ sections:
   - headline: Who We Are
     icon: i-lucide-heart
     title: A Community Built on Inclusivity
-    description: We're the largest alterhuman and kemonomimi community event organisers in the UK, hosting regular meetups where members can trade creations, meet content creators, and celebrate their authentic selves.
+    description: We, are the largest Therian, Kemonomimi and Alterhuman meet in the UK! Hosting events currently twice a year; We strive for inclusivity, saftey and welcoming factors! Nobody left out!
     image: /images/events/2025-07-05/IMG_4715.webp
     imageAlt: Community gathering at Pups in the Park
     features:
@@ -99,7 +102,7 @@ sections:
   - headline: What We Offer
     icon: i-lucide-star
     title: Events That Bring Us Together
-    description: From large meetups to smaller gatherings, we create spaces for connection, creativity, and community.
+    description: From large meetups to smaller gatherings, we create spaces for connection, creativity, and community at every corner.
     reverse: true
     features:
       - title: Regular Meetups

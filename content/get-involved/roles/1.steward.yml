@@ -2,7 +2,7 @@ apply:
   label: Apply
   to: https://forms.gle/steward-form
   target: _blank
-available: true
+available: false
 colorHex: "#da1309"
 description: Join The PITP Helper Team and help us manage our events! At our frontline, you will be leading games and activities during our events!
 details:
@@ -11,5 +11,6 @@ details:
     - Provide directions and basic information
     - Escalate issues to Team Leaders
   contactEmail: volunteer@pupsinthepark.org
+  requirements: []
 icon: i-lucide-users
 name: Helper

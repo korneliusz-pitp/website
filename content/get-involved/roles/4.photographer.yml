@@ -2,14 +2,22 @@ apply:
   label: Apply
   to: https://forms.gle/photography-form
   target: _blank
+  disabled: false
+  description: ""
 available: false
 colorHex: "#e201a0"
 description: Join The PITP Content Team as a Photographer or Videographer and be our social frontline of our events! Portfolio/Experiance Required.
 details:
   requirements:
-    - Portfolio demonstrating event or portrait work
+    - Portfolio demonstrating relevant experiance
     - Respect for privacy and consent policies
     - Own camera and equipment
+    - Knowledge About basic Content Security
+    - Able to work with a team
   contactEmail: rea@pupsinthepark.org
+  duties:
+    - Capturing the energy of PITP Events
+    - Able to get reactionary photos in relation to a specific "moment"
+    - Following brand guidelines
 icon: i-lucide-camera
 name: Photographer
