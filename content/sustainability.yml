@@ -14,7 +14,7 @@ callToAction:
       icon: i-lucide-file-text
 description: At Pups In The Park, we believe in protecting the natural spaces we visit and love. Our sustainability initiatives ensure every event leaves a pawsitive impact on the environment.
 hero:
-  image: /images/Sustainability/We-support-keep-britain-tidy.png
+  image: /images/Sustainability/We-support-keep-britain-tidy-1.png
   alt: We support keep Britain Tidy!
 initiatives:
   - title: Zero-Waste Target
@@ -92,6 +92,8 @@ sections:
       - title: Carbon Offsetting
         description: Exploring programmes to neutralise environmental impact,
         icon: i-lucide-cloud
+    links: ""
+    headline: ""
   - title: Biodiversity & Wildlife Protection
     description: Respecting nature extends beyond litter collection to active ecosystem protection.
     icon: i-lucide-bird
