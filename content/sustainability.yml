@@ -14,7 +14,7 @@ callToAction:
       icon: i-lucide-file-text
 description: At Pups In The Park, we believe in protecting the natural spaces we visit and love. Our sustainability initiatives ensure every event leaves a pawsitive impact on the environment.
 hero:
-  image: /images/Sustainability/header-sustain.svg
+  image: /images/Sustainability/We-support-keep-britain-tidy.png
   alt: We support keep Britain Tidy!
 initiatives:
   - title: Zero-Waste Target
@@ -35,12 +35,15 @@ initiatives:
   - title: Renewable Energy
     description: Prioritising venues with renewable energy sources and supporting the transition to clean power in event spaces.
     icon: i-lucide-zap
+leafImage: /images/Sustainability/The-holy-leaf.png
+navigation:
+  title: ""
 sections:
   - title: Waste Reduction & Recycling
     description: Comprehensive waste management strategies to ensure proper disposal and recycling at every event.
     icon: i-lucide-recycle
     reverse: false
-    image: /images/Sustainability/1.svg
+    image: /images/Sustainability/1.png
     imageAlt: Park environment during our event
     features:
       - title: Recycling Stations
@@ -57,7 +60,7 @@ sections:
     description: Every decision considers environmental impact, from biodegradable name tags to reusable signage.
     icon: i-lucide-leaf
     reverse: true
-    image: /images/Sustainability/2.svg
+    image: /images/Sustainability/2.png
     features:
       - title: Zero Single-Use Plastics
         description: We severely limit the usage of single use plastic where possible.
@@ -75,7 +78,7 @@ sections:
     description: Reducing our collective carbon footprint through sustainable travel choices.
     icon: i-lucide-train-front
     reverse: false
-    image: /images/Sustainability/3.svg
+    image: /images/Sustainability/3.png
     features:
       - title: Public Transport First
         description: Backing the Getting There Greener scheme by East Midlands Railway.
@@ -93,7 +96,7 @@ sections:
     description: Respecting nature extends beyond litter collection to active ecosystem protection.
     icon: i-lucide-bird
     reverse: true
-    image: /images/Sustainability/4.svg
+    image: /images/Sustainability/4.png
     features:
       - title: Wildlife-Friendly Scheduling
         description: Events timed to minimise disruption to local wildlife and nesting seasons.
@@ -108,6 +111,3 @@ sections:
         description: Help attendees understand and appreciate the natural environment.
         icon: i-lucide-book-open
         to: /policies/environmental-impact
-leafImage: /images/Sustainability/The-holy-leaf.png
-navigation:
-  title: ""
