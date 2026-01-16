@@ -26,12 +26,15 @@ quickLinks:
   - label: Privacy Policy
     to: /policies/privacy
     icon: i-heroicons-hand-raised
-  - label: "Sustainability"
+  - label: Sustainability
     icon: i-lucide-leaf
-    to: "/sustainability"
-  - icon: i-heroicons-chevron-right
-    to: "https://kennel.pupsinthepark.uk/login"
+    to: /sustainability
+  - icon: i-lucide-video
+    to: /partnership
+    label: Content Creator Or Business?
+  - to: https://kennel.pupsinthepark.uk/login
     label: Already A Volunteer?
+    icon: i-heroicons-chevron-right
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
