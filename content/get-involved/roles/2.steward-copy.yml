@@ -1,0 +1,16 @@
+apply:
+  label: Apply
+  to: https://forms.gle/steward-form
+  target: _blank
+available: false
+colorHex: "#373c44"
+description: Join The PITP Event Operations team and help us manage our events! A leading position at our frontline. Experiance in team leadership required.
+details:
+  duties:
+    - Help with queue and crowd flow
+    - Provide directions and basic information
+    - Escalate issues to Team Leaders
+  contactEmail: volunteer@pupsinthepark.org
+  requirements: []
+icon: i-lucide-users
+name: Team Lead

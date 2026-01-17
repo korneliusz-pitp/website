@@ -43,6 +43,7 @@ description: Collaboration opportunities for content creators and businesses to 
 hero:
   title: Join Us as a Partner
   description: Whether you're a content creator with a passionate following or a business that serves our community, we'd love to explore partnership opportunities with you.
+  image: ""
 intro: We're always excited to collaborate with content creators and businesses who share our values and want to support the alterhuman and kemonomimi community.
 requirements:
   title: Partnership Criteria
@@ -71,7 +72,7 @@ sections:
       - title: Collaboration Opportunities
         description: Work with us on special projects and initiatives
         icon: i-lucide-users
-    image: /images/events/2025-10-18/27.png
+    image: /images/Affiliate/Creators/Ember.png
     imageAlt: Ember at PITP 2
   - headline: For Businesses
     icon: i-lucide-briefcase
