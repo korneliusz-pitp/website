@@ -1,11 +1,32 @@
 {
   "images": [
     {
+      "path": "/images/Affiliate/Creators/Ember.png",
+      "name": "Ember.png",
+      "category": "Creators",
+      "size": 10929389,
+      "modified": "2026-01-17T23:26:37.140Z"
+    },
+    {
+      "path": "/images/Affiliate/Creators/SubtitleBody.png",
+      "name": "SubtitleBody.png",
+      "category": "Creators",
+      "size": 10131067,
+      "modified": "2026-01-17T23:26:37.195Z"
+    },
+    {
       "path": "/images/brand/pip.png",
       "name": "pip.png",
       "category": "brand",
-      "size": 113369,
-      "modified": "2026-01-15T23:48:54.473Z"
+      "size": 60535,
+      "modified": "2026-01-17T23:26:37.196Z"
+    },
+    {
+      "path": "/images/brand/pip2.png",
+      "name": "pip2.png",
+      "category": "brand",
+      "size": 60535,
+      "modified": "2026-01-17T23:26:37.198Z"
     },
     {
       "path": "/images/events/2025-07-05/20250705_113554.jpg",
@@ -53,7 +74,7 @@
       "category": "events",
       "date": "2025-07-05",
       "size": 265518,
-      "modified": "2026-01-16T23:21:48.753Z"
+      "modified": "2026-01-17T23:26:35.115Z"
     },
     {
       "path": "/images/events/2025-07-05/IMG_3271.JPG",
@@ -433,6 +454,13 @@
       "modified": "2026-01-16T22:59:16.622Z"
     },
     {
+      "path": "/images/Sustainability/We-support-keep-britain-tidy-1.png",
+      "name": "We-support-keep-britain-tidy-1.png",
+      "category": "Sustainability",
+      "size": 17487175,
+      "modified": "2026-01-16T23:23:55.593Z"
+    },
+    {
       "path": "/images/team/Becktemp.png",
       "name": "Becktemp.png",
       "category": "team",
@@ -455,6 +483,7 @@
     }
   ],
   "categories": [
+    "Creators",
     "Sustainability",
     "banners",
     "brand",
@@ -466,5 +495,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-16T23:23:31.665Z"
+  "generated": "2026-01-20T00:52:30.573Z"
 }

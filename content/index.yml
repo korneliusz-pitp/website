@@ -18,7 +18,7 @@ callToAction:
     - label: Join the Discord
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
-      color: info
+      color: discord
       variant: solid
       icon: i-simple-icons-discord
       size: lg
@@ -39,7 +39,7 @@ features:
     - icon: i-lucide-map-pin
       title: Great Locations
       description: Carefully selected outdoor spaces, flagshipped by British Heritage & Trust foundations that provide privacy, accessibility, and natural beauty.
-      spotlight: "true"
+      spotlight: True
       highlightColor: ""
       highlight: ""
       orientation: ""
@@ -72,7 +72,7 @@ hero:
     - label: Join Our Community
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
-      color: info
+      color: discord
       variant: outline
       icon: i-simple-icons-discord
       size: xl
