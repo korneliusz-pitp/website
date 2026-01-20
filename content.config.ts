@@ -1,107 +1,107 @@
-import { defineCollection, z } from "@nuxt/content";
+import { defineCollection, z } from '@nuxt/content'
 
 const colorEnum = z.enum([
-  "primary",
-  "secondary",
-  "neutral",
-  "error",
-  "warning",
-  "success",
-  "info",
-]);
+  'primary',
+  'secondary',
+  'neutral',
+  'error',
+  'warning',
+  'success',
+  'info',
+])
 const variantEnum = z.enum([
-  "solid",
-  "outline",
-  "subtle",
-  "soft",
-  "ghost",
-  "link",
-]);
-const sizeEnum = z.enum(["xs", "sm", "md", "lg", "xl"]);
+  'solid',
+  'outline',
+  'subtle',
+  'soft',
+  'ghost',
+  'link',
+])
+const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
 
 const link = () =>
   z.object({
     label: z.string(),
     to: z.string().optional(),
-    icon: z.string().optional().editor({ input: "icon" }),
+    icon: z.string().optional().editor({ input: 'icon' }),
     description: z.string().optional(),
     disabled: z.boolean().optional(),
-    target: z.enum(["_blank", "_self"]).optional(),
-  });
+    target: z.enum(['_blank', '_self']).optional(),
+  })
 
 const button = () =>
   link().extend({
     color: colorEnum.optional(),
     variant: variantEnum.optional(),
     size: sizeEnum.optional(),
-  });
+  })
 
 const navItem = () =>
   link().extend({
     children: z.array(link()).optional(),
-  });
+  })
 
 const cta = () =>
   z.object({
     title: z.string().optional(),
     description: z.string().optional(),
     buttons: z.array(button()).optional(),
-  });
+  })
 
 const itemList = () =>
   z.object({
     title: z.string(),
-    icon: z.string().optional().editor({ input: "icon" }),
-    itemIcon: z.string().optional().editor({ input: "icon" }),
+    icon: z.string().optional().editor({ input: 'icon' }),
+    itemIcon: z.string().optional().editor({ input: 'icon' }),
     items: z.array(z.string()),
-  });
+  })
 
 const pageFeature = () =>
   z.object({
     title: z.string(),
     description: z.string().optional(),
-    icon: z.string().optional().editor({ input: "icon" }),
-    orientation: z.enum(["horizontal", "vertical"]).default("horizontal").optional(),
+    icon: z.string().optional().editor({ input: 'icon' }),
+    orientation: z.enum(['horizontal', 'vertical']).default('horizontal').optional(),
     to: z.string().optional(),
-    target: z.enum(["_blank", "_self"]).optional(),
-  });
+    target: z.enum(['_blank', '_self']).optional(),
+  })
 
 const pageSection = () =>
   z.object({
     headline: z.string().optional(),
-    icon: z.string().optional().editor({ input: "icon" }),
+    icon: z.string().optional().editor({ input: 'icon' }),
     title: z.string(),
     description: z.string().optional(),
     content: z.string().optional(),
     reverse: z.boolean().optional(),
-    image: z.string().optional().editor({ input: "media" }),
+    image: z.string().optional().editor({ input: 'media' }),
     imageAlt: z.string().optional(),
     features: z.array(pageFeature()).optional(),
     links: z.array(button()).optional(),
-  });
+  })
 
 const pageCard = () =>
   z.object({
-    icon: z.string().optional().editor({ input: "icon" }),
+    icon: z.string().optional().editor({ input: 'icon' }),
     title: z.string(),
     description: z.string().optional(),
     to: z.string().optional(),
-    target: z.enum(["_blank", "_self"]).optional(),
-    orientation: z.enum(["horizontal", "vertical"]).default("vertical").optional(),
+    target: z.enum(['_blank', '_self']).optional(),
+    orientation: z.enum(['horizontal', 'vertical']).default('vertical').optional(),
     highlight: z.boolean().optional(),
     highlightColor: colorEnum.optional(),
     spotlight: z.boolean().optional(),
-  });
+  })
 
 export const collections = {
   content: defineCollection({
-    type: "page",
-    source: { include: "**/*.md", exclude: ["events/*.md", "policies/*.md"] },
+    type: 'page',
+    source: { include: '**/*.md', exclude: ['events/*.md', 'policies/*.md'] },
   }),
 
   homepage: defineCollection({
-    type: "page",
-    source: "index.yml",
+    type: 'page',
+    source: 'index.yml',
     schema: z.object({
       title: z.string(),
       description: z.string(),
@@ -109,10 +109,10 @@ export const collections = {
         headline: z.string().optional(),
         title: z.string(),
         description: z.string(),
-        image: z.string().optional().editor({ input: "media" }),
+        image: z.string().optional().editor({ input: 'media' }),
         imageAlt: z.string().optional(),
         links: z.array(button()).optional(),
-        orientation: z.enum(["horizontal", "vertical"]).default("vertical").optional(),
+        orientation: z.enum(['horizontal', 'vertical']).default('vertical').optional(),
       }).optional(),
       sections: z.array(pageSection()).optional(),
       features: z.object({
@@ -126,8 +126,8 @@ export const collections = {
           z.object({
             value: z.string(),
             label: z.string(),
-            icon: z.string().optional().editor({ input: "icon" }),
-          })
+            icon: z.string().optional().editor({ input: 'icon' }),
+          }),
         ),
       }).optional(),
       callToAction: cta().optional(),
@@ -135,8 +135,8 @@ export const collections = {
   }),
 
   header: defineCollection({
-    type: "data",
-    source: "header.yml",
+    type: 'data',
+    source: 'header.yml',
     schema: z.object({
       title: z.string().optional(),
       to: z.string().optional(),
@@ -152,8 +152,8 @@ export const collections = {
   }),
 
   footer: defineCollection({
-    type: "data",
-    source: "footer.yml",
+    type: 'data',
+    source: 'footer.yml',
     schema: z.object({
       brand: z
         .object({
@@ -168,8 +168,8 @@ export const collections = {
           z.object({
             label: z.string(),
             email: z.string().email(),
-            icon: z.string().optional().editor({ input: "icon" }),
-          })
+            icon: z.string().optional().editor({ input: 'icon' }),
+          }),
         )
         .optional(),
       footnote: z.string().optional(),
@@ -177,19 +177,19 @@ export const collections = {
   }),
 
   event: defineCollection({
-    type: "page",
-    source: "events/index.yml",
+    type: 'page',
+    source: 'events/index.yml',
     schema: z.object({ cta: cta().optional() }),
   }),
 
   event_gallery: defineCollection({
-    type: "page",
-    source: "events/gallery.yml",
+    type: 'page',
+    source: 'events/gallery.yml',
   }),
 
   events: defineCollection({
-    type: "page",
-    source: "events/*.md",
+    type: 'page',
+    source: 'events/*.md',
     schema: z.object({
       date: z.string().date().optional(),
       time: z
@@ -206,16 +206,16 @@ export const collections = {
           what3words: z.string().optional(),
         })
         .optional(),
-      status: z.enum(["draft", "published", "cancelled"]).default("draft"),
-      coverImage: z.string().optional().editor({ input: "media" }),
+      status: z.enum(['draft', 'published', 'cancelled']).default('draft'),
+      coverImage: z.string().optional().editor({ input: 'media' }),
       registrationLink: z.string().url().optional(),
       feedbackLink: z.string().url().optional(),
     }),
   }),
 
   rules: defineCollection({
-    type: "page",
-    source: "events/rules.yml",
+    type: 'page',
+    source: 'events/rules.yml',
     schema: z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -229,7 +229,7 @@ export const collections = {
             z.object({
               ageRange: z.string(),
               summary: z.string(),
-            })
+            }),
           ),
         })
         .optional(),
@@ -237,9 +237,9 @@ export const collections = {
         .array(
           z.object({
             label: z.string(),
-            icon: z.string().optional().editor({ input: "icon" }),
+            icon: z.string().optional().editor({ input: 'icon' }),
             content: z.array(z.string()),
-          })
+          }),
         )
         .optional(),
       callToAction: cta().optional(),
@@ -248,38 +248,38 @@ export const collections = {
   }),
 
   policy: defineCollection({
-    type: "page",
-    source: "policies/index.yml",
+    type: 'page',
+    source: 'policies/index.yml',
   }),
 
   policies: defineCollection({
-    type: "page",
-    source: "policies/*.md",
+    type: 'page',
+    source: 'policies/*.md',
   }),
 
   team: defineCollection({
-    type: "data",
-    source: "about/team/*.yml",
+    type: 'data',
+    source: 'about/team/*.yml',
     schema: z.object({
       name: z.string(),
       role: z.string(),
       bio: z.string().optional(),
-      image: z.string().optional().editor({ input: "media" }),
+      image: z.string().optional().editor({ input: 'media' }),
       socials: z
         .array(
           z.object({
-            icon: z.string().optional().editor({ input: "icon" }),
+            icon: z.string().optional().editor({ input: 'icon' }),
             url: z.string().url().optional(),
             label: z.string().optional(),
-          })
+          }),
         )
         .optional(),
     }),
   }),
 
   about: defineCollection({
-    type: "page",
-    source: "about/index.yml",
+    type: 'page',
+    source: 'about/index.yml',
     schema: z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -295,8 +295,8 @@ export const collections = {
           z.object({
             label: z.string(),
             description: z.string(),
-            icon: z.string().optional().editor({ input: "icon" }),
-          })
+            icon: z.string().optional().editor({ input: 'icon' }),
+          }),
         )
         .optional(),
       callToAction: cta().optional(),
@@ -304,8 +304,8 @@ export const collections = {
   }),
 
   get_involved: defineCollection({
-    type: "page",
-    source: "get-involved/index.yml",
+    type: 'page',
+    source: 'get-involved/index.yml',
     schema: z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -322,8 +322,8 @@ export const collections = {
           z.object({
             title: z.string(),
             description: z.string().optional(),
-            icon: z.string().optional().editor({ input: "icon" }),
-          })
+            icon: z.string().optional().editor({ input: 'icon' }),
+          }),
         )
         .optional(),
       callToAction: cta().optional(),
@@ -331,8 +331,8 @@ export const collections = {
   }),
 
   partnership: defineCollection({
-    type: "page",
-    source: "partnership.yml",
+    type: 'page',
+    source: 'partnership.yml',
     schema: z.object({
       title: z.string(),
       description: z.string(),
@@ -341,7 +341,7 @@ export const collections = {
         .object({
           title: z.string(),
           description: z.string(),
-          image: z.string().optional().editor({ input: "media" }),
+          image: z.string().optional().editor({ input: 'media' }),
           imageAlt: z.string().optional(),
         })
         .optional(),
@@ -366,12 +366,12 @@ export const collections = {
   }),
 
   volunteer_roles: defineCollection({
-    type: "data",
-    source: "get-involved/roles/*.yml",
+    type: 'data',
+    source: 'get-involved/roles/*.yml',
     schema: z.object({
       name: z.string(),
       description: z.string().optional(),
-      icon: z.string().optional().editor({ input: "icon" }),
+      icon: z.string().optional().editor({ input: 'icon' }),
       available: z.boolean(),
       colorHex: z
         .string()
@@ -389,8 +389,8 @@ export const collections = {
   }),
 
   contact: defineCollection({
-    type: "page",
-    source: "contact.yml",
+    type: 'page',
+    source: 'contact.yml',
     schema: z.object({
       title: z.string(),
       description: z.string(),
@@ -399,10 +399,10 @@ export const collections = {
         z.object({
           department: z.string(),
           email: z.string().email(),
-          icon: z.string().optional().editor({ input: "icon" }),
+          icon: z.string().optional().editor({ input: 'icon' }),
           description: z.string().optional(),
-          priority: z.enum(["normal", "high"]).default("normal").optional(),
-        })
+          priority: z.enum(['normal', 'high']).default('normal').optional(),
+        }),
       ),
       socialConnections: z
         .object({
@@ -419,7 +419,7 @@ export const collections = {
               question: z.string(),
               answer: z.string(),
               link: z.string().optional(),
-            })
+            }),
           ),
         })
         .optional(),
@@ -427,8 +427,8 @@ export const collections = {
   }),
 
   report: defineCollection({
-    type: "page",
-    source: "report.yml",
+    type: 'page',
+    source: 'report.yml',
     schema: z.object({
       title: z.string(),
       description: z.string(),
@@ -454,10 +454,10 @@ export const collections = {
         categories: z.array(
           z.object({
             label: z.string(),
-            icon: z.string().optional().editor({ input: "icon" }),
+            icon: z.string().optional().editor({ input: 'icon' }),
             description: z.string(),
             examples: z.array(z.string()),
-          })
+          }),
         ),
       }),
       supportResources: z
@@ -469,8 +469,8 @@ export const collections = {
               label: z.string(),
               contact: z.string(),
               description: z.string().optional(),
-              icon: z.string().optional().editor({ input: "icon" }),
-            })
+              icon: z.string().optional().editor({ input: 'icon' }),
+            }),
           ),
         })
         .optional(),
@@ -484,15 +484,15 @@ export const collections = {
   }),
 
   sustainability: defineCollection({
-    type: "page",
-    source: "sustainability.yml",
+    type: 'page',
+    source: 'sustainability.yml',
     schema: z.object({
       title: z.string(),
       description: z.string(),
-      leafImage: z.string().optional().editor({ input: "media" }),
+      leafImage: z.string().optional().editor({ input: 'media' }),
       hero: z
         .object({
-          image: z.string().optional().editor({ input: "media" }),
+          image: z.string().optional().editor({ input: 'media' }),
           alt: z.string().optional(),
         })
         .optional(),
@@ -502,17 +502,17 @@ export const collections = {
           z.object({
             title: z.string(),
             description: z.string(),
-            icon: z.string().optional().editor({ input: "icon" }),
+            icon: z.string().optional().editor({ input: 'icon' }),
             stats: z
               .object({
                 value: z.string(),
                 label: z.string(),
               })
               .optional(),
-          })
+          }),
         )
         .optional(),
       callToAction: cta().optional(),
     }),
   }),
-};
+}

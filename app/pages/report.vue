@@ -1,31 +1,34 @@
 <script setup lang="ts">
-const { data: report } = await useAsyncData("report-page", () =>
-  queryCollection("report").first()
-);
+const { data: report } = await useAsyncData('report-page', () =>
+  queryCollection('report').first(),
+)
 
 if (!report.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page not found",
+    statusMessage: 'Page not found',
     fatal: true,
-  });
+  })
 }
 
 useSeoMeta({
   title: report.value.title,
   description: report.value.description,
-  robots: "noindex", // Prevent indexing for sensitive page
-});
+  robots: 'noindex', // Prevent indexing for sensitive page
+})
 
 const formHeight = computed(
-  () => `${report.value?.formInfo?.googleFormHeight ?? 1200}px`
-);
+  () => `${report.value?.formInfo?.googleFormHeight ?? 1200}px`,
+)
 </script>
 
 <template>
   <UPage v-if="report">
     <UContainer>
-      <UPageHeader :title="report.title" :description="report.description" />
+      <UPageHeader
+        :title="report.title"
+        :description="report.description"
+      />
 
       <UPageBody>
         <!-- Emergency Alert -->
@@ -54,14 +57,20 @@ const formHeight = computed(
         </UAlert>
 
         <!-- Non-Emergency Notice -->
-        <UCard v-if="report.urgency.nonEmergency" class="mb-8 bg-primary/5">
+        <UCard
+          v-if="report.urgency.nonEmergency"
+          class="mb-8 bg-primary/5"
+        >
           <p class="font-medium">
             {{ report.urgency.nonEmergency.description }}
           </p>
         </UCard>
 
         <!-- What to Report -->
-        <div v-if="report.whatToReport" class="my-8">
+        <div
+          v-if="report.whatToReport"
+          class="my-8"
+        >
           <ProseH2>{{ report.whatToReport.title }}</ProseH2>
           <div class="grid gap-4 md:grid-cols-3 mt-4">
             <UCard
@@ -75,10 +84,14 @@ const formHeight = computed(
                     :name="category.icon"
                     class="w-5 h-5 text-secondary"
                   />
-                  <h3 class="font-semibold">{{ category.label }}</h3>
+                  <h3 class="font-semibold">
+                    {{ category.label }}
+                  </h3>
                 </div>
               </template>
-              <p class="text-sm mb-3">{{ category.description }}</p>
+              <p class="text-sm mb-3">
+                {{ category.description }}
+              </p>
               <ul class="text-sm text-muted-foreground space-y-1">
                 <li
                   v-for="example in category.examples"
@@ -97,11 +110,16 @@ const formHeight = computed(
         </div>
 
         <!-- Google Form Embed -->
-        <div v-if="report.formInfo" class="my-8">
+        <div
+          v-if="report.formInfo"
+          class="my-8"
+        >
           <ProseH2>{{ report.formInfo.title }}</ProseH2>
-          <ProseP class="mb-4">{{ report.formInfo.intro }}</ProseP>
+          <ProseP class="mb-4">
+            {{ report.formInfo.intro }}
+          </ProseP>
 
-          <div class="border-2 border-neutral rounded-lg overflow-hidden">
+          <div class="border-2 border-neutral rounded-[2rem] overflow-hidden">
             <iframe
               :src="report.formInfo.googleFormUrl"
               :height="formHeight"
@@ -125,7 +143,10 @@ const formHeight = computed(
         </div>
 
         <!-- Support Resources -->
-        <div v-if="report.supportResources" class="my-8">
+        <div
+          v-if="report.supportResources"
+          class="my-8"
+        >
           <ProseH2>{{ report.supportResources.title }}</ProseH2>
           <ProseP v-if="report.supportResources.description">
             {{ report.supportResources.description }}
@@ -141,7 +162,9 @@ const formHeight = computed(
                 :name="resource.icon"
                 class="w-8 h-8 mx-auto mb-3 text-secondary"
               />
-              <h3 class="font-semibold mb-1">{{ resource.label }}</h3>
+              <h3 class="font-semibold mb-1">
+                {{ resource.label }}
+              </h3>
               <p class="text-sm text-muted-foreground mb-2">
                 {{ resource.description }}
               </p>
@@ -153,7 +176,10 @@ const formHeight = computed(
         </div>
 
         <!-- Related Policies -->
-        <div v-if="report.relatedPolicies" class="my-8">
+        <div
+          v-if="report.relatedPolicies"
+          class="my-8"
+        >
           <ProseH2>{{ report.relatedPolicies.title }}</ProseH2>
           <div class="flex flex-wrap gap-3 mt-4">
             <UButton

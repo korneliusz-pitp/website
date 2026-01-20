@@ -3,18 +3,31 @@
     <UPage v-if="page">
       <!-- Falling Leaves Animation -->
       <div class="falling-leaves-container">
-        <div v-for="leaf in leaves" :key="leaf.id" class="leaf" :style="leaf.style">
-          <img v-if="page.leafImage" :src="page.leafImage" alt="Leaf" class="leaf-image" >
+        <div
+          v-for="leaf in leaves"
+          :key="leaf.id"
+          class="leaf"
+          :style="leaf.style"
+        >
+          <img
+            v-if="page.leafImage"
+            :src="page.leafImage"
+            alt="Leaf"
+            class="leaf-image"
+          >
           <span v-else>🍃</span>
         </div>
       </div>
 
-      <UPageHero :title="page.title" :description="page.description" >
+      <UPageHero
+        :title="page.title"
+        :description="page.description"
+      >
         <img
-            :src="page.hero?.image"
-            :alt="page.hero?.alt || 'Sustainability hero image'"
-            class="w-full h-100 shadow-2xl ring ring-default object-cover"
-          >
+          :src="page.hero?.image"
+          :alt="page.hero?.alt || 'Sustainability hero image'"
+          class="w-full h-full object-cover"
+        >
       </UPageHero>
 
       <UPageBody>
@@ -31,11 +44,14 @@
           :features="section.features"
           :links="section.links"
         >
-          <template v-if="section.image" #default>
+          <template
+            v-if="section.image"
+            #default
+          >
             <img
               :src="section.image"
               :alt="section.imageAlt || section.title"
-              class="w-full rounded-lg object-cover"
+              class="w-full rounded-[2rem] object-cover"
             >
           </template>
         </UPageSection>
@@ -59,65 +75,70 @@
       </UPageBody>
     </UPage>
 
-    <div v-else class="flex items-center justify-center min-h-screen">
-      <p class="text-muted">Content not found</p>
+    <div
+      v-else
+      class="flex items-center justify-center min-h-screen"
+    >
+      <p class="text-muted">
+        Content not found
+      </p>
     </div>
   </UContainer>
 </template>
 
 <script lang="ts" setup>
-const { data: page } = await useAsyncData("sustainability", () =>
-  queryCollection("sustainability").first()
-);
+const { data: page } = await useAsyncData('sustainability', () =>
+  queryCollection('sustainability').first(),
+)
 
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Sustainability page not found",
+    statusMessage: 'Sustainability page not found',
     fatal: true,
-  });
+  })
 }
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
-});
+})
 
 // Falling leaves animation
 interface Leaf {
-  id: number;
+  id: number
   style: {
-    left: string;
-    '--fall-duration': string;
-    '--sway-duration': string;
-    animationDelay: string;
-    fontSize: string;
-    opacity: string;
-    '--sway-distance': string;
-  };
+    'left': string
+    '--fall-duration': string
+    '--sway-duration': string
+    'animationDelay': string
+    'fontSize': string
+    'opacity': string
+    '--sway-distance': string
+  }
 }
 
-const leaves = ref<Leaf[]>([]);
+const leaves = ref<Leaf[]>([])
 
 onMounted(() => {
   // Generate random leaves with varied properties
   for (let i = 0; i < 15; i++) {
-    const fallDuration = 8 + Math.random() * 10;
-    const swayDuration = 3 + Math.random() * 3;
+    const fallDuration = 8 + Math.random() * 10
+    const swayDuration = 3 + Math.random() * 3
     leaves.value.push({
       id: i,
       style: {
-        left: `${Math.random() * 100}%`,
+        'left': `${Math.random() * 100}%`,
         '--fall-duration': `${fallDuration}s`,
         '--sway-duration': `${swayDuration}s`,
-        animationDelay: `${Math.random() * 5}s`,
-        fontSize: `${20 + Math.random() * 20}px`,
-        opacity: `${0.3 + Math.random() * 0.4}`,
+        'animationDelay': `${Math.random() * 5}s`,
+        'fontSize': `${20 + Math.random() * 20}px`,
+        'opacity': `${0.3 + Math.random() * 0.4}`,
         '--sway-distance': `${60 + Math.random() * 80}px`,
       },
-    });
+    })
   }
-});
+})
 </script>
 
 <style scoped>
@@ -135,7 +156,7 @@ onMounted(() => {
 .leaf {
   position: absolute;
   top: -100px;
-  animation: fall var(--fall-duration, 12s) linear infinite, 
+  animation: fall var(--fall-duration, 12s) linear infinite,
              sway var(--sway-duration, 4s) ease-in-out infinite;
   pointer-events: none;
   will-change: transform;

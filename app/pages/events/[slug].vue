@@ -1,79 +1,79 @@
 <script setup lang="ts">
-import { useInfiniteScroll } from "@vueuse/core";
+import { useInfiniteScroll } from '@vueuse/core'
 
-const route = useRoute();
-const slug = route.params.slug as string;
+const route = useRoute()
+const slug = route.params.slug as string
 
 const { data: event } = await useAsyncData(`event-${slug}`, () =>
-  queryCollection("events").path(`/events/${slug}`).first()
-);
+  queryCollection('events').path(`/events/${slug}`).first(),
+)
 
 if (!event.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Event not found",
+    statusMessage: 'Event not found',
     fatal: true,
-  });
+  })
 }
 
 const eventDateTime = computed(() =>
-  getEventDateTime(event.value!.date, event.value!.time)
-);
+  getEventDateTime(event.value!.date, event.value!.time),
+)
 
 interface Image {
-  path: string;
-  name: string;
-  category: string;
-  date?: string;
-  size: number;
-  modified: string;
+  path: string
+  name: string
+  category: string
+  date?: string
+  size: number
+  modified: string
 }
 
-const offset = ref(0);
+const offset = ref(0)
 
 const {
   data: galleryData,
   status: galleryStatus,
   execute,
-} = await useFetch("/api/gallery", {
+} = await useFetch('/api/gallery', {
   query: {
-    category: "events",
-    date: event.value?.date || "",
+    category: 'events',
+    date: event.value?.date || '',
     offset,
   },
   lazy: true,
   immediate: false,
-});
+})
 
-const images = useState<Image[]>(`event-gallery-${slug}`, () => []);
+const images = useState<Image[]>(`event-gallery-${slug}`, () => [])
 
 watch(galleryData, () => {
-  images.value = [...images.value, ...(galleryData.value?.images || [])];
-});
+  images.value = [...images.value, ...(galleryData.value?.images || [])]
+})
 
-const scrollArea = useTemplateRef("scrollArea");
-const scrollElement = computed(() => scrollArea.value?.$el);
+const scrollArea = useTemplateRef('scrollArea')
+const scrollElement = computed(() => scrollArea.value?.$el)
 
 onMounted(() => {
-  execute();
+  execute()
 
   useInfiniteScroll(
     scrollElement,
     () => {
-      offset.value += 20;
+      offset.value += 20
     },
     {
       distance: 200,
       canLoadMore: () => {
         return (
-          (galleryData.value?.hasMore && galleryStatus.value === "success") ||
-          false
-        );
+          (galleryData.value?.hasMore && galleryStatus.value === 'success')
+          || false
+        )
       },
-      direction: "right",
-    }
-  );
-});
+      direction: 'right',
+    },
+  )
+})
 </script>
 
 <template>
@@ -99,7 +99,9 @@ onMounted(() => {
           <div class="mb-8">
             <div class="flex items-start justify-between mb-4">
               <div>
-                <h1 class="text-4xl font-bold mb-2">{{ event.title }}</h1>
+                <h1 class="text-4xl font-bold mb-2">
+                  {{ event.title }}
+                </h1>
                 <p
                   v-if="event.description"
                   class="text-lg text-gray-600 dark:text-gray-400"
@@ -107,7 +109,10 @@ onMounted(() => {
                   {{ event.description }}
                 </p>
               </div>
-              <div v-if="event.status !== 'cancelled'" class="text-right">
+              <div
+                v-if="event.status !== 'cancelled'"
+                class="text-right"
+              >
                 <UBadge
                   v-if="eventDateTime.isUpcoming"
                   color="primary"
@@ -125,7 +130,12 @@ onMounted(() => {
                   Past
                 </UBadge>
               </div>
-              <UBadge v-else color="error" size="lg" class="mb-2">
+              <UBadge
+                v-else
+                color="error"
+                size="lg"
+                class="mb-2"
+              >
                 Cancelled
               </UBadge>
             </div>
@@ -142,10 +152,18 @@ onMounted(() => {
                 </div>
               </template>
               <div class="space-y-2">
-                <div v-if="eventDateTime.formattedDate" class="font-medium">
+                <div
+                  v-if="eventDateTime.formattedDate"
+                  class="font-medium"
+                >
                   {{ eventDateTime.formattedDate }}
                 </div>
-                <div v-else class="text-amber-600 dark:text-amber-500">TBC</div>
+                <div
+                  v-else
+                  class="text-amber-600 dark:text-amber-500"
+                >
+                  TBC
+                </div>
                 <div
                   v-if="eventDateTime.formattedTimeRange"
                   class="text-sm text-gray-600 dark:text-gray-400"
@@ -164,7 +182,10 @@ onMounted(() => {
                 </div>
               </template>
               <div class="space-y-2">
-                <div v-if="event.location?.name" class="font-medium">
+                <div
+                  v-if="event.location?.name"
+                  class="font-medium"
+                >
                   {{ event.location.name }}
                 </div>
                 <div
@@ -190,7 +211,10 @@ onMounted(() => {
           </div>
 
           <!-- Map Embed -->
-          <div v-if="event.location?.map" class="mb-8">
+          <div
+            v-if="event.location?.map"
+            class="mb-8"
+          >
             <UCard>
               <template #header>
                 <span class="font-semibold">Location Map</span>
@@ -212,7 +236,9 @@ onMounted(() => {
 
           <!-- Gallery -->
           <template v-if="galleryStatus === 'pending' && images.length === 0">
-            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Gallery
+            </h2>
             <div
               class="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg"
             >
@@ -231,7 +257,9 @@ onMounted(() => {
           <template
             v-else-if="images.length === 0 && galleryStatus === 'success'"
           >
-            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Gallery
+            </h2>
             <div
               class="flex items-center justify-center h-64 bg-gray-100 dark:bg-gray-800 rounded-lg"
             >
@@ -252,7 +280,9 @@ onMounted(() => {
           </template>
 
           <template v-else-if="images.length === 1">
-            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Gallery
+            </h2>
             <div class="relative rounded-lg overflow-hidden">
               <NuxtImg
                 :src="images[0]!.path"
@@ -267,7 +297,9 @@ onMounted(() => {
           </template>
 
           <template v-else-if="images.length > 1">
-            <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Gallery
+            </h2>
             <div class="relative">
               <UScrollArea
                 ref="scrollArea"
@@ -317,10 +349,10 @@ onMounted(() => {
 
               <div
                 v-if="
-                  event.registrationLink &&
-                  eventDateTime.isUpcoming &&
-                  event.date &&
-                  event.location?.name
+                  event.registrationLink
+                    && eventDateTime.isUpcoming
+                    && event.date
+                    && event.location?.name
                 "
                 class="space-y-3"
               >
@@ -337,7 +369,10 @@ onMounted(() => {
                 </UButton>
               </div>
 
-              <div v-else class="space-y-3">
+              <div
+                v-else
+                class="space-y-3"
+              >
                 <div
                   v-if="event.status === 'cancelled'"
                   class="rounded-lg bg-error-50 dark:bg-error-950 p-3 text-sm"

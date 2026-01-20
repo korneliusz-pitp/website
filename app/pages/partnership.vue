@@ -33,7 +33,7 @@ useSeoMeta({
           <NuxtImg
             :src="partnership.hero.image"
             :alt="partnership.hero.imageAlt || partnership.hero.title"
-            class="w-full max-w-lg mx-auto rounded-lg shadow-xl"
+            class="w-full max-w-lg mx-auto rounded-[2rem] shadow-xl"
           />
         </template>
       </UPageHero>
@@ -68,7 +68,7 @@ useSeoMeta({
               <img
                 :src="section.image"
                 :alt="section.imageAlt || section.title"
-                class="w-full rounded-lg object-cover"
+                class="w-full rounded-[2rem] object-cover"
               >
             </template>
           </UPageSection>

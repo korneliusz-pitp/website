@@ -1,20 +1,20 @@
 <script setup lang="ts">
-const { data: home } = await useAsyncData("homepage", () =>
-  queryCollection("homepage").first()
-);
+const { data: home } = await useAsyncData('homepage', () =>
+  queryCollection('homepage').first(),
+)
 
 if (!home.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Homepage not found",
+    statusMessage: 'Homepage not found',
     fatal: true,
-  });
+  })
 }
 
 useSeoMeta({
   title: home.value.title,
   description: home.value.description,
-});
+})
 </script>
 
 <template>
@@ -28,7 +28,10 @@ useSeoMeta({
       :links="home.hero.links"
       :orientation="home.hero.orientation"
     >
-      <template v-if="home.hero.image" #default>
+      <template
+        v-if="home.hero.image"
+        #default
+      >
         <NuxtImg
           :src="home.hero.image"
           :alt="home.hero.imageAlt || home.hero.title"
@@ -53,21 +56,30 @@ useSeoMeta({
             :features="section.features"
             :links="section.links"
           >
-            <template v-if="section.image" #default>
+            <template
+              v-if="section.image"
+              #default
+            >
               <NuxtImg
                 :src="section.image"
                 :alt="section.imageAlt || section.title"
-                class="w-full rounded-lg shadow-lg"
+                class="w-full rounded-[2rem] shadow-lg"
               />
             </template>
           </UPageSection>
         </template>
 
         <!-- Features Grid -->
-        <div v-if="home.features" class="my-16">
+        <div
+          v-if="home.features"
+          class="my-16"
+        >
           <div class="text-center mb-12">
             <ProseH2>{{ home.features.title }}</ProseH2>
-            <ProseP v-if="home.features.description" class="text-lg">
+            <ProseP
+              v-if="home.features.description"
+              class="text-lg"
+            >
               {{ home.features.description }}
             </ProseP>
           </div>
@@ -89,8 +101,14 @@ useSeoMeta({
         </div>
 
         <!-- Stats Section -->
-        <div v-if="home.stats" class="my-16">
-          <ProseH2 v-if="home.stats.title" class="text-center mb-8">
+        <div
+          v-if="home.stats"
+          class="my-16"
+        >
+          <ProseH2
+            v-if="home.stats.title"
+            class="text-center mb-8"
+          >
             {{ home.stats.title }}
           </ProseH2>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-8">

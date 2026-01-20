@@ -1,20 +1,20 @@
 <script setup lang="ts">
 interface EventCardProps {
-  title?: string;
-  description?: string;
-  date?: string;
+  title?: string
+  description?: string
+  date?: string
   time?: {
-    start?: string;
-    end?: string;
-  };
+    start?: string
+    end?: string
+  }
   location?: {
-    name?: string;
-    address?: string;
-  };
-  status?: "draft" | "published" | "cancelled";
-  coverImage?: string;
-  to?: string;
-  orientation?: "vertical" | "horizontal";
+    name?: string
+    address?: string
+  }
+  status?: 'draft' | 'published' | 'cancelled'
+  coverImage?: string
+  to?: string
+  orientation?: 'vertical' | 'horizontal'
 }
 
 const props = withDefaults(defineProps<EventCardProps>(), {
@@ -23,11 +23,11 @@ const props = withDefaults(defineProps<EventCardProps>(), {
   date: undefined,
   time: undefined,
   location: undefined,
-  status: "draft",
+  status: 'draft',
   coverImage: undefined,
   to: undefined,
-  orientation: "vertical",
-});
+  orientation: 'vertical',
+})
 
 const computedDateTime = computed(() => {
   if (!props.date) {
@@ -36,10 +36,10 @@ const computedDateTime = computed(() => {
       formattedTimeRange: null,
       isUpcoming: false,
       isPast: false,
-    };
+    }
   }
-  return getEventDateTime(props.date, props.time);
-});
+  return getEventDateTime(props.date, props.time)
+})
 </script>
 
 <template>
@@ -57,7 +57,7 @@ const computedDateTime = computed(() => {
   >
     <div
       :class="[
-        'flex gap-4 rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden bg-white dark:bg-neutral-950 hover:shadow-lg transition-shadow',
+        'flex gap-4 border border-neutral-200 dark:border-neutral-800 overflow-hidden bg-white dark:bg-neutral-950 hover:shadow-lg transition-shadow',
         orientation === 'horizontal' && 'md:flex-row',
         orientation === 'vertical' && 'flex-col',
       ]"
@@ -139,14 +139,20 @@ const computedDateTime = computed(() => {
               v-if="date"
               class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300"
             >
-              <UIcon name="i-lucide-calendar" class="w-4 h-4 shrink-0" />
+              <UIcon
+                name="i-lucide-calendar"
+                class="w-4 h-4 shrink-0"
+              />
               <span>{{ computedDateTime.formattedDate }}</span>
             </div>
             <div
               v-if="time?.start || time?.end"
               class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300"
             >
-              <UIcon name="i-lucide-clock" class="w-4 h-4 shrink-0" />
+              <UIcon
+                name="i-lucide-clock"
+                class="w-4 h-4 shrink-0"
+              />
               <span>{{ computedDateTime.formattedTimeRange }}</span>
             </div>
           </div>
@@ -156,7 +162,10 @@ const computedDateTime = computed(() => {
             v-if="location?.name"
             class="flex items-start gap-2 text-neutral-700 dark:text-neutral-300"
           >
-            <UIcon name="i-lucide-map-pin" class="w-4 h-4 shrink-0 mt-0.5" />
+            <UIcon
+              name="i-lucide-map-pin"
+              class="w-4 h-4 shrink-0 mt-0.5"
+            />
             <span>{{ location.name }}</span>
           </div>
         </div>
