@@ -48,8 +48,8 @@ socialConnections:
     - label: Discord Server
       to: https://discord.gg/9Sz2msbSDq
       icon: i-simple-icons-discord
-      color: info
-      variant: ghost
+      color: discord
+      variant: outline
     - label: Instagram
       to: https://www.instagram.com/pupsintheparkuk/
       icon: i-simple-icons-instagram
@@ -58,5 +58,5 @@ socialConnections:
     - label: TikTok
       to: https://www.tiktok.com/@pupsintheparkuk
       icon: i-simple-icons-tiktok
-      color: ""
+      color: neutral
       variant: ghost

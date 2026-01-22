@@ -11,7 +11,7 @@ callToAction:
     - label: Join the Discord
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
-      color: neutral
+      color: discord
       variant: outline
       icon: i-simple-icons-discord
 description: Learn about our community, values, and the team behind Pups in the Park.
