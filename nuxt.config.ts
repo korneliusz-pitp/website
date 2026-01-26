@@ -6,10 +6,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
+    '@nuxtjs/seo',
     '@nuxt/content',
     'nuxt-studio',
     '@nuxt/a11y',
-    '@nuxtjs/seo',
   ],
 
   $production: {

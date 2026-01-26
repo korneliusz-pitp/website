@@ -1,4 +1,5 @@
 import { defineCollection, z } from '@nuxt/content'
+import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 const colorEnum = z.enum([
   'primary',
@@ -94,10 +95,12 @@ const pageCard = () =>
   })
 
 export const collections = {
-  content: defineCollection({
-    type: 'page',
-    source: { include: '**/*.md', exclude: ['events/*.md', 'policies/*.md'] },
-  }),
+  content: defineCollection(
+    asSitemapCollection({
+      type: 'page',
+      source: { include: '**/*.md', exclude: ['events/*.md', 'policies/*.md'] },
+    }),
+  ),
 
   homepage: defineCollection({
     type: 'page',
@@ -187,31 +190,33 @@ export const collections = {
     source: 'events/gallery.yml',
   }),
 
-  events: defineCollection({
-    type: 'page',
-    source: 'events/*.md',
-    schema: z.object({
-      date: z.string().date().optional(),
-      time: z
-        .object({
-          start: z.string().time().optional(),
-          end: z.string().time().optional(),
-        })
-        .optional(),
-      location: z
-        .object({
-          name: z.string().optional(),
-          address: z.string().optional(),
-          map: z.string().url().optional(),
-          what3words: z.string().optional(),
-        })
-        .optional(),
-      status: z.enum(['draft', 'published', 'cancelled']).default('draft'),
-      coverImage: z.string().optional().editor({ input: 'media' }),
-      registrationLink: z.string().url().optional(),
-      feedbackLink: z.string().url().optional(),
+  events: defineCollection(
+    asSitemapCollection({
+      type: 'page',
+      source: 'events/*.md',
+      schema: z.object({
+        date: z.string().date().optional(),
+        time: z
+          .object({
+            start: z.string().time().optional(),
+            end: z.string().time().optional(),
+          })
+          .optional(),
+        location: z
+          .object({
+            name: z.string().optional(),
+            address: z.string().optional(),
+            map: z.string().url().optional(),
+            what3words: z.string().optional(),
+          })
+          .optional(),
+        status: z.enum(['draft', 'published', 'cancelled']).default('draft'),
+        coverImage: z.string().optional().editor({ input: 'media' }),
+        registrationLink: z.string().url().optional(),
+        feedbackLink: z.string().url().optional(),
+      }),
     }),
-  }),
+  ),
 
   rules: defineCollection({
     type: 'page',
@@ -252,10 +257,12 @@ export const collections = {
     source: 'policies/index.yml',
   }),
 
-  policies: defineCollection({
-    type: 'page',
-    source: 'policies/*.md',
-  }),
+  policies: defineCollection(
+    asSitemapCollection({
+      type: 'page',
+      source: 'policies/*.md',
+    }),
+  ),
 
   team: defineCollection({
     type: 'data',
