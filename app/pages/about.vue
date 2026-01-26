@@ -8,7 +8,7 @@ const { data: team } = await useAsyncData('team-members', () =>
 )
 
 useSeoMeta({
-  title: about.value?.title,
+  title: 'About Us',
   description: about.value?.description,
 })
 

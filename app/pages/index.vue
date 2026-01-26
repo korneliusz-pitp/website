@@ -12,7 +12,7 @@ if (!home.value) {
 }
 
 useSeoMeta({
-  title: home.value.title,
+  title: 'Home',
   description: home.value.description,
 })
 </script>
