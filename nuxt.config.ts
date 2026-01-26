@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     image: {
       provider: 'cloudflare',
       cloudflare: {
-        baseURL: 'https://preview.pupsinthepark.uk/', // TODO: Update this when needed lol
+        baseURL: 'https://pupsinthepark.uk/', // TODO: Update this when needed lol
       },
     },
   },
@@ -65,6 +65,9 @@ export default defineNuxtConfig({
             database_id: 'ab3472a7-a1c9-40a6-a240-feb4f241c9e3',
           },
         ],
+        observability: {
+          enabled: true,
+        },
       },
     },
   },
