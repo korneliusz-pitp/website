@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BreadcrumbItem } from '@nuxt/ui';
+import type { BreadcrumbItem } from '@nuxt/ui'
 
 const route = useRoute()
 
@@ -11,27 +11,33 @@ if (!page.value) {
 const items: BreadcrumbItem[] = [
   {
     label: 'Policy Library',
-    to: '/policies'
+    to: '/policies',
   },
   {
     label: page.value?.title,
-    to: page.value?.path
+    to: page.value?.path,
   },
 ]
 </script>
 
 <template>
   <UContainer>
-  <UPage v-if="page">
-    <UPageBody>
-      <UBreadcrumb :items="items" />
+    <UPage v-if="page">
+      <UPageBody>
+        <UBreadcrumb :items="items" />
 
-      <ContentRenderer v-if="page.body" :value="page" />
-    </UPageBody>
+        <ContentRenderer
+          v-if="page.body"
+          :value="page"
+        />
+      </UPageBody>
 
-    <template v-if="page?.body?.toc?.links?.length" #right>
-      <UContentToc :links="page.body.toc.links" />
-    </template>
-  </UPage>
+      <template
+        v-if="page?.body?.toc?.links?.length"
+        #right
+      >
+        <UContentToc :links="page.body.toc.links" />
+      </template>
+    </UPage>
   </UContainer>
 </template>

@@ -1,23 +1,23 @@
 <script setup lang="ts">
-const { data: about } = await useAsyncData("about-page", () =>
-  queryCollection("about").first()
-);
+const { data: about } = await useAsyncData('about-page', () =>
+  queryCollection('about').first(),
+)
 
-const { data: team } = await useAsyncData("team-members", () =>
-  queryCollection("team").all()
-);
+const { data: team } = await useAsyncData('team-members', () =>
+  queryCollection('team').all(),
+)
 
 useSeoMeta({
   title: about.value?.title,
   description: about.value?.description,
-});
+})
 
 if (!about.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page not found",
+    statusMessage: 'Page not found',
     fatal: true,
-  });
+  })
 }
 
 const carouselItems = computed(() => {
@@ -26,15 +26,18 @@ const carouselItems = computed(() => {
       id: idx,
       slot: `slide-${idx}`,
     })) || []
-  );
-});
+  )
+})
 </script>
 
 <template>
   <UPage v-if="about">
     <UContainer>
       <!-- Page Header -->
-      <UPageHero :title="about.title" :description="about.description" />
+      <UPageHero
+        :title="about.title"
+        :description="about.description"
+      />
 
       <!-- Page Body -->
       <UPageBody>
@@ -44,20 +47,26 @@ const carouselItems = computed(() => {
         </ProseP>
 
         <!-- Mission Section -->
-        <div v-if="about.mission" class="my-8">
+        <div
+          v-if="about.mission"
+          class="my-8"
+        >
           <ProseH2>{{ about.mission.title }}</ProseH2>
           <ProseP>{{ about.mission.content }}</ProseP>
         </div>
 
         <!-- Values Carousel -->
-        <div v-if="about.values && about.values.length > 0" class="my-8">
+        <div
+          v-if="about.values && about.values.length > 0"
+          class="my-8"
+        >
           <ProseH2>Our Values</ProseH2>
           <UCarousel
             v-slot="{ item }"
             loop
             arrows
             dots
-            :autoplay="{ delay: 7000 }" 
+            :autoplay="{ delay: 7000 }"
             :wheel-gestures="false"
             :items="carouselItems"
             :ui="{
@@ -85,7 +94,10 @@ const carouselItems = computed(() => {
         </div>
 
         <!-- Meet the Team Section -->
-        <div v-if="team && team.length > 0" class="my-8">
+        <div
+          v-if="team && team.length > 0"
+          class="my-8"
+        >
           <ProseH2>Meet the Team</ProseH2>
           <div class="grid gap-4 mt-6 md:grid-cols-2 lg:grid-cols-3">
             <UCard
@@ -94,7 +106,10 @@ const carouselItems = computed(() => {
               class="flex flex-col text-center"
             >
               <!-- Team Member Image -->
-              <div v-if="member.image" class="mb-4">
+              <div
+                v-if="member.image"
+                class="mb-4"
+              >
                 <NuxtImg
                   :src="member.image"
                   :alt="member.name"
@@ -105,11 +120,16 @@ const carouselItems = computed(() => {
 
               <!-- Team Member Info -->
               <div class="grow">
-                <ProseH4 class="mt-0! mb-1">{{ member.name }}</ProseH4>
+                <ProseH4 class="mt-0! mb-1">
+                  {{ member.name }}
+                </ProseH4>
                 <ProseP class="text-xs font-semibold text-primary mb-2">
                   {{ member.role }}
                 </ProseP>
-                <ProseP v-if="member.bio" class="text-xs mb-3 line-clamp-5">
+                <ProseP
+                  v-if="member.bio"
+                  class="text-xs mb-3 line-clamp-5"
+                >
                   {{ member.bio }}
                 </ProseP>
 

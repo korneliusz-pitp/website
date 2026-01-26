@@ -119,7 +119,7 @@ const formHeight = computed(
             {{ report.formInfo.intro }}
           </ProseP>
 
-          <div class="border-2 border-neutral rounded-[2rem] overflow-hidden">
+          <div class="border-2 border-neutral rounded-4xl overflow-hidden">
             <iframe
               :src="report.formInfo.googleFormUrl"
               :height="formHeight"

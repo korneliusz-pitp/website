@@ -63,7 +63,7 @@ useSeoMeta({
               <NuxtImg
                 :src="section.image"
                 :alt="section.imageAlt || section.title"
-                class="w-full rounded-[2rem] shadow-lg"
+                class="w-full rounded-4xl shadow-lg"
               />
             </template>
           </UPageSection>

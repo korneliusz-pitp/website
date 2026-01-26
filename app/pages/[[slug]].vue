@@ -9,10 +9,13 @@ if (!page.value) {
 
 <template>
   <UContainer>
-  <UPage v-if="page">
-    <UPageBody>
-      <ContentRenderer v-if="page.body" :value="page" />
-    </UPageBody>
-  </UPage>
+    <UPage v-if="page">
+      <UPageBody>
+        <ContentRenderer
+          v-if="page.body"
+          :value="page"
+        />
+      </UPageBody>
+    </UPage>
   </UContainer>
 </template>

@@ -1,42 +1,45 @@
 <script setup lang="ts">
-import type { AccordionItem } from "@nuxt/ui";
+import type { AccordionItem } from '@nuxt/ui'
 
-const { data: rules } = await useAsyncData("rules", () =>
-  queryCollection("rules").first()
-);
+const { data: rules } = await useAsyncData('rules', () =>
+  queryCollection('rules').first(),
+)
 
 if (!rules.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Rules page not found",
+    statusMessage: 'Rules page not found',
     fatal: true,
-  });
+  })
 }
 
 useSeoMeta({
   title: rules.value.title,
   description: rules.value.description,
-});
+})
 
 const accordionItems = computed<AccordionItem[]>(() => {
-  if (!rules.value?.keyRules) return [];
+  if (!rules.value?.keyRules) return []
   return rules.value.keyRules.map((rule, index) => ({
     label: rule.label,
     icon: rule.icon,
     value: String(index),
-  }));
-});
+  }))
+})
 
 const getKeyRuleContent = (index: number): string[] => {
-  return rules.value?.keyRules?.[index]?.content ?? [];
-};
+  return rules.value?.keyRules?.[index]?.content ?? []
+}
 </script>
 
 <template>
   <UPage v-if="rules">
     <UContainer>
       <!-- Page Header -->
-      <UPageHeader :title="rules.title" :description="rules.description" />
+      <UPageHeader
+        :title="rules.title"
+        :description="rules.description"
+      />
 
       <!-- Introduction -->
       <UPageBody>
@@ -70,7 +73,10 @@ const getKeyRuleContent = (index: number): string[] => {
         </div>
 
         <!-- Age Groups Section -->
-        <div v-if="rules.ageGroups" class="my-12">
+        <div
+          v-if="rules.ageGroups"
+          class="my-12"
+        >
           <ProseH2>{{ rules.ageGroups.title }}</ProseH2>
           <div class="space-y-3 mt-6">
             <div
@@ -89,7 +95,10 @@ const getKeyRuleContent = (index: number): string[] => {
         <!-- Key Rules Accordion -->
         <div v-if="accordionItems.length > 0">
           <ProseH2>Key Rules</ProseH2>
-          <UAccordion :items="accordionItems" type="multiple">
+          <UAccordion
+            :items="accordionItems"
+            type="multiple"
+          >
             <template #body="{ item }">
               <ProseUl v-if="getKeyRuleContent(Number(item.value)).length > 1">
                 <ProseLi

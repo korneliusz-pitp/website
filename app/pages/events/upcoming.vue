@@ -7,23 +7,23 @@ useSeoMeta({
 const { data: events } = await useAsyncData('upcoming-events', () =>
   queryCollection('events')
     .where('status', '=', 'published')
-    .orWhere(query => 
+    .orWhere(query =>
       query
         .where('date', '>', new Date().toISOString())
-        .where('date', 'IS NULL')
+        .where('date', 'IS NULL'),
     )
     .order('date', 'ASC')
     .all(),
 )
 
-console.log('Upcoming events:', events.value);
+console.log('Upcoming events:', events.value)
 
 if (!events.value || events.value.length === 0) {
   throw navigateTo('/events', { replace: true, redirectCode: 307 })
-} else if (events.value.length == 1 && events.value[0]?.path) {
+}
+else if (events.value.length == 1 && events.value[0]?.path) {
   throw navigateTo(events.value[0].path, { replace: true, redirectCode: 307 })
 }
-
 </script>
 
 <template>

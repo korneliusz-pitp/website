@@ -1,6 +1,9 @@
 <template>
   <UContainer class="py-8 space-y-6">
-    <UPageHeader :title="gallery?.title" :description="gallery?.description" />
+    <UPageHeader
+      :title="gallery?.title"
+      :description="gallery?.description"
+    />
 
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
       <NuxtImg
@@ -28,59 +31,59 @@
 </template>
 
 <script lang="ts" setup>
-import { useInfiniteScroll } from "@vueuse/core";
+import { useInfiniteScroll } from '@vueuse/core'
 
 interface Image {
-  path: string;
-  name: string;
-  category: string;
-  date?: string;
-  size: number;
-  modified: string;
+  path: string
+  name: string
+  category: string
+  date?: string
+  size: number
+  modified: string
 }
 
-const offset = ref(0);
+const offset = ref(0)
 
-const { data, status, execute } = await useFetch("/api/gallery", {
+const { data, status, execute } = await useFetch('/api/gallery', {
   query: {
-    category: "events",
+    category: 'events',
     offset,
   },
   lazy: true,
   immediate: false,
-});
+})
 
-const images = useState<Image[]>("event-gallery-images", () => []);
+const images = useState<Image[]>('event-gallery-images', () => [])
 
 watch(data, () => {
-  images.value = [...images.value, ...(data.value?.images || [])];
-});
+  images.value = [...images.value, ...(data.value?.images || [])]
+})
 
-execute();
+execute()
 
 onMounted(() => {
   useInfiniteScroll(
     document,
     () => {
-      offset.value += 20;
+      offset.value += 20
     },
     {
       distance: 500,
       canLoadMore: () => {
-        return (data.value?.hasMore && status.value === "success") || false;
+        return (data.value?.hasMore && status.value === 'success') || false
       },
-    }
-  );
-});
+    },
+  )
+})
 
 const { data: gallery } = await useAsyncData(`event-gallery`, () => {
-  return queryCollection("event_gallery").first();
-});
+  return queryCollection('event_gallery').first()
+})
 
 useSeoMeta({
   title: gallery.value?.title,
   description: gallery.value?.description,
-});
+})
 </script>
 
 <style></style>

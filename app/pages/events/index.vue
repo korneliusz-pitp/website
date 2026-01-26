@@ -1,51 +1,56 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("events-page", () =>
-  queryCollection("event").first()
-);
+const { data: page } = await useAsyncData('events-page', () =>
+  queryCollection('event').first(),
+)
 
 useSeoMeta({
   title: page.value?.title,
   description: page.value?.description,
-});
+})
 
-const { data: events } = await useAsyncData("events", () =>
-  queryCollection("events").where("status", "=", "published").all()
-);
+const { data: events } = await useAsyncData('events', () =>
+  queryCollection('events').where('status', '=', 'published').all(),
+)
 
 const upcomingEvents = computed(() => {
-  if (!events.value) return [];
+  if (!events.value) return []
   return events.value
-    .filter((event) => getEventDateTime(event.date, event.time).isUpcoming)
+    .filter(event => getEventDateTime(event.date, event.time).isUpcoming)
     .sort((a, b) => {
-      const dateA = new Date(a.date || "");
-      const dateB = new Date(b.date || "");
-      return dateA.getTime() - dateB.getTime();
-    });
-});
+      const dateA = new Date(a.date || '')
+      const dateB = new Date(b.date || '')
+      return dateA.getTime() - dateB.getTime()
+    })
+})
 
 const pastEvents = computed(() => {
-  if (!events.value) return [];
+  if (!events.value) return []
   return events.value
-    .filter((event) => getEventDateTime(event.date, event.time).isPast)
+    .filter(event => getEventDateTime(event.date, event.time).isPast)
     .sort((a, b) => {
-      const dateA = new Date(a.date || "");
-      const dateB = new Date(b.date || "");
-      return dateB.getTime() - dateA.getTime();
-    });
-});
+      const dateA = new Date(a.date || '')
+      const dateB = new Date(b.date || '')
+      return dateB.getTime() - dateA.getTime()
+    })
+})
 </script>
 
 <template>
   <UPage>
     <UContainer v-if="page">
       <!-- Page Header -->
-      <UPageHero :title="page.title" :description="page.description" />
+      <UPageHero
+        :title="page.title"
+        :description="page.description"
+      />
 
       <UPageBody>
         <!-- Upcoming Events Section -->
         <div class="space-y-6">
           <div>
-            <h2 class="text-2xl font-bold mb-4">Upcoming Events</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Upcoming Events
+            </h2>
             <div v-if="upcomingEvents.length > 0">
               <div
                 :class="[
@@ -86,7 +91,9 @@ const pastEvents = computed(() => {
 
           <!-- Past Events Section -->
           <div v-if="pastEvents.length > 0">
-            <h2 class="text-2xl font-bold mb-4">Past Events</h2>
+            <h2 class="text-2xl font-bold mb-4">
+              Past Events
+            </h2>
             <div class="grid gap-6 lg:grid-cols-2">
               <EventCard
                 v-for="event in pastEvents"
@@ -106,15 +113,23 @@ const pastEvents = computed(() => {
           <UCard class="bg-primary/5 dark:bg-primary/10 border-primary/20">
             <template #header>
               <div class="flex items-center gap-2">
-                <UIcon name="i-lucide-shield-check" class="w-5 h-5" />
-                <h3 class="font-semibold">{{ page.cta?.title }}</h3>
+                <UIcon
+                  name="i-lucide-shield-check"
+                  class="w-5 h-5"
+                />
+                <h3 class="font-semibold">
+                  {{ page.cta?.title }}
+                </h3>
               </div>
             </template>
             <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4">
               {{ page.cta?.description }}
             </p>
             <div class="flex flex-wrap">
-              <span v-for="button in page.cta?.buttons" :key="button.label">
+              <span
+                v-for="button in page.cta?.buttons"
+                :key="button.label"
+              >
                 <UButton
                   :to="button.to"
                   color="primary"

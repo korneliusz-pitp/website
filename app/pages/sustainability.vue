@@ -51,7 +51,7 @@
             <img
               :src="section.image"
               :alt="section.imageAlt || section.title"
-              class="w-full rounded-[2rem] object-cover"
+              class="w-full rounded-4xl object-cover"
             >
           </template>
         </UPageSection>
