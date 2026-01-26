@@ -39,7 +39,7 @@ features:
     - icon: i-lucide-map-pin
       title: Great Locations
       description: Carefully selected outdoor spaces, flagshipped by British Heritage & Trust foundations that provide privacy, accessibility, and natural beauty.
-      spotlight: True
+      spotlight: true
       highlightColor: ""
       highlight: ""
       orientation: ""
@@ -120,7 +120,7 @@ sections:
         color: primary
         variant: subtle
         icon: i-lucide-arrow-right
-    image: https://placehold.co/600x400?text=Placeholder
+    image: /images/events/2025-07-05/IMG_3955.jpg
   - headline: Information for Parents
     icon: i-lucide-users
     title: A Safe Space for Young People
@@ -149,7 +149,7 @@ sections:
         color: neutral
         variant: outline
         icon: i-lucide-heart
-    image: https://placehold.co/600x400?text=Placeholder
+    image: /images/events/2025-10-18/30.png
 stats:
   title: Our Impact
   items:

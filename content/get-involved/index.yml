@@ -11,7 +11,7 @@ callToAction:
     - label: Join the Discord
       to: https://discord.gg/9Sz2msbSDq
       target: _blank
-      color: info
+      color: discord
       variant: outline
       icon: i-simple-icons-discord
 description: Volunteer roles and our application process
