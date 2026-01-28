@@ -1,8 +1,8 @@
+bio: ""
+image: /images/team/matta-avatar-pink.png
 name: Matt
 role: Systems Administrator
-bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-image: /images/brand/placeholder.png
 socials:
   - icon: i-lucide-mail
-    url: mailto:member@pupsinthepark.uk
+    url: mailto:matt@pupsinthepark.uk
     label: Email
