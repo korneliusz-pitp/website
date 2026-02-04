@@ -6,3 +6,12 @@ socials:
   - icon: i-lucide-mail
     url: mailto:example@pupsinthepark.uk
     label: Email
+  - url: https://www.tiktok.com/@wolfb3ck
+    icon: i-simple-icons-tiktok
+    label: Tiktok
+  - icon: i-lucide-instagram
+    url: https://www.instagram.com/wolfb3ck/
+    label: Instagram
+  - icon: i-simple-icons-pinterest
+    url: https://uk.pinterest.com/wolfb3ck/
+    label: Pinterest

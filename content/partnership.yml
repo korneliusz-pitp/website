@@ -23,10 +23,10 @@ benefits:
       icon: i-lucide-trending-up
 callToAction:
   title: Ready to Partner?
-  description: Get in touch with us to discuss partnership opportunities. We're excited to hear from you and explore how we can work together.
+  description: Get in touch with our event team to discuss partnership opportunities. We're excited to hear from you and explore how we can work together.
   buttons:
     - label: Apply Now
-      to: https://forms.gle/partnership-application
+      to: https://pupsinthepark.uk/404
       icon: i-lucide-arrow-right
       color: primary
       variant: solid

@@ -6,3 +6,6 @@ socials:
   - icon: i-lucide-mail
     url: mailto:rea@pupsinthepark.uk
     label: Email
+  - icon: i-lucide-instagram
+    url: https://www.instagram.com/purrppie/
+    label: Instagram
