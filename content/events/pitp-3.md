@@ -5,6 +5,8 @@ description: Join us for our upcoming spring gathering! Location and date to be 
 location:
   name: ""
 registrationLink: ""
+sitemap:
+  loc: /events/pitp-3
 status: draft
 ---
 

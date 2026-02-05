@@ -11,6 +11,8 @@ location:
 seo:
   title: Pups in the park 2
   description: Our second pitp on October 18th, 2025
+sitemap:
+  loc: /events/pitp-2
 status: published
 time:
   start: 12:00

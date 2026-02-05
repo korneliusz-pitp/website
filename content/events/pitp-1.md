@@ -15,6 +15,8 @@ registrationLink: ""
 seo:
   title: Pups In The Park 1
   description: Our founding meet on July 5th, 2025
+sitemap:
+  loc: /events/pitp-1
 status: published
 time:
   start: 10:00
