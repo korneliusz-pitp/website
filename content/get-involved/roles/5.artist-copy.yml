@@ -1,0 +1,23 @@
+apply:
+  label: Apply
+  to: https://forms.gle/artist-form
+  target: _blank
+available: false
+colorHex: "#ffda00"
+description: Be part of the Core team that Makes PITP Events Happen!
+details:
+  requirements:
+    - A Full UK Drivers Licence
+    - 1+ Year Of Driving
+    - Ability drive B category vehicles or Higher (B1,C,C1 or BE+)
+    - Ability to Lift Heavy items
+    - Ability to drive for extended periods of time
+    - Live locally to event location (1.5hr Or Less Drive)
+  duties:
+    - Setting Up PITP Events
+    - Taking down Temp Structures at Events
+    - Health & Safety compliance
+    - Sustainability Compliance
+  contactEmail: rea@pupsinthepark.org
+icon: i-lucide-truck
+name: Logistical Operations

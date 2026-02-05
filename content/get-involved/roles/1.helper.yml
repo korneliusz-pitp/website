@@ -11,6 +11,9 @@ details:
     - Provide directions and basic information
     - Escalate issues to Team Leaders
   contactEmail: volunteer@pupsinthepark.org
-  requirements: []
+  requirements:
+    - Be over 18
+    - Able to work as a team
+    - Have Good problem mitigation skills
 icon: i-lucide-users
 name: Helper

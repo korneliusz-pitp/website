@@ -9,8 +9,11 @@ details:
   duties:
     - Help with queue and crowd flow
     - Provide directions and basic information
-    - Escalate issues to Team Leaders
+    - Escalate issues to Event Management
   contactEmail: volunteer@pupsinthepark.org
-  requirements: []
+  requirements:
+    - Have prior experience in team leadership
+    - Be over 18
+    - Able to direct a team
 icon: i-lucide-users
 name: Team Lead

@@ -5,11 +5,11 @@ ageGroups:
     - ageRange: Under 13
       summary: You Must be accompanied by a parent or legal guardian (18+) at all times.
     - ageRange: 13-17
-      summary: Permitted unaccompanied, You are Strictly prohibited from consuming alcohol, tobacco, vapes and cigarettes.
+      summary: You are Strictly prohibited from consuming alcohol, tobacco, vapes and cigarettes.
     - ageRange: 18-29
-      summary: Standard access! Expected to model appropriate behaviour for younger attendees.
+      summary: Expected to model appropriate behaviour for younger attendees.
     - ageRange: 30+
-      summary: Sorry, Restricted access - only as guardians, registered carers, or approved volunteers.
+      summary: Sorry, PITP Isnt best fit for this age range for now - reserved only for guardians, registered carers, or approved volunteers.
 callToAction:
   title: Read the Full Code of Conduct
   description: This page is a summary. For complete details on all policies, visit our Policies Hub.
