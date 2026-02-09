@@ -52,7 +52,7 @@ Our spring event will feature:
 We're currently finalizing the details for this event to ensure we bring you the best experience possible. Stay tuned for updates about:
 
 - **Location**: To be confirmed
-- **Date**: Spring 2025
+- **Date**: Spring 2026
 - **Time**: 1130-1700
 - **Capacity**: 300
 
