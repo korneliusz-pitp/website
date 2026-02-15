@@ -12,7 +12,7 @@ contacts:
   - label: Speak to our event team!
     icon: i-heroicons-chat-bubble-left-right
     email: events@pupsinthepark.uk
-footnote: Designed in the UK
+footnote: Designed in the UK by dogs and foxes
 quickLinks:
   - label: Code of Conduct
     to: /policies/code-of-conduct
@@ -32,7 +32,7 @@ quickLinks:
   - icon: i-lucide-video
     to: /partnership
     label: Content Creator Or Business?
-  - to: https://kennel.pupsinthepark.uk/login
+  - to: https://drive.google.com/drive/folders/0ANmeRQW9fM1jUk9PVA
     label: Already A Volunteer?
     icon: i-heroicons-chevron-right
 socials:

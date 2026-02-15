@@ -25,10 +25,10 @@ callToAction:
   title: Ready to Partner?
   description: Get in touch with our event team to discuss partnership opportunities. We're excited to hear from you and explore how we can work together.
   buttons:
-    - label: Apply Now
+    - label: Check Back Soon For Partner opportunities
       to: https://pupsinthepark.uk/404
       icon: i-lucide-arrow-right
-      color: primary
+      color: warning
       variant: solid
       size: lg
     - label: Join the Discord

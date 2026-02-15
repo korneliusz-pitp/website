@@ -11,6 +11,10 @@ buttons:
     color: primary
     variant: solid
     size: md
+  - label: PITP3
+    color: info
+    to: /events/pitp-3
+    icon: i-lucide-badge-info
 links:
   - label: About
     to: /about
