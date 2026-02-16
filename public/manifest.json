@@ -426,13 +426,6 @@
       "modified": "2026-02-16T17:02:05.654Z"
     },
     {
-      "path": "/images/events/PITP3.png",
-      "name": "PITP3.png",
-      "category": "events",
-      "size": 32789966,
-      "modified": "2026-02-16T17:02:05.751Z"
-    },
-    {
       "path": "/images/PLACEHOLD.svg",
       "name": "PLACEHOLD.svg",
       "category": "uncategorized",
@@ -537,5 +530,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-02-16T17:16:48.695Z"
+  "generated": "2026-02-16T17:22:50.583Z"
 }
