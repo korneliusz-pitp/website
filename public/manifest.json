@@ -412,13 +412,6 @@
       "modified": "2026-01-15T21:11:34.473Z"
     },
     {
-      "path": "/images/events/PITP3-1.png",
-      "name": "PITP3-1.png",
-      "category": "events",
-      "size": 30931832,
-      "modified": "2026-02-16T17:02:05.575Z"
-    },
-    {
       "path": "/images/events/PITP3-2.png",
       "name": "PITP3-2.png",
       "category": "events",
@@ -544,5 +537,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-02-16T17:04:21.649Z"
+  "generated": "2026-02-16T17:16:48.695Z"
 }
