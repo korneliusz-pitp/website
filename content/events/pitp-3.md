@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2026
-coverImage: /images/events/PITP3-1.png
+coverImage: /images/events/PITP3-COV.png
 date: ""
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 feedbackLink: ""
