@@ -17,9 +17,11 @@ const upcomingEvents = computed(() => {
   return events.value
     .filter(event => getEventDateTime(event.date, event.time).isUpcoming)
     .sort((a, b) => {
-      const dateA = new Date(a.date || '')
-      const dateB = new Date(b.date || '')
-      return dateA.getTime() - dateB.getTime()
+      const dateTimeA = getEventDateTime(a.date, a.time)
+      const dateTimeB = getEventDateTime(b.date, b.time)
+      const timeA = dateTimeA.startDateTime?.getTime() ?? Number.POSITIVE_INFINITY
+      const timeB = dateTimeB.startDateTime?.getTime() ?? Number.POSITIVE_INFINITY
+      return timeA - timeB
     })
 })
 
@@ -28,9 +30,11 @@ const pastEvents = computed(() => {
   return events.value
     .filter(event => getEventDateTime(event.date, event.time).isPast)
     .sort((a, b) => {
-      const dateA = new Date(a.date || '')
-      const dateB = new Date(b.date || '')
-      return dateB.getTime() - dateA.getTime()
+      const dateTimeA = getEventDateTime(a.date, a.time)
+      const dateTimeB = getEventDateTime(b.date, b.time)
+      const timeA = dateTimeA.startDateTime?.getTime() ?? Number.NEGATIVE_INFINITY
+      const timeB = dateTimeB.startDateTime?.getTime() ?? Number.NEGATIVE_INFINITY
+      return timeB - timeA
     })
 })
 </script>

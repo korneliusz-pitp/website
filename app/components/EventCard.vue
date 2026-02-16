@@ -136,17 +136,18 @@ const computedDateTime = computed(() => {
           <!-- Date & Time -->
           <div class="space-y-1">
             <div
-              v-if="date"
               class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300"
             >
               <UIcon
                 name="i-lucide-calendar"
                 class="w-4 h-4 shrink-0"
               />
-              <span>{{ computedDateTime.formattedDate }}</span>
+              <span>
+                {{ computedDateTime.formattedDate || 'TBC' }}
+              </span>
             </div>
             <div
-              v-if="time?.start || time?.end"
+              v-if="computedDateTime.formattedTimeRange"
               class="flex items-center gap-2 text-neutral-700 dark:text-neutral-300"
             >
               <UIcon
