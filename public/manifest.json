@@ -412,6 +412,34 @@
       "modified": "2026-01-15T21:11:34.473Z"
     },
     {
+      "path": "/images/events/PITP3-1.png",
+      "name": "PITP3-1.png",
+      "category": "events",
+      "size": 30931832,
+      "modified": "2026-02-16T17:02:05.575Z"
+    },
+    {
+      "path": "/images/events/PITP3-2.png",
+      "name": "PITP3-2.png",
+      "category": "events",
+      "size": 20063945,
+      "modified": "2026-02-16T17:02:05.640Z"
+    },
+    {
+      "path": "/images/events/PITP3-COV.png",
+      "name": "PITP3-COV.png",
+      "category": "events",
+      "size": 3083219,
+      "modified": "2026-02-16T17:02:05.654Z"
+    },
+    {
+      "path": "/images/events/PITP3.png",
+      "name": "PITP3.png",
+      "category": "events",
+      "size": 32789966,
+      "modified": "2026-02-16T17:02:05.751Z"
+    },
+    {
       "path": "/images/PLACEHOLD.svg",
       "name": "PLACEHOLD.svg",
       "category": "uncategorized",
@@ -447,6 +475,13 @@
       "modified": "2026-01-16T22:59:16.622Z"
     },
     {
+      "path": "/images/Sustainability/Greengettransparent.png",
+      "name": "Greengettransparent.png",
+      "category": "Sustainability",
+      "size": 166674,
+      "modified": "2026-02-16T17:02:05.415Z"
+    },
+    {
       "path": "/images/Sustainability/The-holy-leaf.png",
       "name": "The-holy-leaf.png",
       "category": "Sustainability",
@@ -461,6 +496,13 @@
       "modified": "2026-01-16T23:23:55.593Z"
     },
     {
+      "path": "/images/Sustainability/We-support-keep-britain-tidy-transp2.png",
+      "name": "We-support-keep-britain-tidy-transp2.png",
+      "category": "Sustainability",
+      "size": 16837509,
+      "modified": "2026-02-16T17:02:05.490Z"
+    },
+    {
       "path": "/images/team/Becktemp.png",
       "name": "Becktemp.png",
       "category": "team",
@@ -473,6 +515,13 @@
       "category": "team",
       "size": 162305,
       "modified": "2026-01-15T21:11:34.482Z"
+    },
+    {
+      "path": "/images/team/matta-avatar-pink.png",
+      "name": "matta-avatar-pink.png",
+      "category": "team",
+      "size": 676817,
+      "modified": "2026-02-16T17:02:05.751Z"
     },
     {
       "path": "/images/team/rea-rea.png",
@@ -495,5 +544,5 @@
     "2025-10-18",
     "2025-07-05"
   ],
-  "generated": "2026-01-20T00:52:30.573Z"
+  "generated": "2026-02-16T17:04:21.649Z"
 }
