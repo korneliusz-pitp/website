@@ -1,7 +1,7 @@
 ---
 title: Spring Meet 2026
 coverImage: /images/events/PITP3-COV.png
-date: ""
+date:
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 feedbackLink: ""
 location:
@@ -17,13 +17,6 @@ registrationLink: ""
 seo:
   title: Spring Meet 2025
   description: Join us for our upcoming spring gathering! Location and date to be confirmed.
-sitemap:
-  loc: /events/pitp-3
-  changefreq: hourly
-  videos: []
-  images: []
-  lastmod: 2026-02-09
-  priority: 1
 status: published
 time:
   start: 10:30

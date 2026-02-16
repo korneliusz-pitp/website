@@ -95,11 +95,11 @@ const pageCard = () =>
   })
 
 export const collections = {
-  content: defineCollection(
-    asSitemapCollection({
-      type: 'page',
-      source: { include: '**/*.md', exclude: ['events/*.md', 'policies/*.md'] },
-    }),
+  content: defineCollection({
+    // asSitemapCollection({
+    type: 'page',
+    source: { include: '**/*.md', exclude: ['events/*.md', 'policies/*.md'] },
+  }, // ),
   ),
 
   homepage: defineCollection({
@@ -190,32 +190,32 @@ export const collections = {
     source: 'events/gallery.yml',
   }),
 
-  events: defineCollection(
-    asSitemapCollection({
-      type: 'page',
-      source: 'events/*.md',
-      schema: z.object({
-        date: z.string().date().optional(),
-        time: z
-          .object({
-            start: z.string().time().optional(),
-            end: z.string().time().optional(),
-          })
-          .optional(),
-        location: z
-          .object({
-            name: z.string().optional(),
-            address: z.string().optional(),
-            map: z.string().url().optional(),
-            what3words: z.string().optional(),
-          })
-          .optional(),
-        status: z.enum(['draft', 'published', 'cancelled']).default('draft'),
-        coverImage: z.string().optional().editor({ input: 'media' }),
-        registrationLink: z.string().url().optional(),
-        feedbackLink: z.string().url().optional(),
-      }),
+  events: defineCollection({
+    // asSitemapCollection({
+    type: 'page',
+    source: 'events/*.md',
+    schema: z.object({
+      date: z.string().date().optional(),
+      time: z
+        .object({
+          start: z.string().time().optional(),
+          end: z.string().time().optional(),
+        })
+        .optional(),
+      location: z
+        .object({
+          name: z.string().optional(),
+          address: z.string().optional(),
+          map: z.string().url().optional(),
+          what3words: z.string().optional(),
+        })
+        .optional(),
+      status: z.enum(['draft', 'published', 'cancelled']).default('draft'),
+      coverImage: z.string().optional().editor({ input: 'media' }),
+      registrationLink: z.string().url().optional(),
+      feedbackLink: z.string().url().optional(),
     }),
+  }, // ),
   ),
 
   rules: defineCollection({

@@ -1,7 +1,7 @@
 ---
 title: Pups In The Park 2
 coverImage: /images/events/banners/pitp2.webp
-date: 2025-10-18
+date: 2025-10-18T00:00:00.000Z
 description: Our Second meet on the 18th October 2025
 location:
   name: Cannon Hill Park
@@ -11,8 +11,6 @@ location:
 seo:
   title: Pups in the park 2
   description: Our second pitp on October 18th, 2025
-sitemap:
-  loc: /events/pitp-2
 status: published
 time:
   start: 12:00
