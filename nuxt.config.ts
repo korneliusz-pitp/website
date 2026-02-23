@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     image: {
       provider: 'cloudflare',
       cloudflare: {
-        baseURL: 'https://pupsinthepark.uk/', // TODO: Update this when needed lol
+        baseURL: 'https://cdn.pupsinthepark.uk/',
       },
     },
   },
@@ -160,6 +160,10 @@ export default defineNuxtConfig({
       owner: 'pups-in-the-park',
       repo: 'website',
       branch: 'main',
+    },
+    media: {
+      external: true,
+      prefix: 'studio',
     },
   },
 })
