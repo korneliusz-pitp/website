@@ -1,5 +1,5 @@
-export default defineEventHandler(async (event) => {
-  const images = await listGalleryImages(event)
+export default defineEventHandler(async () => {
+  const images = await listGalleryImages()
   const categories = [...new Set(images.map(img => img.category))].sort()
   const dates = [
     ...new Set(images.map(img => img.date).filter(Boolean)),

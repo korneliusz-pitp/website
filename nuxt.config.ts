@@ -76,7 +76,7 @@ export default defineNuxtConfig({
         ],
         r2_buckets: [
           {
-            binding: 'MEDIA',
+            binding: 'BLOB',
             bucket_name: 'studio-media',
           },
         ],
@@ -88,10 +88,7 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    blob: {
-      driver: 'cloudflare-r2',
-      binding: 'MEDIA',
-    },
+    blob: true,
   },
 
   eslint: {

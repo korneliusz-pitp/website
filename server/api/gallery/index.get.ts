@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
     query => querySchema.parse(query),
   )
 
-  let images = await listGalleryImages(event)
+  let images = await listGalleryImages()
 
   if (category) {
     images = images.filter(img => img.category === category)

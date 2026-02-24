@@ -1,4 +1,4 @@
-import { createError } from 'h3'
+import { blob } from 'hub:blob'
 
 export interface ImageFile {
   path: string
@@ -7,26 +7,6 @@ export interface ImageFile {
   date?: string
   size: number
   modified: string
-}
-
-interface R2ObjectInfo {
-  key: string
-  size: number
-  uploaded?: Date | string
-}
-
-interface R2ListResult {
-  objects: R2ObjectInfo[]
-  truncated: boolean
-  cursor?: string
-}
-
-interface R2Bucket {
-  list: (options?: {
-    prefix?: string
-    cursor?: string
-    limit?: number
-  }) => Promise<R2ListResult>
 }
 
 const IMAGE_EXTENSIONS = new Set([
@@ -48,14 +28,6 @@ const isImageKey = (key: string) => {
   if (lastDot === -1) return false
   const ext = key.slice(lastDot).toLowerCase()
   return IMAGE_EXTENSIONS.has(ext)
-}
-
-const getPrefix = (event: { context: { cloudflare?: { env?: Record<string, unknown> } } }) => {
-  const envPrefix = event.context.cloudflare?.env?.R2_GALLERY_PREFIX
-  if (typeof envPrefix === 'string' && envPrefix.trim()) {
-    return envPrefix.replace(/^\/+/, '')
-  }
-  return DEFAULT_PREFIX
 }
 
 const parseCategoryAndDate = (key: string, prefix: string) => {
@@ -82,43 +54,27 @@ const parseCategoryAndDate = (key: string, prefix: string) => {
   return { category, date }
 }
 
-const toIsoString = (uploaded?: Date | string) => {
-  if (!uploaded) return new Date().toISOString()
-  if (uploaded instanceof Date) return uploaded.toISOString()
-  const parsed = new Date(uploaded)
-  if (Number.isNaN(parsed.valueOf())) return new Date().toISOString()
-  return parsed.toISOString()
-}
+export const listGalleryImages = async (): Promise<ImageFile[]> => {
+  const prefix = DEFAULT_PREFIX
 
-const getMediaBucket = (event: { context: { cloudflare?: { env?: Record<string, unknown> } } }) => {
-  const bucket = event.context.cloudflare?.env?.MEDIA as R2Bucket | undefined
-  if (!bucket) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: 'R2 bucket binding \'MEDIA\' is not configured.',
-    })
+  interface BlobItem {
+    pathname: string
+    size: number
+    uploadedAt: string
   }
-  return bucket
-}
 
-export const listGalleryImages = async (event: {
-  context: { cloudflare?: { env?: Record<string, unknown> } }
-}): Promise<ImageFile[]> => {
-  const bucket = getMediaBucket(event)
-  const prefix = getPrefix(event)
-
-  const objects: R2ObjectInfo[] = []
+  const allBlobs: BlobItem[] = []
   let cursor: string | undefined
 
   do {
-    const result = await bucket.list({ prefix, cursor, limit: 1000 })
-    objects.push(...result.objects)
-    cursor = result.truncated ? result.cursor : undefined
+    const result = await blob.list({ prefix, cursor, limit: 1000 })
+    allBlobs.push(...result.blobs as BlobItem[])
+    cursor = result.hasMore ? result.cursor : undefined
   } while (cursor)
 
-  const images = objects
-    .map((object) => {
-      const key = normaliseKey(object.key)
+  const images = allBlobs
+    .map((item) => {
+      const key = normaliseKey(item.pathname)
       if (!isImageKey(key)) return null
 
       const { category, date } = parseCategoryAndDate(key, prefix)
@@ -129,8 +85,8 @@ export const listGalleryImages = async (event: {
         name,
         category,
         date,
-        size: object.size,
-        modified: toIsoString(object.uploaded),
+        size: item.size,
+        modified: item.uploadedAt || new Date().toISOString(),
       } satisfies ImageFile
     })
     .filter((image): image is ImageFile => Boolean(image))
