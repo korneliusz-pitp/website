@@ -88,7 +88,10 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    blob: true,
+    blob: {
+      driver: 'cloudflare-r2',
+      binding: 'BLOB',
+    },
   },
 
   eslint: {
