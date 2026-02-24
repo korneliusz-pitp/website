@@ -2,21 +2,13 @@ import { defineOrganization } from 'nuxt-schema-org/schema'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxtjs/seo',
-    '@nuxt/content',
-    'nuxt-studio',
-    '@nuxt/a11y',
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', 'nuxt-studio', '@nuxt/a11y', '@nuxthub/core'],
 
   $production: {
     image: {
       provider: 'cloudflare',
       cloudflare: {
-        baseURL: 'https://cdn.pupsinthepark.uk/',
+        baseURL: 'https://pupsinthepark.uk/',
       },
     },
   },
@@ -86,13 +78,19 @@ export default defineNuxtConfig({
           {
             binding: 'MEDIA',
             bucket_name: 'studio-media',
-            preview_bucket_name: 'studio-media',
           },
         ],
         observability: {
           enabled: true,
         },
       },
+    },
+  },
+
+  hub: {
+    blob: {
+      driver: 'cloudflare-r2',
+      binding: 'MEDIA',
     },
   },
 
@@ -170,7 +168,6 @@ export default defineNuxtConfig({
     },
     media: {
       external: true,
-      prefix: 'studio',
     },
   },
 })
