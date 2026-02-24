@@ -12,20 +12,21 @@
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/content": "3.11.2",
-    "@nuxt/eslint": "1.15.1",
+    "@nuxt/eslint": "1.15.2",
     "@nuxt/image": "2.0.0",
-    "@nuxt/ui": "4.4.0",
+    "@nuxt/ui": "4.5.0",
+    "@nuxthub/core": "0.10.6",
     "@nuxtjs/seo": "3.4.0",
     "better-sqlite3": "^12.6.2",
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.2",
     "nuxt": "^4.3.1",
     "nuxt-studio": "https://pkg.pr.new/nuxt-content/nuxt-studio@315",
     "typescript": "^5.6.3",
-    "vue": "^3.5.28",
-    "vue-router": "^5.0.2",
-    "wrangler": "^4.65.0"
+    "vue": "^3.5.29",
+    "vue-router": "^5.0.3",
+    "wrangler": "^4.68.1"
   },
   "devDependencies": {
-    "@types/node": "^25.2.3"
+    "@types/node": "^25.3.0"
   }
 }
