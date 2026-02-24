@@ -91,6 +91,7 @@ export default defineNuxtConfig({
     blob: {
       driver: 'cloudflare-r2',
       binding: 'BLOB',
+      bucketName: 'studio-media',
     },
   },
 
