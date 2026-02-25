@@ -20,7 +20,7 @@
     "better-sqlite3": "^12.6.2",
     "eslint": "^10.0.2",
     "nuxt": "^4.3.1",
-    "nuxt-studio": "https://pkg.pr.new/nuxt-content/nuxt-studio@315",
+    "nuxt-studio": "https://pkg.pr.new/nuxt-content/nuxt-studio@9f27e2c",
     "typescript": "^5.6.3",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3",
