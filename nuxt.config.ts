@@ -67,19 +67,6 @@ export default defineNuxtConfig({
           STUDIO_GOOGLE_MODERATORS:
             'matt@pupsinthepark.uk,rea@pupsinthepark.uk,beck@pupsinthepark.uk',
         },
-        d1_databases: [
-          {
-            binding: 'DB',
-            database_name: 'website',
-            database_id: 'ab3472a7-a1c9-40a6-a240-feb4f241c9e3',
-          },
-        ],
-        r2_buckets: [
-          {
-            binding: 'BLOB',
-            bucket_name: 'studio-media',
-          },
-        ],
         observability: {
           enabled: true,
         },
