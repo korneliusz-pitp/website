@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     image: {
       provider: 'cloudflare',
       cloudflare: {
-        baseURL: 'https://pupsinthepark.uk/',
+        baseURL: 'https://cdn.pupsinthepark.uk/',
       },
     },
   },
@@ -91,7 +91,6 @@ export default defineNuxtConfig({
     blob: {
       driver: 'cloudflare-r2',
       binding: 'BLOB',
-      bucketName: 'studio-media',
     },
   },
 

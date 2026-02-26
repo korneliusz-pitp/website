@@ -20,13 +20,13 @@
     "better-sqlite3": "^12.6.2",
     "eslint": "^10.0.2",
     "nuxt": "^4.3.1",
-    "nuxt-studio": "https://pkg.pr.new/nuxt-content/nuxt-studio@9f27e2c",
-    "typescript": "^5.6.3",
+    "nuxt-studio": "https://pkg.pr.new/nuxt-content/nuxt-studio@315",
+    "typescript": "^5.9.3",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3",
     "wrangler": "^4.68.1"
   },
   "devDependencies": {
-    "@types/node": "^25.3.0"
+    "@types/node": "^25.3.1"
   }
 }
