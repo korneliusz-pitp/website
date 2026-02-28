@@ -1,18 +1,13 @@
-export default defineEventHandler(async () => {
-  const images = await listGalleryImages()
-  const dates = [
-    ...new Set(images.map(img => img.date).filter(Boolean)),
-  ].sort().reverse()
+import { buildGalleryMetadata, listGalleryImages } from '../../utils/r2Gallery'
 
-  const counts = images.reduce<Record<string, number>>((acc, img) => {
-    if (img.date) {
-      acc[img.date] = (acc[img.date] || 0) + 1
-    }
-    return acc
-  }, {})
+export default defineEventHandler(async (event) => {
+  setHeader(event, 'Cache-Control', 'public, max-age=120, s-maxage=300, stale-while-revalidate=600')
+
+  const images = await listGalleryImages()
+  const { dates, dateCounts } = buildGalleryMetadata(images)
 
   return dates.map(date => ({
     date,
-    count: counts[date] || 0,
+    count: dateCounts[date] || 0,
   }))
 })
