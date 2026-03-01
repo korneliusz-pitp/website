@@ -27,7 +27,7 @@ const IMAGE_EXTENSIONS = new Set([
   '.avif',
 ])
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
-const DEFAULT_PREFIX = 'images/'
+const DEFAULT_PREFIX = 'studio/'
 const DEFAULT_CACHE_TTL_MS = 60_000
 
 interface ImageListCache {
