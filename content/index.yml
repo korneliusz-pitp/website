@@ -60,7 +60,7 @@ hero:
   title: Pups in the Park
   description: The UK's largest Alterhuman and Kemonomimi community event! Join us for inclusive gatherings where you can be yourself in a safe environment and connect with like-minded individuals!
   orientation: horizontal
-  image: /images/brand/pip.png
+  image: https://cdn.pupsinthepark.uk/studio/images/brand/pip.png
   imageAlt: Pups in the Park Logo
   links:
     - label: View Upcoming Events
@@ -81,7 +81,7 @@ sections:
     icon: i-lucide-heart
     title: A Community Built on Inclusivity
     description: We, are the largest Therian, Kemonomimi and Alterhuman meet in the UK! Hosting events currently twice a year; We strive for inclusivity, saftey and welcoming factors! Nobody left out!
-    image: /images/events/2025-07-05/IMG_4715.webp
+    image: https://cdn.pupsinthepark.uk/studio/images/events/2025-07-05/IMG_4715.webp
     imageAlt: Community gathering at Pups in the Park
     features:
       - title: Inclusive
@@ -120,7 +120,7 @@ sections:
         color: primary
         variant: subtle
         icon: i-lucide-arrow-right
-    image: /images/events/2025-07-05/IMG_3955.jpg
+    image: https://cdn.pupsinthepark.uk/studio/images/events/2025-07-05/IMG_3955.jpg
   - headline: Information for Parents
     icon: i-lucide-users
     title: A Safe Space for Young People
@@ -149,7 +149,7 @@ sections:
         color: neutral
         variant: outline
         icon: i-lucide-heart
-    image: /images/events/2025-10-18/30.png
+    image: https://cdn.pupsinthepark.uk/studio/images/events/2025-10-18/30.png
 stats:
   title: Our Impact
   items:
