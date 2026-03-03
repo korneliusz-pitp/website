@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2026
-coverImage: /images/events/PITP3-COV.png
+coverImage: /images/events/PITP3-2.png
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 feedbackLink: ""
 location:
@@ -16,42 +16,73 @@ registrationLink: ""
 seo:
   title: Spring Meet 2025
   description: Join us for our upcoming spring gathering! Location and date to be confirmed.
-status: published
+status: draft
 time:
   start: 10:30
   end: 16:30
 ---
 
 ::note{color="success"}
-We are awaiting final approval from the site!! - 11/02/26
+We are very close for our grand reveal - 3/03/26
 ::
 
-## Coming Soon!
+## Hello Coventry!
 
-We're excited to announce our upcoming spring meet!
+We're excited to announce our upcoming spring meet! On the XX April 2026!
 
 ### What to Expect
 
-Our spring event will feature:
+Our brand new venue will include some PITP Firsts! They are;
 
 - A Brand new Venue!
-- New Games
+- New reworked Games structure
 - Your Favorite Content Creators!
-- Affilates and Small Stores
+- Brand new Small Stores & Vendors
+- PITP Merch!!!
+- A Large Family Friendly group!
 
-### Event Details Coming Soon
+### Event Details
 
-We're currently finalizing the details for this event to ensure we bring you the best experience possible. Stay tuned for updates about:
+We will be at War Memorial Park, Coventry on the xxth April 2026, 
 
-- **Location**: War Memorial Park, Coventry
-- **Date**: Spring 2026
-- **Time**: 1130-1700
-- **Capacity**: 300
+**Getting Public transport to PITP?**
+
+For the first time ever, Pups in the Park is walking distance from a Major railway station! 
+
+However, if you still wish to get the bus to/from the station, you can get the 
+
+**PLATINUM 9**[ - From Coventry Station DIRECT to The Park Operated by NATX]{style="font-size:11pt;font-family:Arial,sans-serif;color:#ffffff;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"}
+
+[12X]{style="font-size:11pt;font-family:Arial,sans-serif;color:#f1c232;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"}[ - From Coventry Station SECONDARY ENTRANCE  from The Park/  Operated by NATX]{style="font-size:11pt;font-family:Arial,sans-serif;color:#ffffff;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"}
+
+12X - From Coventry Station DIRECT TO PITP / the Park and Ride / Operated by Stagecoach
+
+#### **Driving to PITP? Pop the below, in your sat nav!**
+
+War Memorial Park, Kenilworth Rd, Coventry CV3 6PT
+
+Car Parking charges can be found on site (Pay and display) but also online ([https://www.coventry.gov.uk/war-memorial-park/war-memorial-park-1/4)](https://www.coventry.gov.uk/war-memorial-park/war-memorial-park-1/4)
+
+#### Coming from overseas?
+
+The nearest airport to PITP is Birmingham international, This airport/station is 1 stop from Coventry! Tickets can be bought in advance or on the day at ticket machines/offices
+
+## Buying Tickets
+
+Many companies service coventry, the below websites are train companies that run services to/from coventry
+
+<https://www.crosscountrytrains.co.uk/>
+
+<https://www.londonnorthwesternrailway.co.uk/>
+
+<https://www.avantiwestcoast.co.uk/>
+
+[https://www.avantisuperfare.co.uk/ - Avanti west coasts ultra-low fare system](https://www.avantisuperfare.co.uk/)
 
 ### Stay Updated
 
 - Follow us on **Instagram** for announcements
-- Join our **Discord** community for discussions and updates
+- Join our **Discord** community for discussions and updates & travel information
 - Check back on this page for the latest information
 
-We can't wait to see you there! Keep an eye on our social media channels for the official announcement!
+We can't wait to see you there!
