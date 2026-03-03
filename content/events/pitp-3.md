@@ -16,7 +16,7 @@ registrationLink: ""
 seo:
   title: Spring Meet 2025
   description: Join us for our upcoming spring gathering! Location and date to be confirmed.
-status: draft
+status: published
 time:
   start: 10:30
   end: 16:30
