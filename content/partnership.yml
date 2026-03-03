@@ -72,7 +72,7 @@ sections:
       - title: Collaboration Opportunities
         description: Work with us on special projects and initiatives
         icon: i-lucide-users
-    image: /images/Affiliate/Creators/Ember.png
+    image: https://cdn.pupsinthepark.uk/studio/images/Affiliate/Creators/Ember.png
     imageAlt: Ember at PITP 2
   - headline: For Businesses
     icon: i-lucide-briefcase

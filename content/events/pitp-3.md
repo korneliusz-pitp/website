@@ -1,6 +1,6 @@
 ---
 title: Spring Meet 2026
-coverImage: /images/events/PITP3-2.png
+coverImage: https://cdn.pupsinthepark.uk/studio/images/events/PITP3-2.png
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 feedbackLink: ""
 location:
