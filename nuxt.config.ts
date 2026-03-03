@@ -2,21 +2,13 @@ import { defineOrganization } from 'nuxt-schema-org/schema'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxtjs/seo',
-    '@nuxt/content',
-    'nuxt-studio',
-    '@nuxt/a11y',
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', 'nuxt-studio', '@nuxt/a11y', '@nuxthub/core'],
 
   $production: {
     image: {
       provider: 'cloudflare',
       cloudflare: {
-        baseURL: 'https://pupsinthepark.uk/', // TODO: Update this when needed lol
+        baseURL: 'https://cdn.pupsinthepark.uk/',
       },
     },
   },
@@ -75,17 +67,17 @@ export default defineNuxtConfig({
           STUDIO_GOOGLE_MODERATORS:
             'matt@pupsinthepark.uk,rea@pupsinthepark.uk,beck@pupsinthepark.uk',
         },
-        d1_databases: [
-          {
-            binding: 'DB',
-            database_name: 'website',
-            database_id: 'ab3472a7-a1c9-40a6-a240-feb4f241c9e3',
-          },
-        ],
         observability: {
           enabled: true,
         },
       },
+    },
+  },
+
+  hub: {
+    blob: {
+      driver: 'cloudflare-r2',
+      binding: 'BLOB',
     },
   },
 
@@ -159,7 +151,10 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'pups-in-the-park',
       repo: 'website',
-      branch: 'main',
+      branch: 'feat/cloudflare-r2-storage',
+    },
+    media: {
+      external: true,
     },
   },
 })

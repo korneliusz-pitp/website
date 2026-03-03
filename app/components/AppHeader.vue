@@ -8,7 +8,7 @@
     <template #title>
       <span class="flex items-center gap-1">
         <NuxtImg
-          src="/images/brand/pip.png"
+          src="studio/images/brand/pip.png"
           alt="Our Mascot - Pip!"
           height="50"
         />
@@ -17,7 +17,10 @@
     </template>
 
     <!-- Navigation - Desktop & Mobile -->
-    <div v-if="navigationItems.length > 0" class="hidden lg:flex">
+    <div
+      v-if="navigationItems.length > 0"
+      class="hidden lg:flex"
+    >
       <UNavigationMenu
         :items="navigationItems"
         content-orientation="vertical"
@@ -26,7 +29,10 @@
 
     <!-- Right Slot - Buttons (Desktop) & Color Mode Toggle -->
     <template #right>
-      <div v-if="buttons.length > 0" class="hidden lg:flex items-center gap-2">
+      <div
+        v-if="buttons.length > 0"
+        class="hidden lg:flex items-center gap-2"
+      >
         <UButton
           v-for="button in buttons"
           :key="button.label"
@@ -52,7 +58,10 @@
           class="-mx-2.5"
         />
       </div>
-      <div v-if="buttons.length > 0" class="flex flex-col gap-2 mt-4">
+      <div
+        v-if="buttons.length > 0"
+        class="flex flex-col gap-2 mt-4"
+      >
         <UButton
           v-for="button in buttons"
           :key="button.label"
@@ -72,31 +81,31 @@
 </template>
 
 <script lang="ts" setup>
-import type { NavigationMenuItem, ButtonProps } from "@nuxt/ui";
+import type { NavigationMenuItem, ButtonProps } from '@nuxt/ui'
 
 // Fetch header configuration from Nuxt Content with SSR support
-const { data: headerConfig } = await useAsyncData("header-config", () =>
-  useHeaderConfig()
-);
+const { data: headerConfig } = await useAsyncData('header-config', () =>
+  useHeaderConfig(),
+)
 
 // Build navigation items with native children support
 const navigationItems = computed<NavigationMenuItem[]>(() => {
   if (!headerConfig.value?.links) {
-    return [];
+    return []
   }
 
-  const route = useRoute();
+  const route = useRoute()
 
-  return headerConfig.value.links.map((link) => ({
+  return headerConfig.value.links.map(link => ({
     active: link.to
-      ? route.path === link.to || route.path.startsWith(link.to + "/")
+      ? route.path === link.to || route.path.startsWith(link.to + '/')
       : false,
     ...link,
-  }));
-});
+  }))
+})
 
 // Extract buttons from header config
 const buttons = computed<ButtonProps[]>(() => {
-  return headerConfig.value?.buttons || [];
-});
+  return headerConfig.value?.buttons || []
+})
 </script>

@@ -9,12 +9,12 @@
           class="leaf"
           :style="leaf.style"
         >
-          <img
+          <NuxtImg
             v-if="page.leafImage"
             :src="page.leafImage"
             alt="Leaf"
             class="leaf-image"
-          >
+          />
           <span v-else>🍃</span>
         </div>
       </div>
@@ -23,11 +23,11 @@
         :title="page.title"
         :description="page.description"
       >
-        <img
+        <NuxtImg
           :src="page.hero?.image"
           :alt="page.hero?.alt || 'Sustainability hero image'"
           class="w-full h-full object-cover"
-        >
+        />
       </UPageHero>
 
       <UPageBody>
@@ -48,11 +48,11 @@
             v-if="section.image"
             #default
           >
-            <img
+            <NuxtImg
               :src="section.image"
               :alt="section.imageAlt || section.title"
               class="w-full rounded-4xl object-cover"
-            >
+            />
           </template>
         </UPageSection>
 

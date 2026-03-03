@@ -65,11 +65,11 @@ useSeoMeta({
               v-if="section.image"
               #default
             >
-              <img
+              <NuxtImg
                 :src="section.image"
                 :alt="section.imageAlt || section.title"
                 class="w-full rounded-4xl object-cover"
-              >
+              />
             </template>
           </UPageSection>
         </template>

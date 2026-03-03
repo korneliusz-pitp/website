@@ -1,15 +1,13 @@
-import manifest from "~~/public/manifest.json";
+import { buildGalleryMetadata, listGalleryImages } from '../../utils/r2Gallery'
 
-export default defineEventHandler(async () => {
-  const categories = manifest.categories;
+export default defineEventHandler(async (event) => {
+  setHeader(event, 'Cache-Control', 'public, max-age=120, s-maxage=300, stale-while-revalidate=600')
 
-  const counts = manifest.images.reduce<Record<string, number>>((acc, img) => {
-    acc[img.category] = (acc[img.category] || 0) + 1;
-    return acc;
-  }, {});
+  const images = await listGalleryImages()
+  const { categories, categoryCounts } = buildGalleryMetadata(images)
 
-  return categories.map((category) => ({
+  return categories.map(category => ({
     category,
-    count: counts[category] || 0,
-  }));
-});
+    count: categoryCounts[category] || 0,
+  }))
+})
