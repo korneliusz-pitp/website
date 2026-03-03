@@ -151,7 +151,7 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'pups-in-the-park',
       repo: 'website',
-      branch: 'feat/cloudflare-r2-storage',
+      branch: 'main',
     },
     media: {
       external: true,
