@@ -12,5 +12,5 @@
             "binding": "BLOB",
             "bucket_name": "studio-media",
         },
-    ],
+    ],"name": "website",
 }
