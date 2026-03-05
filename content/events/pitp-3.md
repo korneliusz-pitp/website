@@ -2,7 +2,7 @@
 title: Spring Meet 2026
 coverImage: https://cdn.pupsinthepark.uk/studio/images/events/PITP3-2.png
 date: 2026-04-25
-description: Join us for our upcoming spring gathering! Location and date to be confirmed.
+description: Join us for our upcoming spring gathering!
 feedbackLink: ""
 location:
   name: War Memorial Park, Coventry
@@ -16,7 +16,7 @@ navigation:
 registrationLink: https://forms.gle/YuW7TakErxsTr6Tp8
 seo:
   title: Spring Meet 2026
-  description: Join us for our upcoming spring gathering! Location and date to be confirmed.
+  description: Join us for our upcoming spring gathering!
 status: published
 time:
   start: 11:30
