@@ -1,6 +1,7 @@
 ---
 title: Spring Meet 2026
 coverImage: https://cdn.pupsinthepark.uk/studio/images/events/PITP3-2.png
+date: 2026-04-25
 description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 feedbackLink: ""
 location:
@@ -12,19 +13,15 @@ navigation:
   title: ""
   description: ""
   icon: ""
-registrationLink: ""
+registrationLink: https://forms.gle/YuW7TakErxsTr6Tp8
 seo:
   title: Spring Meet 2025
   description: Join us for our upcoming spring gathering! Location and date to be confirmed.
 status: published
 time:
-  start: 10:30
-  end: 16:30
+  start: 11:30
+  end: 17:30
 ---
-
-::note{color="success"}
-We are very close for our grand reveal - 3/03/26
-::
 
 ## Hello Coventry!
 
@@ -55,7 +52,7 @@ However, if you still wish to get the bus to/from the station, you can get the 
 
 [12X]{style="font-size:11pt;font-family:Arial,sans-serif;color:#f1c232;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"}[ - From Coventry Station SECONDARY ENTRANCE  from The Park/  Operated by NATX]{style="font-size:11pt;font-family:Arial,sans-serif;color:#ffffff;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"}
 
-12X - From Coventry Station DIRECT TO PITP / the Park and Ride / Operated by Stagecoach
+17X - From Coventry Station DIRECT TO PITP / the Park and Ride / Operated by Stagecoach
 
 #### **Driving to PITP? Pop the below, in your sat nav!**
 
