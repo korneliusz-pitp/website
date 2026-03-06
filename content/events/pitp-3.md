@@ -15,7 +15,7 @@ navigation:
   icon: ""
 registrationLink: https://forms.gle/YuW7TakErxsTr6Tp8
 seo:
-  title: Spring Meet 2025
+  title: Spring Meet 2026
   description: Join us for our upcoming spring gathering!
 status: published
 time:
