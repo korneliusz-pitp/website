@@ -155,6 +155,7 @@ export default defineNuxtConfig({
     },
     media: {
       external: true,
+      maxFileSize: 30 * 1024 * 1024, // 30MB
     },
   },
 })
