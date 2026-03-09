@@ -29,6 +29,8 @@ links:
         to: /events/rules
   - label: Get Involved
     to: /get-involved
+  - label: PITP Merch!
+    to: https://shop.pupsinthepark.uk/
 to: /
 toggle:
   color: primary
