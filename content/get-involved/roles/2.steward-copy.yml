@@ -2,7 +2,7 @@ apply:
   label: Apply
   to: https://forms.gle/EVF1ZE9YiCpsvNWS7
   target: _blank
-available: true
+available: false
 colorHex: "#373c44"
 description: Join The PITP Event Operations team and help us manage our events! A leading position at our frontline. Experiance in team leadership required.
 details:
