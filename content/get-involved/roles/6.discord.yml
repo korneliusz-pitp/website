@@ -1,8 +1,8 @@
 apply:
   label: Apply
-  to: https://forms.gle/discord-form
+  to: https://docs.google.com/forms/d/e/1FAIpQLSdiNMv_MFXZJFQZ_1n0OrhCuMVF6SRWO2_gmKGffNBo_dVapg/viewform?usp=header
   target: _blank
-available: false
+available: true
 colorHex: "#3b82f6"
 description: Support a safe and welcoming online space by moderating our Discord server. Experience with community moderation preferred.
 details:
