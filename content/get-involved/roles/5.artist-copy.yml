@@ -2,7 +2,7 @@ apply:
   label: Apply
   to: https://forms.gle/dGiejVUBYBEdz21e8
   target: _blank
-available: true
+available: false
 colorHex: "#ffda00"
 description: Be part of the Core team that Makes PITP Events Happen!
 details:

@@ -2,7 +2,7 @@ apply:
   label: Apply
   to: https://forms.gle/UesbK7kDtXVzjMGc9
   target: _blank
-available: true
+available: false
 colorHex: "#da1309"
 description: Join The PITP Help Team and help us manage our events! At our frontline you will help us in running our community events!
 details:
