@@ -1,0 +1,14 @@
+apply:
+  label: Apply
+  to: ""
+  target: _blank
+  disabled: false
+available: false
+colorHex: "#000"
+description: ??? Coming Soon ???
+details:
+  requirements: []
+  duties: []
+  contactEmail: ???@pupsinthepark.uk
+icon: i-lucide-shield
+name: Warewolves
