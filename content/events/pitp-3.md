@@ -24,6 +24,8 @@ time:
 
 We're excited to announce our upcoming spring meet! On the 25th April 2026!
 
+![Trading-Area-4](https://cdn.pupsinthepark.uk/studio/images/events/Trading-Area-4.png)
+
 ### What to Expect
 
 Our brand new venue will include some PITP Firsts! They are;
