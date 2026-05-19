@@ -1,0 +1,23 @@
+apply:
+  label: Apply
+  to: ""
+  target: _blank
+available: false
+colorHex: "#ff751f"
+description: Join The PITP Event Operations Team and help us form and create our events! At our frontline and backend you will help us in run and make our community events!
+details:
+  duties:
+    - Communicates with Safeguarding to ensure site safety when planning, and during the event and forming contingency plans for failures or changes.
+    - Assists with the planning of the event, working with the Event Manager to ensure a suitable site in regards to location, accessibility, travel arrangements, safeguarding and visits of the site.
+    - Assists with legal requirements when delegated by the Event Manager, and reports any legal concerns as they arise.
+    - Assists in forming the processes for the event setup/takedown and the organisation during the event.
+  contactEmail: rea@pupsinthepark.org
+  requirements:
+    - Be over 18
+    - Able to work as a team
+    - Have Good problem mitigation skills
+    - Health & Safety knowledge
+    - Accessibility awareness
+    - Legal compliance knowledge
+icon: i-lucide-hammer
+name: Event Operations

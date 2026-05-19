@@ -3,7 +3,7 @@ title: Spring Meet 2026
 coverImage: https://cdn.pupsinthepark.uk/studio/images/events/PITP3-2.png
 date: 2026-04-25
 description: Our third meet on the 25th April 2026
-feedbackLink: https://docs.google.com/forms/d/e/1FAIpQLScwcpzaIzST5pakfr3sH3LMNvaWGoZX9_qJBxT9HTXK73rRAg/viewform
+feedbackLink: ""
 location:
   name: War Memorial Park, Coventry
   address: Coventry, CV36HR
@@ -20,94 +20,76 @@ time:
   end: 17:30
 ---
 
-# Hello Coventry!
+# Farewell Coventry!
 
-We're excited to announce our upcoming spring meet! On the 25th April 2026!
+Our third event on April 25th, 2026 was a Blast! We had over 450 attendees which was so amazing for our 3rd + biggest event!
 
-![Trading-Area-4](https://cdn.pupsinthepark.uk/studio/images/events/Trading-Area-4.png)![Title-3](https://cdn.pupsinthepark.uk/studio/images/events/Title-3.png)
+### At PITP, We value community feedback, here some of the key things we were identify based off community feedback!
 
-### What to Expect
-
-Our brand new venue will include some PITP Firsts! They are;
-
-- A Brand new Venue!
-- New reworked Games structure
-- Your Favorite Content Creators!
-- Brand new Small Stores & Vendors
-- PITP Merch!!!
-- A Large Family Friendly group!
-
-### Event Details
-
-We will be at War Memorial Park, Coventry on the 25th April 2026, 
-
-# War Memorial Park; Accessibility
-
-War Memorial Park is accessible to wheelchair users due to the presence of Tarmac Pathways, The Main Car park has 370 total spaces with Accessible bays included.
-
-Disabled parking bays are available at Kenilworth Road and Leamington Road car parks.
-
-Please note we cannot confirm a guaranteed space in any Car park as the Park is still open to the public all day.
-
-The car park (Kenilworth Road) is a <5 Minute walk from the main event area.
-
-There is a Tarmac path leading to the main entrance of the event.
-
-The event area itself is Mixed between Concrete slabs (Main entrance & Trading area) as the rest of the event will be held of flat & slightly sloped trimmed grass)
-
-Accessible toilets are <2 Minute walk from the Event area The on-site cafe is a 5-10 minute walk from the Event area.
-
-Attendees may not bring their vehicles to the main entrance of the Event. It is reserved for emergency service use only.
-
-# Please note the following information regarding parking at War Memorial Park:
-
-- Parking is Up to 3 hours Free
-- 3 - 4 hours £3.00
-- 4 - 5 hours £4.00
-- Over 5 hours £5.00
-- Weekly Pass £17.50
-- Park & Ride (Kenilworth Road): The bus ticket cost is in addition to the reduced price parking fee. You must request your discount parking ticket on board. £1.00
-
-::callout{color="info"}
-For Blue Badge holders the above tariff applies.
+::note{color="warning"}
+The Feedback window for this event has now closed
 ::
 
-You pay for parking upon exit of the Park. There are 3 payment stations situated in the main car park for payment before exit.
+#### "I waited too long to get in"
 
-The payment stations are cashless payment only.
+PITP3 Was the biggest meet ever and we now understand our trajectory from here, We are working on internal systems to implement a QR Ticketing system going forward, for all events. With a complete restructure of the entrance to allow for multiple, smaller queues, like you'd find at Larger events such as MegaCon!
 
-Contactless payment is accepted. *Within the free period no ticket validation required. Proceed to exit.* Where payment is required, follow the instructions on the pay station screen.
+#### "Accessible Queue"
 
-*Park and Ride users, scan the original ticket followed by the discount ticket*
+We plan to implement an accessible queue for those that need it.
 
-# *How to get to PITP3!*
+#### "Toilets & Facilities were bad"
 
-*Address: War Memorial Park Kenilworth Road / Leamington Road / Coat of Arms B Coventry CV3 6PT*
+PITP1 & PITP2 Saw no facilities like we had at PITP3, We were using a council-provided facility. Unfortunately it is still out of our budget to look for additional toilet facilities
 
-*Trains: Coventry Station (10 Minute walk from Park) Coventry is Serviced by Cross Country, London NorthWestern railway & Avanti West coast.*
+#### "Site security"
 
-*Busses:* via Kenilworth Road - 16, 49, 18A, 87, Park & Ride south, U17, X17. \* via Warwick Road - 9, 9A, 49, 539.
+At PITP3, For the first time, we had a "secure venue" when compared to the previous 2 events, We are looking at ways of making site security better, We understand tape didn't make the cut that the community were looking for. We did have Police onsite to deter the bulk of negative force, We are still looking into how to improve security visibility.
 
-#### Coming from overseas?
+#### "Quiet room was still loud"
 
-The nearest airport to PITP is Birmingham international, This airport/station is 1 stop from Coventry! Tickets can be bought in advance or on the day at ticket machines/offices
+We plan to make sure there isn't a walking route for staff via the quiet room going forward.
 
-## Buying Tickets
+#### "Delays to the day"
 
-Many companies service coventry, the below websites are train companies that run services to/from coventry
+We plan to alter schedules of the day going forward, Giving more time between events so we can get delays sorted as quick as we can.
 
-<https://www.crosscountrytrains.co.uk/>
+#### "PA & Speaker system"
 
-<https://www.londonnorthwesternrailway.co.uk/>
+We plan to get a more powerful system going forward, That can be heard in all areas.
 
-<https://www.avantiwestcoast.co.uk/>
+#### "Vendors!"
 
-[https://www.avantisuperfare.co.uk/ - Avanti west coasts ultra-low fare system](https://www.avantisuperfare.co.uk/)
+We have seen a great success with vendors, we plan to have more going forward. (Subject to applying vendors)
 
-### Stay Updated
+#### "I struggled to make friends"
 
-- Follow us on **Instagram** for announcements
-- Join our **Discord** community for discussions and updates & travel information
-- Check back on this page for the latest information
+We plan to implement more bonding activities, or an area for people to say wruff to!
 
-We can't wait to see you there!
+#### "RSVP Issues"
+
+We understand we failed on the run-up to the event, we plan to redevelop the entire system going forward.
+
+#### "Trading area!"
+
+We understand that some trades were unable to be made because of lack of communication, We suggest to attendees to make yourself known or schedule a time to make trades with a specific person for future events.
+
+#### "I had no service!"
+
+With the amount of people we had in attendance, we accidentally created a Mobile Service blackspot due to the available bandwidth, which meant people lost cellular connection. We are investigating ways to mitigate this going forwards.
+
+#### Leave no trace 🌳
+
+We have had some concerns about the litter left at the site, This was all cleared at the end of the day and recycled where possible.
+
+#### Pinch the Parcel
+
+Pinch the parcel was a lot more successful than PITP2, Where it debuted. We are looking into ways of changing this to make it fair for all.
+
+#### "I couldn't collect my merch! / When is merch shipped?!"
+
+Information regarding this will be sent out in the coming days/weeks
+
+## What/Where next?
+
+Our next event will be At the End of Summer, Into Mid Autumn.
