@@ -1,0 +1,26 @@
+details:
+  duties:
+    - Maintain accurate records of all income, expenditure and assets
+    - Advise management on long-term planning, budgets and financial sustainability
+    - Track regular income and spending and approving them when applicable
+    - Prepare and submit annual accounts to the Charity Commission
+    - Ensure full compliance with charity law, including managing liaisons with the Local Authority Designated Officer (LADO)
+    - Help improve financial policies to prevent fraud and mismanagement
+    - Overseeing Gift Aid claims and ensuring compliance with HMRC charity tax exemptions
+    - Present clear and accessible updates to management
+    - Serve as the main point of contact for any finance matters
+  requirements:
+    - Experience in management and finance
+    - An understanding of budgeting
+    - Familiar with legal requirements
+    - Strong organisational and communication skills
+  contactEmail: management@pupsinthepark.uk
+name: Treasurer
+colorHex: d81309
+available: true
+description: We're looking for a treasurer to manage our finance & budgets
+icon: i-tdesign-money
+apply:
+  to: https://docs.google.com/forms/d/e/1FAIpQLSd2xestgDhQ5HK_SC6SjIXzE8LKiJ202uudbsfGz12Q0kKWMg/viewform?usp=publish-editor
+  label: Apply
+  target: _blank

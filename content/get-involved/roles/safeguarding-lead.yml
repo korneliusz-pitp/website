@@ -1,0 +1,17 @@
+details:
+  duties: []
+  requirements:
+    - Experience in management and safeguarding
+    - An understanding of risk assessments, liaison, and legal safeguarding frameworks
+    - Strong organisational, communication and compassion skills
+    - Experience handling sensitive data
+  contactEmail: management@pupsinthepark.uk
+name: Safeguarding Lead
+description: We're looking for a Safeguarding Lead to protect our community and handle concerns raised.
+icon: i-tdesign-user-safety
+available: true
+apply:
+  label: Apply
+  target: _blank
+  to: https://docs.google.com/forms/d/e/1FAIpQLSeFpXR8ohbccAhzUG2dhW61CEk_djtW5z66_2cH_gsFfW3Lrg/viewform?usp=publish-editor
+colorHex: d81309
