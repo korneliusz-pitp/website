@@ -1,8 +1,8 @@
 apply:
   label: Apply
-  to: ""
+  to: https://docs.google.com/forms/d/e/1FAIpQLSd14dZ0RxlnGbIaquNtaKq5RskbI8Tw6w8xJ-PJku7K1Xa7Mw/viewform?usp=dialog
   target: _blank
-available: false
+available: true
 colorHex: "#ff751f"
 description: Join The PITP Event Operations Team and help us form and create our events! At our frontline and backend you will help us in run and make our community events!
 details:
