@@ -1,15 +1,15 @@
 apply:
   label: Apply
-  to: https://forms.gle/artist-form
+  to: https://forms.gle/tC7fwynbDvBAYNjm6
   target: _blank
-available: false
+available: true
 colorHex: "#d05549"
 description: Be at the front of our Creative and Artistic operatons in our Creative Team!
 details:
   requirements:
-    - Experiance with Digital Artworking tools
-    - Relevant Portfolio work
-    - Calm, clear communication, status updates
+    - Experience with digital artwork tools
+    - Relevant portfolio work
+    - Calm, clear communication and status updates
   duties:
     - Following briefs
   contactEmail: creative@pupsinthepark.org
