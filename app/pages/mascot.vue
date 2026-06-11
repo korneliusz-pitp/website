@@ -11,7 +11,7 @@ useSeoMeta({
       <UPageBody>
         <div class="my-8">
           <NuxtImg
-            src="/pip-reference.png"
+            src="/public/pip-reference.png"
             alt="Reference sheet for Pip, the Pups In The Park mascot."
             class="w-full rounded-4xl shadow-xl"
           />
