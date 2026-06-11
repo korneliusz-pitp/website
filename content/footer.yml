@@ -35,6 +35,9 @@ quickLinks:
   - to: https://drive.google.com/drive/folders/0ANmeRQW9fM1jUk9PVA
     label: Already A Volunteer?
     icon: i-heroicons-chevron-right
+  - label: Our Mascot
+    to: /mascot
+    icon: i-lucide-dog
 socials:
   - label: Instagram
     to: https://www.instagram.com/pupsintheparkuk/
